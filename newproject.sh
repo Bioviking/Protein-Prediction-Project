@@ -65,6 +65,7 @@ cd ..
 #Creating structure in the src directory
 cd src
 touch mkdir.gitkeep
+touch parse.py
 cd ..
 
 
