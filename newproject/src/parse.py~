@@ -1,8 +1,5 @@
 #####################################################3
 #Creating a parsed file for the extraction of features for the original dataset.
-
-#library imports
-import os 
 import numpy as np
 
 
