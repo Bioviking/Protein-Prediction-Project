@@ -10,7 +10,7 @@ import scipy as sp
 
 
 # Load the data from file
-fname = open('seqlist.txt', 'r+')
+fname = open('both_list.txt', 'r+')
 f2name = open('feat_list.txt', 'r+')
 out_sparse1 = open('trainlist_no1.txt', 'w')
 out_sparse2 = open('trainlist_no2.txt', 'w')
@@ -19,39 +19,38 @@ out_sparse4 = open('trainlist_no4.txt', 'w')
 out_test = open('test_list.txt', 'w')
 
 #List declaration
-trainlist = [1, 2, 3, 4]
+trainlist = [1, 2, 3, 4, 5, 6, 7, 8]
 list1 = []
 list2 = []
 count = 1
 #def cross_valid(file1, file2):
 #print() 
 for counter, line in enumerate(fname):
+  line = line.strip()
 
-  #print(counter)
-  #print("First count", count)
   if count in trainlist:
     list1.append(line)
 
-    #print("2nd count", count)
+    print("2nd count", count)
    
-    if count == trainlist[0]:    
-        #print("this is count 1", count)
+    if count == trainlist[0:2]:    
+        print("this is count 1", count)
         count += 1
-        out_sparse1.write(line + '\n')
-    elif count == trainlist[1]:
-        out_sparse2.write(line + '\n')
+        out_sparse1.write(line)
+    elif count == trainlist[3:5]:
+        out_sparse2.write(line)
         count += 1
-    elif count == trainlist[2]:
-        out_sparse3.write(line + '\n')
+    elif count == trainlist[5:7]:
+        out_sparse3.write(line)
         count += 1
-    elif count == trainlist[3]: 
-        out_sparse4.write(line + '\n')
+    elif count == trainlist[7:8]: 
+        out_sparse4.write(line)
         count += 1
      
-  elif count == 5:
+  elif count == 9 or 10 :
     print("this is count 5", count)
     list2.append(line)
-    out_test.write(line + '\n')
+    out_test.write(line)
     count = 1
     
 print("this list 1", len(list1))
@@ -69,4 +68,4 @@ out_sparse2.close()
 out_sparse3.close()
 out_sparse4.close()
 out_test.close()
-
+out_both.close()

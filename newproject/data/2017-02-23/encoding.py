@@ -22,14 +22,18 @@ from sklearn.feature_extraction import DictVectorizer
 
 
 # Load the data from file
-fname = open('seqlist.txt', 'r+')
-out_sparse = open('sparse_list.txt', 'w')
+fname = open('both_list.txt', 'r+')
 
+out_sparse1 = open('trainlist_no1.txt', 'w')
+out_sparse2 = open('trainlist_no2.txt', 'w')
+out_sparse3 = open('trainlist_no3.txt', 'w')
+out_sparse4 = open('trainlist_no4.txt', 'w')
+out_test = open('test_list.txt', 'w')
 
 
 #Amino acid numbers assignment
 aadict = [{'A': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'K': 9, 'L': 10, 'M': 11, 'N': 12, 'P': 13, 'Q': 14, 'R': 15, 'S': 16, 'T': 17, 'V': 18, 'W': 19, 'Y': 20}]
-
+topdict = [{'I': 0, 'M': 1, 'O': 3}]
 
 
 #Creating my window triplet
@@ -56,18 +60,8 @@ for counter, line in enumerate(fname):
 		#print('This is an AA', counter, aacid)
 
 
-
 #Closing the files which were opened
-
 fname.close()
 out_sparse.close()
 
-'''	if counter % 3 == 0:
-		line = line.strip('>')
-		line = line.split('\n')
-		line = line[0]
-		idlist.append(line)	
-		#print(line)
-		out_ids.write(line + '\n')
-		
-'''
+
