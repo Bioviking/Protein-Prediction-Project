@@ -22,7 +22,7 @@ feat_list = []
 #iterating through the file and separating the id label, sequences and topology
 
 for counter, line in enumerate(fname):
-  	line = line.strip()
+	line = line.strip()
 	if counter % 3 == 0:
 		line = line.strip('>')
 		line = line.split('\n')
