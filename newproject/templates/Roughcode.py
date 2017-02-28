@@ -32,3 +32,17 @@ print ("feature names: %s" % vect.get_feature_names() )
 		out_ids.write(line + '\n')
 		
 '''
+
+#??????  = np.array([aa * 20] * sw)
+
+
+#Creating my window triplet
+#enc.fit([0,0,0],[1,0,3])
+
+'''
+##DictVectorizer code
+vect = DictVectorizer(sparse= False).fit(aadict)
+print(vect.transform(aadict))
+print ("feature names: %s" % vect.get_feature_names())
+'''
+
