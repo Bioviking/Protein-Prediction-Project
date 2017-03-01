@@ -1,0 +1,9 @@
+   626 both_list.txt
+     1 fastalengths.txt
+   313 feat_list.txt
+   626 id_feat_list.txt
+   313 id_list.txt
+   939 membrane-alpha.3line.txt
+   313 seqlist.txt
+     7 txtlengths.txt
+  3138 total
