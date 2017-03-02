@@ -8,14 +8,14 @@
 
 
 # Load the data from file.
-fname = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-out_ids = open('../data/textfile/parsed/id_list.txt', 'w')
-out_ids_seq = open('../data/textfile/parsed/id_seq_list.fasta', 'w')
-out_seq = open('../data/textfile/parsed/seqlist.txt', 'w')
-out_ids_feat = open('../data/textfile/parsed/id_feat_list.txt', 'w')
-out_feat = open('../data/textfile/parsed/feat_list.txt', 'w')
+fname = open('membrane-alpha.3line.txt', 'r+')
+out_ids = open('id_list.txt', 'w')
+out_ids_seq = open('id_seq_list.fasta', 'w')
+out_seq = open('seqlist.txt', 'w')
+out_ids_feat = open('id_feat_list.txt', 'w')
+out_feat = open('feat_list.txt', 'w')
 
-out_both = open('../data/textfile/parsed/both_list.txt', 'w')
+out_both = open('both_list.txt', 'w')
 
 
 #creating Lists for Ids sequences and features

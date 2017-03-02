@@ -41,21 +41,20 @@
 ##################################### Load the data from file############################
 
 
-out_sparse1 = '../data/textfile/cross_validated/testtrainlist_no1.txt'
-out_formatted = '../data/textfile//encoded/formatted1.txt'
+out_sparse1 = 'testtrainlist_no1.txt'
+out_formatted = 'formatted1.txt'
 
 ##################################Creating Lists for Ids sequences and features##############
 
-########################################Making seq and feat lists function########################  
+########################################Main function########################  
 
 def encoding_list(file1):
     seq_list = []
     feat_list = []
     nfile = open(file1, 'r+')
     for counter, line in enumerate(nfile):
-#        print(line)
-        line = line.strip('\n').split()
-#        print(line)
+        line = line.strip()
+        line = line.split('\n')
         #print("this is line:", line)
         line = line[0] 
         if counter % 2 == 0:
@@ -66,23 +65,29 @@ def encoding_list(file1):
             #print('This is an topology:', line)
             feat_list.append(line)
     nfile.close()
-#    print(seq_list)
-#    print(feat_list)
+    #print(seq_list)
+    #print(feat_list)
     return seq_list, feat_list
 
 
 
-################################################Encoding function###################################################################
+
+
+
+
+
+
+
+
 
 def encoding(file1, file2):
   
     #nfile = open(file1, 'r+')
   
-    seq_list = []
-    feat_list = []
-    top_list = []
-#    aa_list = []
+    list1 = []
+    list2 = []
     link_list = []
+    aa_list = []
     ofile = open(file2, 'w')
     #Amino acid numbers assignment
     aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -109,82 +114,98 @@ def encoding(file1, file2):
     top_dict = {'I': 0, 'M': 1, 'O': 2}
 
     #sw = [1, 3, 5, 7, 9, 11, 13]
-    seq_list, feat_list = encoding_list(file1)
-#    print(seq_list)
-#    print(feat_list) 
+    list1, list2 = encoding_list(file1)
+#    print(list1)
+#    print(list2)
 
- 
-    for counter, line in enumerate(seq_list):
-#        print('this is the aa seq list', line)
-#        line = line.strip().split('\n')
-#        print(line)
-        aa_list = []
-        for aa in line:
-            i = aadict[aa]
-#            print(i)
-            aa_list.append(i)
-        link_list.append(aa_list)   
-#        print('this is the length of the inital aa list', len(aa_list))
-#        print(aa_list)
-#        print('this is the length of the final aa list', len(link_list))
-    print(link_list)  
-    window_maker(link_list)
-#        print(aa_list)
-        
-#        print(link_list)
-#        break
-              
-#        print('\n')
-#        print('\n')
-#        print('\n')
-          
-#        link_list = link_list.
-#        print(link_list)
-#    for counter, line in enumerate(feat_list):
-##        print('this is the topology list', line)
-#        for feat in line:
-#            i = top_dict[feat]
-##            print('this in a single feat', i)
-#            top_list.append(i)
-#            
-#
-##        print(top_list)
-#
-    ofile.close()
-
-
-
-#######################################################Creating window###############################################
-
-def window_maker(link_list):
-   pad = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-   null_list = [] 
-    
-   for pos in link_list:
-#        print(pos)
-        for aa in range(len(pos)):
-            if aa == 0: 
-                
-                print('This is the first pos:', aa)
-#                print(link_list[aa])
-                null_list.append(pad + pos[aa] + pos[aa + 1])
-                print(null_list)
-#            
-            elif aa == len(pos)-1:
-                print('This is the last pos:', aa)
-                
-#               null_list.append(link_list[aa-1]+ link_list[aa] + pad)
-#            print(null_list)
-            else:
-                print(aa)
-#            null_list.append(link_list[pos-1] + link_list[pos] + link_list[pos+1] )
-#            print(null_list)
-#        break
-#        print('this is link_list', len(null_list))    
-##                
-#
 #    
+    for counter, line in enumerate(list1):
+        
+        line = line.strip().split('\n')
+        print(line)
+        for aa in line:
+            aa = aadict[aa]
+            print(aa)
+        #        line = line[counter]
+#            aa_list.append(aadict[aa])
+#            print(aa_list)
+#            print(len(aa_list)) 
+####            
+#                print(aa, aadict[aa]) 
+#                break
+        
+#        for counter, line2 in enumerate(list2):
+#            line = line[0]
+#            print(line, line2)
+#            
+#            for feat in line2:
+#                print(feat)
+#            print("this is line:", line)
+            
+#            line2 = line2[0]
+            
+#            print(counter)
+    #        print("this is line:", line)
+#        
+#            aa = aa.split(' ')
+#            print(aa)
+##            aa = aa[0]
+#            
+#                line = line.strip().split('\n')
+#                print(counter)
+#                print('this is feat', line)
+#            break
+            
+            
+            
+##                print(line)
+#                line = line[0]
+##                print(counter, line)
+#    #            print('This is aa:', aa, )
+#                break
+#    #        print("this is line:", line)
+#    #        print('this is a feat', line)
+#                for counter in line:
+#                    print(counter)
+##                    feat = feat.split('')
+#                    
+##                    feat = feat[0]
+#                    #print(feat)
+##                    print('this is both:', top_dict[feat], aadict[aa])
+#                    break
+#     for counter in link_list:
+#        print(counter)
+    
+#        link_list.append()   
+        
+#            print('This is aa:', feat, top_dict[feat])
+#            print('Another the match ', top_dict[aa], aadict[aa])
+#              ofile.write(aa, aadict[aa])
+##            for aa in line:
+#                i = i.split(' ')
+#                i = i[0]
+#                print('This is feat', aa)
+#          aa = aa[0]
+#          print('Another the match ', aa, top_dict[aa])
+#          ofile.write(aa, aadict[aa])
 
+    ofile.close()
+  
+     
+      
+  	#line = line.split('\n')
+  	#print(line)
+  #	for i in range(len(line)):
+  #		aacid = line[i]
+  		#print(fit_transform(aadict,aacid))
+  		#print('This is an AA', counter, aacid)
+  
+  
+  #Closing the files which were opened
+  #file.close()
+        
+
+#fname = input("enter name of input file:")
 
 
 
@@ -195,10 +216,10 @@ print(encoding(out_sparse1, out_formatted))
 ##################################Closing the files which were opened################################33
 
 
-""" 
-file1.close()
-file2.close()
 
+#file1.close()
+#file2.close()
+""" 
     out_sparse1.close()
 out_formatted.close()
   out_sparse1.close()
@@ -206,4 +227,4 @@ out_formatted.close()
   out_sparse3.close()
   out_sparse4.close()
   out_test.close()
- """
+  """
