@@ -41,8 +41,6 @@ for counter, line in enumerate(fname):
     out_ids_seq.write(line + '\n')
     out_ids_feat.write(line + '\n')
   
-  
-  
   ######Sequence####################### 
   elif counter % 3 == 1:
     line = line.split('\n')
@@ -55,7 +53,7 @@ for counter, line in enumerate(fname):
     out_ids_seq.write(line + '\n')
     out_both.write(line + '\n')
   
-  ######Topology###
+  ######Topology###########
   else:
     line = line.split('\n')
     line = line[0]

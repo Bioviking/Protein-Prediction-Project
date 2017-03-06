@@ -127,8 +127,8 @@ def encoding(file1, file2):
 #        print('this is the length of the inital aa list', len(aa_list))
 #        print(aa_list)
 #        print('this is the length of the final aa list', len(link_list))
-    print(link_list)  
-    window_maker(link_list)
+#    print(link_list)  
+    padding(link_list)
 #        print(aa_list)
         
 #        print(link_list)
@@ -140,6 +140,8 @@ def encoding(file1, file2):
           
 #        link_list = link_list.
 #        print(link_list)
+
+##########IMPORTANT do not change#####################3
 #    for counter, line in enumerate(feat_list):
 ##        print('this is the topology list', line)
 #        for feat in line:
@@ -156,33 +158,71 @@ def encoding(file1, file2):
 
 #######################################################Creating window###############################################
 
-def window_maker(link_list):
+def padding(link_list):
    pad = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-   null_list = [] 
-    
+   size = int(input('please confirm your window if not default of 3:'))
+   sw = int((size - 1)  / 2)
+   wind_list = []
+   print('these are the variables')
+   print('pad', pad)
+   print('sw', sw)
+   
+   print('size', size)
+   
    for pos in link_list:
-#        print(pos)
+        temp_list = []
+        wind_pad = []
+        wind_pad = [pad] * sw
+        print('wind_pad', wind_pad)
+        print('this is 1st wind_pad', wind_pad)
+        temp_list = wind_pad
+        print('this is temp list', temp_list)
         for aa in range(len(pos)):
-            if aa == 0: 
-                
-                print('This is the first pos:', aa)
-#                print(link_list[aa])
-                null_list.append(pad + pos[aa] + pos[aa + 1])
-                print(null_list)
-#            
-            elif aa == len(pos)-1:
-                print('This is the last pos:', aa)
-                
-#               null_list.append(link_list[aa-1]+ link_list[aa] + pad)
-#            print(null_list)
-            else:
-                print(aa)
-#            null_list.append(link_list[pos-1] + link_list[pos] + link_list[pos+1] )
-#            print(null_list)
-#        break
-#        print('this is link_list', len(null_list))    
-##                
-#
+            temp_list.append(pos[aa])                   
+        print('this is wind _ pad ', wind_pad, 'this end')
+        temp_list += wind_pad
+        print('this is the temporay list', temp_list)
+        wind_list = temp_list
+#   window_maker(temp_list, sw, size)
+##################################Expanding the Window##################################
+
+#def window_maker(wind_list,sw, size):
+#    print('user input', size, 'sw', sw)
+#    for pos in wind_list:
+#        
+#        pos = pos[0]
+#        print(pos)
+#        for da in range(len(temp_list)):
+###           print(aa - sw)
+#            win_list.append(temp_list[::size]) 
+#        print('this is the final list', win_list)
+#        print('end')
+    #        for aa in range(len(pos)):
+#           print(aa, pos[aa])
+#            print(aa, pos[aa-1:aa+1])
+#            win_list.append(pos[aa-1:aa+2]) 
+
+
+#    break
+#            if aa == 0:
+#                print('This is the first pos:', aa)
+##               print(link_list[aa])
+#                win_list.append(pad + pos[aa] + pos[aa + 1])
+##                print('Pos 0:', win_list)
+##            
+#            elif aa == len(pos)-1:
+#                print('This is the last pos:', aa)
+#                win_list.append(pos[aa-1] + pos[aa] + pad)
+##                print('pos end:', win_list)
+#            else:
+#                print(aa)
+##                win_list.append(pos[aa-1] + pos[aa] + pos[aa+1] )
+##                print(win_list)
+#            print('end of aa:', win_list)
+##        break
+##        print('this is link_list', len(win_list))    
+###                
+##
 #    
 
 
