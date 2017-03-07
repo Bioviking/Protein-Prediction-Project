@@ -172,7 +172,7 @@ def padding(link_list, sw):
            elif aa == (plen - 1):
                wind_list.append(pos[aa - 1]+ pos[aa] + pad*sw)
            else:
-               wind_list.append(pos[aa-1] + pos[aa] + pos[aa+1]) 
+               wind_list.append(pos[aa-sw]+ pos[aa] + pos[aa+sw]) 
    print(wind_list)
         
 #        temp_list = []
