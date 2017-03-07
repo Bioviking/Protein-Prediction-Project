@@ -156,7 +156,7 @@ def encoding(file1, file2):
 
 
 
-#######################################################Creating window###############################################
+#######################################################Creating padding###############################################
 
 def padding(link_list):
    pad = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -172,20 +172,20 @@ def padding(link_list):
    for pos in link_list:
         temp_list = []
         wind_pad = []
-        wind_pad = [pad] * sw
-        print('wind_pad', wind_pad)
-        print('this is 1st wind_pad', wind_pad)
-        temp_list = wind_pad
+        pad = [pad] * sw
+        print('wind_pad', pad)
+        print('this is 1st wind_pad', pad)
+        temp_list = pad
         print('this is temp list', temp_list)
         for aa in range(len(pos)):
             temp_list.append(pos[aa])                   
-        print('this is wind _ pad ', wind_pad, 'this end')
-        temp_list += wind_pad
+        print('this is pad ', pad, 'this end')
+        temp_list.append(pad)
         print('this is the temporay list', temp_list)
         wind_list = temp_list
 #   window_maker(temp_list, sw, size)
 ##################################Expanding the Window##################################
-
+#
 #def window_maker(wind_list,sw, size):
 #    print('user input', size, 'sw', sw)
 #    for pos in wind_list:
@@ -197,7 +197,7 @@ def padding(link_list):
 #            win_list.append(temp_list[::size]) 
 #        print('this is the final list', win_list)
 #        print('end')
-    #        for aa in range(len(pos)):
+#            for aa in range(len(pos)):
 #           print(aa, pos[aa])
 #            print(aa, pos[aa-1:aa+1])
 #            win_list.append(pos[aa-1:aa+2]) 
