@@ -112,8 +112,7 @@ def encoding(file1, file2):
     seq_list, feat_list = encoding_list(file1)
 #    print(seq_list)
 #    print(feat_list) 
-
- 
+    
     for counter, line in enumerate(seq_list):
 #        print('this is the aa seq list', line)
 #        line = line.strip().split('\n')
@@ -128,7 +127,7 @@ def encoding(file1, file2):
 #        print(aa_list)
 #        print('this is the length of the final aa list', len(link_list))
 #    print(link_list)  
-    padding(link_list)
+    window_maker(link_list)
 #        print(aa_list)
         
 #        print(link_list)
@@ -158,35 +157,53 @@ def encoding(file1, file2):
 
 #######################################################Creating padding###############################################
 
-def padding(link_list):
-   pad = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-   size = int(input('please confirm your window if not default of 3:'))
-   sw = int((size - 1)  / 2)
+def padding(link_list, sw):
+   pad = [0] * 20   
    wind_list = []
    print('these are the variables')
    print('pad', pad)
-   print('sw', sw)
    
-   print('size', size)
    
    for pos in link_list:
-        temp_list = []
-        wind_pad = []
-        pad = [pad] * sw
-        print('wind_pad', pad)
-        print('this is 1st wind_pad', pad)
-        temp_list = pad
-        print('this is temp list', temp_list)
-        for aa in range(len(pos)):
-            temp_list.append(pos[aa])                   
-        print('this is pad ', pad, 'this end')
-        temp_list.append(pad)
-        print('this is the temporay list', temp_list)
-        wind_list = temp_list
+       plen = len(pos)
+       for aa in range(plen):
+           if aa == 0:
+               wind_list.append(pad*sw + pos[aa] + pos[aa + 1])
+           elif aa == (plen - 1):
+               wind_list.append(pos[aa - 1]+ pos[aa] + pad*sw)
+           else:
+               wind_list.append(pos[aa-1] + pos[aa] + pos[aa+1]) 
+   print(wind_list)
+        
+#        temp_list = []
+#        wind_pad = []
+#        pad = [pad] * sw
+#        print('wind_pad', pad)
+#        print('this is 1st wind_pad', pad)
+#        temp_list = pad
+#        print('this is temp list', temp_list)
+#        for aa in range(len(pos)):
+#            temp_list.append(pos[aa])                   
+#        print('this is pad ', pad, 'this end')
+#        temp_list.append(pad)
+#        print('this is the temporay list', temp_list)
+#        wind_list = temp_list
 #   window_maker(temp_list, sw, size)
 ##################################Expanding the Window##################################
 #
-#def window_maker(wind_list,sw, size):
+def window_maker(link_list):
+    size = int(input('Please confirm your window if not default of 3:'))
+    odd = False
+    while odd == False:
+        if size % 2 == 1:
+            odd = True
+            sw = int((size - 1)  / 2)
+            padding(link_list, sw)
+            return odd
+        else:
+            size = int(input('Please enter an odd number or choose default 3:'))
+            
+        
 #    print('user input', size, 'sw', sw)
 #    for pos in wind_list:
 #        
