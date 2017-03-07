@@ -141,16 +141,16 @@ def encoding(file1, file2):
 #        print(link_list)
 
 ##########IMPORTANT do not change#####################3
-#    for counter, line in enumerate(feat_list):
-##        print('this is the topology list', line)
-#        for feat in line:
-#            i = top_dict[feat]
-##            print('this in a single feat', i)
-#            top_list.append(i)
-#            
-#
-##        print(top_list)
-#
+    for counter, line in enumerate(feat_list):
+#        print('this is the topology list', line)
+        for feat in line:
+            i = top_dict[feat]
+#            print('this in a single feat', i)
+            top_list.append(i)
+            
+
+    print(top_list)
+
     ofile.close()
 
 
