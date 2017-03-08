@@ -7,6 +7,7 @@
 
 
 ####################################Library imports################################
+import sys
 #from sklearn import preprocessing
 #import os 
 #import numpy as np
@@ -46,6 +47,37 @@ out_formatted = '../data/textfile//encoded/formatted1.txt'
 
 ##################################Creating Lists for Ids sequences and features##############
 
+####Global Varial'bles 
+aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'C' : [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'D' : [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'E' : [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'F' : [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'G' : [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'H' : [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          'I' : [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],
+          'K' : [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
+          'L' : [0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],
+          'M' : [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
+          'N' : [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
+          'P' : [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+          'Q' : [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
+          'R' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
+          'S' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
+          'T' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
+          'V' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+          'W' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+          'Y' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]}
+
+top_dict = {'I': 0, 'M': 1, 'O': 2}
+
+
+
+
+
+
+
+
 ########################################Making seq and feat lists function########################  
 
 def encoding_list(file1):
@@ -59,7 +91,7 @@ def encoding_list(file1):
         #print("this is line:", line)
         line = line[0] 
         if counter % 2 == 0:
-            #print('This is a Match:', line)
+#            print('This is a Match:', line)
             seq_list.append(line)
     
         else:
@@ -85,28 +117,7 @@ def encoding(file1, file2):
     link_list = []
     ofile = open(file2, 'w')
     #Amino acid numbers assignment
-    aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'C' : [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'D' : [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'E' : [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'F' : [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'G' : [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'H' : [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                'I' : [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0],
-                'K' : [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
-                'L' : [0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],
-                'M' : [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
-                'N' : [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
-                'P' : [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
-                'Q' : [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
-                'R' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
-                'S' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-                'T' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
-                'V' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
-                'W' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
-                'Y' : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]}
 
-    top_dict = {'I': 0, 'M': 1, 'O': 2}
 
     #sw = [1, 3, 5, 7, 9, 11, 13]
     seq_list, feat_list = encoding_list(file1)
@@ -115,18 +126,42 @@ def encoding(file1, file2):
     
     for counter, line in enumerate(seq_list):
 #        print('this is the aa seq list', line)
-#        line = line.strip().split('\n')
+#        line = line.strip()
 #        print(line)
         aa_list = []
         for aa in line:
-            i = aadict[aa]
+#            
 #            print(i)
+#            aadict.strip()
+            i = aadict[aa]
+#            print('from dict', aadict[aa])
             aa_list.append(i)
-        link_list.append(aa_list)   
+            
+#            print('this is list', aa_list)
+#        print(aa_list)
+#        print(len(aa_list))
+        link_list.append(aa_list)  
+#        print(link_list)
 #        print('this is the length of the inital aa list', len(aa_list))
 #        print(aa_list)
 #        print('this is the length of the final aa list', len(link_list))
 #    print(link_list)  
+    
+##########IMPORTANT do not change#####################3
+    
+
+
+
+#for counter, line in enumerate(feat_list):
+##        print('this is the topology list', line)
+#        for feat in line:
+#            i = top_dict[feat]
+##            print('this in a single feat', i)
+#            top_list.append(i)
+#    print(top_list)
+
+
+
     window_maker(link_list)
 #        print(aa_list)
         
@@ -140,16 +175,10 @@ def encoding(file1, file2):
 #        link_list = link_list.
 #        print(link_list)
 
-##########IMPORTANT do not change#####################3
-    for counter, line in enumerate(feat_list):
-#        print('this is the topology list', line)
-        for feat in line:
-            i = top_dict[feat]
-#            print('this in a single feat', i)
-            top_list.append(i)
+
             
 
-    print(top_list)
+#    
 
     ofile.close()
 
@@ -157,23 +186,100 @@ def encoding(file1, file2):
 
 #######################################################Creating padding###############################################
 
-def padding(link_list, sw):
-   pad = [0] * 20   
+def padding(link_list, sw, wsize):
+   pad =   [0] * 20 #[[0]*20] * sw
    wind_list = []
-   print('these are the variables')
-   print('pad', pad)
+   wind_begin = []
+   wind_end = []
+   wind_mid = []
+   
+#   print('these are the variables')
+#   print('pad', pad)
    
    
    for pos in link_list:
        plen = len(pos)
+#       print('this is pos', pos)
+#       print('end')
+       assign_feat(pos)
+       seq_total = [] 
        for aa in range(plen):
-           if aa == 0:
-               wind_list.append(pad*sw + pos[aa] + pos[aa + 1])
-           elif aa == (plen - 1):
-               wind_list.append(pos[aa - 1]+ pos[aa] + pad*sw)
+           
+           if aa < sw:
+#               print(aa)
+#               print(pad*(sw-aa))
+               wind_begin.extend(pad*(sw-aa))       #Size of pad depended      
+               end = (wsize-(sw-aa))
+#               print((wsize-(sw-aa)))
+               aapos = []
+               for i in pos[0: end]:
+                   aapos.extend(i)
+#               print(aapos)
+               wind_begin.extend(aapos) 
+               print('this first wind', wind_begin)
+               print(len(wind_begin))
+#               wind_list.extend(pad*(sw-aa) + aapos)    
+##               temp = pad*(sw-aa) + aapos
+###               print('this is temp', temp)
+##               wind_list.extend(temp)
+#            
+
+
+
+
+
+ 
+           elif aa >= (plen - sw): #
+#               print(aa)
+#               print(plen - sw)
+               aapos = []
+#               print([(aa-sw):plen])
+#               print(pos[(aa-sw):plen])
+               for i in pos[(aa-sw):plen]:
+                   aapos.extend(i)  
+#               print(aapos)
+               wind_end.extend(aapos)
+               wind_end.extend(pad*(sw-((plen-1)-aa)))
+               print('this end wind', wind_end)
+               print(len(wind_end)) 
+#               
+#               
+#               
+#               temp = aapos + pad*(sw-((plen-1)-aa))    
+#               wind_list.extend(aapos + pad*(sw-((plen-1)-aa)))#pos[aa:plen] 
+#               print('this is end', wind_list)
+#           
+
+#   print('this first wind', wind_list)
+#   print(len(wind_list))
+
+
            else:
-               wind_list.append(pos[aa-sw]+ pos[aa] + pos[aa+sw]) 
-   print(wind_list)
+               print(aa)
+               
+               aapos = []
+#               wind_mid.extend() 
+               for i in pos[(aa-sw):(aa+1+sw)]:   
+                   aapos.extend(i) 
+               print('this is start of middle', aapos)
+               print(len(aapos))
+               wind_mid.extend(aapos)
+##               temp = pos[aa-sw:aa+1+sw] 
+#               temp = aapos  + pos[aa] + pos[aa+1:aa+sw]
+#               wind_list.extend(temp)
+#               print('this is middle', wind_list)
+#   
+               print('this end wind', wind_mid)
+               print(len(wind_mid)) 
+       seq_total = wind_begin + wind_mid + wind_end
+       print(seq_total)
+       print(len(seq_total))
+       print('next seq')
+   wind_list.extend(seq_total)
+   print('this is one seq', wind_list)
+   print(len(wind_list))
+#   sys.exit(1)        
+   
         
 #        temp_list = []
 #        wind_pad = []
@@ -192,17 +298,42 @@ def padding(link_list, sw):
 ##################################Expanding the Window##################################
 #
 def window_maker(link_list):
-    size = int(input('Please confirm your window if not default of 3:'))
+    wsize = int(input('Please confirm your window if not default of 3:'))
     odd = False
     while odd == False:
-        if size % 2 == 1:
+        if wsize % 2 == 1:
             odd = True
-            sw = int((size - 1)  / 2)
-            padding(link_list, sw)
+            sw = int((wsize - 1)  / 2)
+            padding(link_list, sw, wsize)
             return odd
         else:
-            size = int(input('Please enter an odd number or choose default 3:'))
+            wsize = int(input('Please enter an odd number or choose default 3:'))
+  
+
+
+##########Assigning features to the sliding frame#####################3
+
+
+def assign_feat(pos):
+    top_list = []
+    for aa in pos:
+        i = top_dict[aa] 
+        top_list.extend(i)
+        
+        
+        
+        
+#    for counter, line in enumerate(feat_list):
+##        print('this is the topology list', line)
+#        for feat in line:
+#            i = top_dict[feat]
+##            print('this in a single feat', i)
+#            top_list.append(i)
             
+
+#    print(top_list)
+
+         
         
 #    print('user input', size, 'sw', sw)
 #    for pos in wind_list:
