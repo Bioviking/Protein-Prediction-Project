@@ -78,15 +78,15 @@ def protein_cross(file1):
 
 #######################################################Window Cross Validation###################################33
 
-def window_cross()
+#def window_cross()
 
 
 
 #Calling the function
 #print("this is the function", 
 
-       protein_cross(fname)
-window_cross()
+protein_cross(fname)
+#window_cross()
 
 
 

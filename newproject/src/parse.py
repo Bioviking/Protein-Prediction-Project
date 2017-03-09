@@ -8,7 +8,7 @@
 
 
 # Load the data from file.
-fname = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
+first_dataset = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
 out_ids = open('../data/textfile/parsed/id_list.txt', 'w')
 out_ids_seq = open('../data/textfile/parsed/id_seq_list.fasta', 'w')
 out_seq = open('../data/textfile/parsed/seqlist.txt', 'w')
@@ -26,55 +26,59 @@ seqlist = []
 feat_list = []
 
 #iterating through the file and separating the id label, sequences and topology
-
-for counter, line in enumerate(fname):
-  line = line.strip()
-  
-  if counter % 3 == 0:
-    line = line.split('\n')
-    line = line[0]
-    #print(line)
-    idslist.append(line)
+def parsing(fname):
+    for counter, line in enumerate(fname):
+      line = line.strip()
+      
+      if counter % 3 == 0:
+        line = line.split('\n')
+        line = line[0]
+        #print(line)
+        idslist.append(line)
+        
+        #Printing the 3 lists to a text file 
+        out_ids.write(line + '\n')
+        out_ids_seq.write(line + '\n')
+        out_ids_feat.write(line + '\n')
+      
+      
+      
+      ######Sequence####################### 
+      elif counter % 3 == 1:
+        line = line.split('\n')
+        line  = line[0]
+        #print(line)
+        seqlist.append(line)
+      
+        #Printing the 3 lists to a text file 
+        out_seq.write(line + '\n')
+        out_ids_seq.write(line + '\n')
+        out_both.write(line + '\n')
+      
+      ######Topology###
+      else:
+        line = line.split('\n')
+        line = line[0]
+        feat_list.append(line)
+        
+        #Printing the 3 lists to a text file 
+        out_feat.write(line + '\n')               
+        out_ids_feat.write(line + '\n')
+        out_both.write(line + '\n')
+      			
+    #Printing the 3 lists to a text file 
     
-    #Printing the 3 lists to a text file 
-    out_ids.write(line + '\n')
-    out_ids_seq.write(line + '\n')
-    out_ids_feat.write(line + '\n')
-  
-  
-  
-  ######Sequence####################### 
-  elif counter % 3 == 1:
-    line = line.split('\n')
-    line  = line[0]
-    #print(line)
-    seqlist.append(line)
-  
-    #Printing the 3 lists to a text file 
-    out_seq.write(line + '\n')
-    out_ids_seq.write(line + '\n')
-    out_both.write(line + '\n')
-  
-  ######Topology###
-  else:
-    line = line.split('\n')
-    line = line[0]
-    feat_list.append(line)
+    #Closing the files which were opened
     
-    #Printing the 3 lists to a text file 
-    out_feat.write(line + '\n')               
-    out_ids_feat.write(line + '\n')
-    out_both.write(line + '\n')
-  			
-#Printing the 3 lists to a text file 
+    
+    fname.close()
+    out_ids.close()
+    out_seq.close()
+    out_feat.close()
+    out_both.close()
+    out_ids_feat.close()
+    out_ids_seq.close()
 
-#Closing the files which were opened
 
-
-fname.close()
-out_ids.close()
-out_seq.close()
-out_feat.close()
-out_both.close()
-out_ids_feat.close()
-out_ids_seq.close()
+#first_dataset = input('Please enter the raw dataset for processing:'))
+parsing(first_dataset)
