@@ -14,7 +14,9 @@ import numpy as np
 #import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
-
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
+from sklearn import svm
 
 ###################################Hot encoding##################################33 
 #enc = preprocessing.OneHotEncoder()
@@ -41,8 +43,8 @@ import numpy as np
 
 ##################################### Load the data from file############################
 
-
-out_sparse1 = '../data/textfile/cross_validated/testtrainlist_no1.txt'
+out_sparse1 = '../data/textfile/both_list.txt'
+#out_sparse1 = '../data/textfile/cross_validated/membrane-alpha.3line.txt'
 out_formatted = '../data/textfile//encoded/formatted1.txt'
 
 ##################################Creating Lists for Ids sequences and features##############
@@ -124,19 +126,32 @@ def encoding(file1, file2):
             aa_list.append(i)
         link_list.append(aa_list) 
     
-    wind_list = padding(link_list)
-    top_list = [top_dict[aa] for pos in feat_list for aa in pos]
-    print('this is toplist', top_list)
-    print('the is length list', len(top_list))
+    wind_list = padding(link_list)   # Calling the padding and frame function
+    top_list = [top_dict[aa] for pos in feat_list for aa in pos]   #Assigning the frames the features
+#    print('this is toplist', top_list)
+#    print('the is length list', len(top_list))
 
 
-##########################Converting lists into an array
-    x = np.array(wind_list)
-    y = np.array(top_list)
+##########################Converting lists into an array#########################
+    X = np.array(wind_list)
+    Y = np.array(top_list)
     
-    print(x.shape)
-    print(y.shape)
+    print(X.shape)
+    print(Y.shape)
+    print(X)
+    
+#########################################Frame Cross-validation################    
+    
+    clf = svm.LinearSVC(class_weight = 'balanced', C=1)
+    scores = cross_val_score(clf, X, Y, cv=5)
+    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
+    print(scores)
 
+########################3Train SVM#####################33
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
+    clf = clf.fit(X_train, Y_train)
+    clf = svm.SVC(kernel='linear', C=1).fit(X_train, Y_train)
+    print(clf.score(X_test, Y_test))
 
     ofile.close()
 
@@ -170,8 +185,8 @@ def padding(link_list):
 #       print(wind_list)
 #       print(len(wind_list))
 #       sys.exit(1)
-            print(wind_list)
-            print(len(wind_list))
+#            print(wind_list)
+#            print(len(wind_list))
             return wind_list
         else:
             wsize = int(input('Please enter an odd number or choose default 3:'))
@@ -181,7 +196,7 @@ def padding(link_list):
 
 ################################################Calling functions###############################
 
-print(encoding(out_sparse1, out_formatted))
+encoding(out_sparse1, out_formatted)
 
 ##################################Closing the files which were opened################################33
 
