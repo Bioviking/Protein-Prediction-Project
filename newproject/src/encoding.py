@@ -10,7 +10,7 @@
 import sys
 #from sklearn import preprocessing
 #import os 
-#import numpy as np
+import numpy as np
 #import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
@@ -72,12 +72,6 @@ aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 top_dict = {'I': 0, 'M': 1, 'O': 2}
 
 
-
-
-
-
-
-
 ########################################Making seq and feat lists function########################  
 
 def encoding_list(file1):
@@ -102,14 +96,12 @@ def encoding_list(file1):
 #    print(feat_list)
     return seq_list, feat_list
 
-
-
 ################################################Encoding function###################################################################
 
 def encoding(file1, file2):
   
     #nfile = open(file1, 'r+')
-  
+    wind_list = []
     seq_list = []
     feat_list = []
     top_list = []
@@ -125,60 +117,26 @@ def encoding(file1, file2):
 #    print(feat_list) 
     
     for counter, line in enumerate(seq_list):
-#        print('this is the aa seq list', line)
-#        line = line.strip()
-#        print(line)
         aa_list = []
         for aa in line:
-#            
-#            print(i)
-#            aadict.strip()
             i = aadict[aa]
-#            print('from dict', aadict[aa])
+
             aa_list.append(i)
-            
-#            print('this is list', aa_list)
-#        print(aa_list)
-#        print(len(aa_list))
-        link_list.append(aa_list)  
-#        print(link_list)
-#        print('this is the length of the inital aa list', len(aa_list))
-#        print(aa_list)
-#        print('this is the length of the final aa list', len(link_list))
-#    print(link_list)  
+        link_list.append(aa_list) 
     
-##########IMPORTANT do not change#####################3
+    wind_list = padding(link_list)
+    top_list = [top_dict[aa] for pos in feat_list for aa in pos]
+    print('this is toplist', top_list)
+    print('the is length list', len(top_list))
+
+
+##########################Converting lists into an array
+    x = np.array(wind_list)
+    y = np.array(top_list)
     
+    print(x.shape)
+    print(y.shape)
 
-
-
-#for counter, line in enumerate(feat_list):
-##        print('this is the topology list', line)
-#        for feat in line:
-#            i = top_dict[feat]
-##            print('this in a single feat', i)
-#            top_list.append(i)
-#    print(top_list)
-
-
-
-    window_maker(link_list)
-#        print(aa_list)
-        
-#        print(link_list)
-#        break
-              
-#        print('\n')
-#        print('\n')
-#        print('\n')
-          
-#        link_list = link_list.
-#        print(link_list)
-
-
-            
-
-#    
 
     ofile.close()
 
@@ -186,194 +144,39 @@ def encoding(file1, file2):
 
 #######################################################Creating padding###############################################
 
-def padding(link_list, sw, wsize):
-   pad =   [0] * 20 #[[0]*20] * sw
-   wind_list = []
-   wind_begin = []
-   wind_end = []
-   wind_mid = []
-   
-#   print('these are the variables')
-#   print('pad', pad)
-   
-   
-   for pos in link_list:
-       plen = len(pos)
-#       print('this is pos', pos)
-#       print('end')
-       assign_feat(pos)
-       seq_total = [] 
-       for aa in range(plen):
-           
-           if aa < sw:
-#               print(aa)
-#               print(pad*(sw-aa))
-               wind_begin.extend(pad*(sw-aa))       #Size of pad depended      
-               end = (wsize-(sw-aa))
-#               print((wsize-(sw-aa)))
-               aapos = []
-               for i in pos[0: end]:
-                   aapos.extend(i)
-#               print(aapos)
-               wind_begin.extend(aapos) 
-               print('this first wind', wind_begin)
-               print(len(wind_begin))
-#               wind_list.extend(pad*(sw-aa) + aapos)    
-##               temp = pad*(sw-aa) + aapos
-###               print('this is temp', temp)
-##               wind_list.extend(temp)
-#            
-
-
-
-
-
- 
-           elif aa >= (plen - sw): #
-#               print(aa)
-#               print(plen - sw)
-               aapos = []
-#               print([(aa-sw):plen])
-#               print(pos[(aa-sw):plen])
-               for i in pos[(aa-sw):plen]:
-                   aapos.extend(i)  
-#               print(aapos)
-               wind_end.extend(aapos)
-               wind_end.extend(pad*(sw-((plen-1)-aa)))
-               print('this end wind', wind_end)
-               print(len(wind_end)) 
-#               
-#               
-#               
-#               temp = aapos + pad*(sw-((plen-1)-aa))    
-#               wind_list.extend(aapos + pad*(sw-((plen-1)-aa)))#pos[aa:plen] 
-#               print('this is end', wind_list)
-#           
-
-#   print('this first wind', wind_list)
-#   print(len(wind_list))
-
-
-           else:
-               print(aa)
-               
-               aapos = []
-#               wind_mid.extend() 
-               for i in pos[(aa-sw):(aa+1+sw)]:   
-                   aapos.extend(i) 
-               print('this is start of middle', aapos)
-               print(len(aapos))
-               wind_mid.extend(aapos)
-##               temp = pos[aa-sw:aa+1+sw] 
-#               temp = aapos  + pos[aa] + pos[aa+1:aa+sw]
-#               wind_list.extend(temp)
-#               print('this is middle', wind_list)
-#   
-               print('this end wind', wind_mid)
-               print(len(wind_mid)) 
-       seq_total = wind_begin + wind_mid + wind_end
-       print(seq_total)
-       print(len(seq_total))
-       print('next seq')
-   wind_list.extend(seq_total)
-   print('this is one seq', wind_list)
-   print(len(wind_list))
-#   sys.exit(1)        
-   
-        
-#        temp_list = []
-#        wind_pad = []
-#        pad = [pad] * sw
-#        print('wind_pad', pad)
-#        print('this is 1st wind_pad', pad)
-#        temp_list = pad
-#        print('this is temp list', temp_list)
-#        for aa in range(len(pos)):
-#            temp_list.append(pos[aa])                   
-#        print('this is pad ', pad, 'this end')
-#        temp_list.append(pad)
-#        print('this is the temporay list', temp_list)
-#        wind_list = temp_list
-#   window_maker(temp_list, sw, size)
-##################################Expanding the Window##################################
-#
-def window_maker(link_list):
+def padding(link_list):
+    pad =   [0] * 20 #[[0]*20] * sw
+    wind_list= []
     wsize = int(input('Please confirm your window if not default of 3:'))
     odd = False
     while odd == False:
         if wsize % 2 == 1:
             odd = True
             sw = int((wsize - 1)  / 2)
-            padding(link_list, sw, wsize)
-            return odd
+            for pos in link_list:
+                plen = len(pos)       
+                for aa in range(plen):
+                   
+                    if aa < sw:
+                        tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
+                        wind_list.append(tempWin)   
+                    elif aa >= (plen - sw): #
+                        tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
+                        wind_list.append(tempWin)
+                    else:
+                        tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
+                        wind_list.append(tempWin)
+ 
+#       print(wind_list)
+#       print(len(wind_list))
+#       sys.exit(1)
+            print(wind_list)
+            print(len(wind_list))
+            return wind_list
         else:
             wsize = int(input('Please enter an odd number or choose default 3:'))
-  
-
-
-##########Assigning features to the sliding frame#####################3
-
-
-def assign_feat(pos):
-    top_list = []
-    for aa in pos:
-        i = top_dict[aa] 
-        top_list.extend(i)
-        
-        
-        
-        
-#    for counter, line in enumerate(feat_list):
-##        print('this is the topology list', line)
-#        for feat in line:
-#            i = top_dict[feat]
-##            print('this in a single feat', i)
-#            top_list.append(i)
-            
-
-#    print(top_list)
-
-         
-        
-#    print('user input', size, 'sw', sw)
-#    for pos in wind_list:
-#        
-#        pos = pos[0]
-#        print(pos)
-#        for da in range(len(temp_list)):
-###           print(aa - sw)
-#            win_list.append(temp_list[::size]) 
-#        print('this is the final list', win_list)
-#        print('end')
-#            for aa in range(len(pos)):
-#           print(aa, pos[aa])
-#            print(aa, pos[aa-1:aa+1])
-#            win_list.append(pos[aa-1:aa+2]) 
-
-
-#    break
-#            if aa == 0:
-#                print('This is the first pos:', aa)
-##               print(link_list[aa])
-#                win_list.append(pad + pos[aa] + pos[aa + 1])
-##                print('Pos 0:', win_list)
-##            
-#            elif aa == len(pos)-1:
-#                print('This is the last pos:', aa)
-#                win_list.append(pos[aa-1] + pos[aa] + pad)
-##                print('pos end:', win_list)
-#            else:
-#                print(aa)
-##                win_list.append(pos[aa-1] + pos[aa] + pos[aa+1] )
-##                print(win_list)
-#            print('end of aa:', win_list)
-##        break
-##        print('this is link_list', len(win_list))    
-###                
-##
-#    
-
-
+    
+#    sys.exit(1)        
 
 
 ################################################Calling functions###############################
