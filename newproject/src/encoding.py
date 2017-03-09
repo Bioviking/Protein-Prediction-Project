@@ -138,7 +138,7 @@ def encoding(file1, file2):
     
     print(X.shape)
     print(Y.shape)
-    print(X)
+#    print(X)
     
 #########################################Frame Cross-validation################    
     
@@ -152,9 +152,17 @@ def encoding(file1, file2):
     clf = clf.fit(X_train, Y_train)
     clf = svm.SVC(kernel='linear', C=1).fit(X_train, Y_train)
     print(clf.score(X_test, Y_test))
-
-    ofile.close()
-
+    
+    ########################################Predictor#######################3
+    #     clf.predict(digits.data[-1:])
+    #    ofile.close()
+    #
+    #import pickle
+    #    s = pickle.dumps(clf)
+    #    clf2 = pickle.loads(s)
+    #    clf2.predict(X[0:1])
+    #
+    #    y[0]
 
 
 #######################################################Creating padding###############################################
