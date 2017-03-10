@@ -9,4 +9,5 @@ Created on Thu Mar  9 21:23:08 2017
 python parse.py parsing()
 python cross_valid.py protein_cross()
 bash training_file_list.sh 
+python shuffle.py
 python encoding.py encoding(out_sparse1) ###, out_formatted

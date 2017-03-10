@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 """
 Created on Thu Mar  9 21:09:14 2017
@@ -9,5 +9,7 @@ Created on Thu Mar  9 21:09:14 2017
 
 cd ../data/textfile/cross_validated/
 
-for file in file_list:
-    
+for filename in *.txt
+do 
+    echo $filename > file_list.txt
+done
