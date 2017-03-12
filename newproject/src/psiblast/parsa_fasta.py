@@ -20,7 +20,7 @@ def parse_fasta(filename):
             line = line[0:]
             #print(line)
             temp_id = line
-            out_test = open('../../data/fasta_files/test_fasta/fasta_samples/' + temp_id + '.fasta', 'w')
+            out_test = open('../../data/fasta_files/fasta_samples/' + temp_id + '.fasta', 'w')
             #print(temp_id)
             out_test.write(line + '\n')
             
