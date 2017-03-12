@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 
 # Import datasets, classifiers and performance metrics
-from sklearn import datasets, svm, metrics
+from sklearn import svm, metrics
 
 # Create a classifier: a support vector classifier
 classifier = svm.SVC(gamma=0.001)

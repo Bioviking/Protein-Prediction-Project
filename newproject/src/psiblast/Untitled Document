@@ -1,0 +1,17 @@
+
+
+
+def parse_fasta(filename):
+    f = open(filename,'r')
+    g_dict = dict()
+    for line in f:
+        line = line.strip()
+        if line[0] == '>':
+            line = line[1:]
+            temp_id = line
+        else:
+            g_dict[temp_id] = line
+    return g_dict
+
+parse_fasta('example.fasta')
+

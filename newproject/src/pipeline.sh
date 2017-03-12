@@ -7,9 +7,9 @@
 
 # This pipeline shell script forms the backbone of the prediction model and runs through the training of the prediction model and quality testing
    
-python parse.py parsing     #Runs parse.py with hard coded dataset file
+python parse.py    #Runs parse.py with hard coded dataset file
 
-python cross_valid.py protein_cross | training_file_list.sh  #Runs protein_cross function in the cross_valid.py makes 4 training and 1 test dataset file plus extra combo files   #Runs training_file_list.sh to create a .txt list of file names for training and test function inputs
+python cross_valid.py | bash training_file_list.sh  #Runs protein_cross function in the cross_valid.py makes 4 training and 1 test dataset file plus extra combo files   #Runs training_file_list.sh to create a .txt list of file names for training and test function inputs
 
 #bash cross_valid.sh     #Convert dataset to a fasta file for psiblast
 
@@ -17,7 +17,7 @@ python cross_valid.py protein_cross | training_file_list.sh  #Runs protein_cross
 
 
 
-#python encoding.py encoding($filename) #(out_sparse1) #, out_formatted    
+python encoding.py # | python svm_learning.py < (X, y)#(out_sparse1) #, out_formatted    
 #Runs encoding function in encoding.py - training and test files will be looped through here    
 
 
