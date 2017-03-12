@@ -44,6 +44,7 @@ from sklearn import svm
 ##################################### Load the data from file############################
 
 out_sparse1 = '../data/textfile/both_list.txt'
+#out_sparse1 = '../data/textfile/both_list.txt'
 #out_sparse1 = '../data/textfile/cross_validated/membrane-alpha.3line.txt'
 out_formatted = '../data/textfile//encoded/formatted1.txt'
 
@@ -100,7 +101,7 @@ def encoding_list(file1):
 
 ################################################Encoding function###################################################################
 
-def encoding(file1, file2):
+def encoding(file1): #### possible output file - , file2
   
     #nfile = open(file1, 'r+')
     wind_list = []
@@ -109,7 +110,7 @@ def encoding(file1, file2):
     top_list = []
 #    aa_list = []
     link_list = []
-    ofile = open(file2, 'w')
+#    ofile = open(file2, 'w')
     #Amino acid numbers assignment
 
 
@@ -142,12 +143,13 @@ def encoding(file1, file2):
     
 #########################################Frame Cross-validation################    
     
-    clf = svm.LinearSVC(class_weight = 'balanced', C=1)
-    scores = cross_val_score(clf, X, Y, cv=5)
-    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
-    print(scores)
+#    clf = svm.LinearSVC(class_weight = 'balanced', C=1)
+#    scores = cross_val_score(clf, X, Y, cv=5)
+#    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
+#    print(scores)
 
 ########################3Train SVM#####################33
+    clf = svm.LinearSVC()    #class_weight = 'balanced', C=1
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
     clf = clf.fit(X_train, Y_train)
     clf = svm.SVC(kernel='linear', C=1).fit(X_train, Y_train)
@@ -204,7 +206,7 @@ def padding(link_list):
 
 ################################################Calling functions###############################
 
-encoding(out_sparse1, out_formatted)
+encoding(out_sparse1)   #Possible out file - , out_formatted
 
 ##################################Closing the files which were opened################################33
 
