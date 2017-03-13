@@ -2,6 +2,7 @@
 ################################Creates a .txt of the training files##########################
 
 cd ../data/textfile/cross_validated/
+#Making a date folder
 
 for filename in *.txt
 do 
