@@ -14,12 +14,11 @@ import numpy as np
 import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
-#from sklearn.model_selection import cross_val_score
-#from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
 from sklearn import svm
-from sklearn.cross_validation import train_test_split
 from sklearn.svm import SVC
-from sklearn.cross_validation import cross_val_score
+
 ###################################Hot encoding##################################33 
 #enc = preprocessing.OneHotEncoder()
 #enc.transform([[0, 1, 3]]).toarray()
@@ -209,7 +208,7 @@ def svm_learning(X, y):
     svc.fit(X_train, y_train)
 
 ##Supervised Estimators
-    y_pred = svc.predict() #p.random.random(()
+    y_pred = svc.predict(X_test) #p.random.random(()
 
 ##################################Evaluate my Model's Preformance########################
 
@@ -219,18 +218,18 @@ def svm_learning(X, y):
     accuracy_score(y_test, y_pred)
 
 #Classification Report
-#from sklearn.metrics import classification_report
-#print(classification_report(y_test,y_pred))
+	from sklearn.metrics import classification_report
+	print(classification_report(y_test,y_pred))
 
 #ConfusionMatrix
-#from sklearn.metrics import confusion_matrix
-#print(confusion_matrix(y_test, y_pred))
+	from sklearn.metrics import confusion_matrix
+	print(confusion_matrix(y_test, y_pred))
 
 #Cross Validation
 
 
-    cross_val_score(svc, X_train, y_train, cv=5)
-#    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
+    print(cross_val_score(svc, X_train, y_train, cv=5))
+    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
 
 
 

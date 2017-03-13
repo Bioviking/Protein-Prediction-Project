@@ -75,8 +75,8 @@ aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 
 top_dict = {'I': 0, 'M': 1, 'O': 2}
 
-
-########################################Making seq and feat lists function########################  
+top_dict_inv = {'0':'I'....}
+#################0#######################Making seq and feat lists function########################  
 
 def encoding_list(file1):
     seq_list = []
@@ -143,6 +143,7 @@ def encoding(file1): #### possible output file - , file2
     print(X.shape)
     print(y.shape)
     
+   
     
 
     svm_learning(X, y) 
@@ -208,10 +209,10 @@ def svm_learning(X, y):
     svc.fit(X_train, y_train)
 
 ##Supervised Estimators
-    y_pred = svc.predict() #p.random.random(()
+    y_pred = svc.predict(X_test) #p.random.random(()
 
 ##################################Evaluate my Model's Preformance########################
-
+	
 #Accuracy Score
 #knn.score(X_test, y_test)
     from sklearn.metrics import accuracy_score
