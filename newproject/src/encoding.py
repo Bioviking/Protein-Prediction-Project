@@ -11,13 +11,14 @@ import sys
 #from sklearn import preprocessing
 #import os 
 import numpy as np
-import scipy as sp
+from src import protein_cross
+#import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import train_test_split
-from sklearn import svm
-from sklearn.svm import SVC
+#from sklearn.model_selection import cross_val_score
+#from sklearn.model_selection import train_test_split
+#from sklearn import svm
+#from sklearn.svm import SVC
 
 ###################################Hot encoding##################################33 
 #enc = preprocessing.OneHotEncoder()
@@ -36,6 +37,17 @@ from sklearn.svm import SVC
 #out_sparse4 = open('trainlist_no4.txt', 'r+')
 #out_test = open('test_list.txt', 'r+')
 #out_encoded1 = open('encoded_file.txt', 'w')
+
+encode_1, encode_2, encode_3, encode_4 = protein_cross()
+# = cross_valid.protein_cross(listB)
+#encode_3 = cross_valid.protein_cross(listC)
+#encode_4 = cross_valid.protein_cross(listD)
+#out_test = open('test_list.txt', 'r+')
+#out_encoded1 = open('encoded_file.txt', 'w')
+
+#####Output_files######
+#out_X_array = open('../data/textfile/encoded/Xarray.txt', 'w')
+#out_Y_array = open('../data/textfile//Yarray.txt', 'w')
 #
 ##Amino acid numbers assignment
 #aadict = [{'A': 1,'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'K': 9, 'L': 10, 'M': 11,
@@ -44,14 +56,20 @@ from sklearn.svm import SVC
 
 ##################################### Load the data from file############################
 
-out_sparse1 = '../data/textfile/both_list.txt'
+#out_sparse1 = '../data/textfile/both_list.txt'
+#out_sparse1 = open('../data/textfile/cross_validated/trainlist_no1.txt', 'w')
+# out_sparse2 = open('../data/textfile/cross_validated/trainlist_no2.txt', 'w')
+#    out_sparse3 = open('../data/textfile/cross_validated/trainlist_no3.txt', 'w')
+#    out_sparse4 = open('../data/textfile/cross_validated/trainlist_no4.txt', 'w')
 #out_sparse1 = '../data/textfile/both_list.txt'
 #out_sparse1 = '../data/textfile/cross_validated/membrane-alpha.3line.txt'
-out_formatted = '../data/textfile//encoded/formatted1.txt'
+#out_formatted = '../data/textfile/encoded/formatted1.txt'
 
 ##################################Creating Lists for Ids sequences and features##############
 
-####Global Varial'bles 
+####Global Variables
+file_lists = [encode_1, encode_2, encode_3, encode_4] 
+
 aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
           'C' : [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
           'D' : [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -75,7 +93,7 @@ aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 
 top_dict = {'I': 0, 'M': 1, 'O': 2}
 
-top_dict_inv = {'0':'I'....}
+top_dict_inv = {'0':'I', '1':'M', '2':'O'}
 #################0#######################Making seq and feat lists function########################  
 
 def encoding_list(file1):
@@ -104,8 +122,10 @@ def encoding_list(file1):
 
 ################################################Encoding function###################################################################
 
-def encoding(file1): #### possible output file - , file2
-  
+def encoding(tnfile): #### possible output file - , file2
+
+    #out_X_array = open('../data/textfile/encoded/X_array.dat', 'w')
+    #out_Y_array = open('../data/textfile/encoded/Y_array.dat', 'w')
     #nfile = open(file1, 'r+')
     wind_list = []
     seq_list = []
@@ -137,8 +157,13 @@ def encoding(file1): #### possible output file - , file2
 
 
 ##########################Converting lists into an array#########################
+    
+    #out_X_array.write(wind_list)
+    #out_Y_array.write(top_list)
     X = np.array(wind_list)
+    #np.save('../data/textfile/encoded/X_array.npy', X, allow_pickle=True, fix_imports=True)  # X is an array
     y = np.array(top_list)
+    #np.save('../data/textfile/encoded/Y_array.npy', y, allow_pickle=True, fix_imports=True)    # Y is an array
     
     print(X.shape)
     print(y.shape)
@@ -146,17 +171,19 @@ def encoding(file1): #### possible output file - , file2
    
     
 
-    svm_learning(X, y) 
+#    svm_learning(X, y) 
     
     return X, y
 #    print(X)
-    
+#    out_X_array.close
+#    out_Y_array.close
 #    ofile.close()
 
 
 #######################################################Creating padding###############################################
 
 def padding(link_list):
+    
     pad =   [0] * 20 #[[0]*20] * sw
     wind_list= []
     wsize = int(input('Please confirm your window if not default of 3:'))
@@ -171,14 +198,17 @@ def padding(link_list):
                    
                     if aa < sw:
                         tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
-                        wind_list.append(tempWin)   
+                        wind_list.append(tempWin) 
+                        
                     elif aa >= (plen - sw): #
                         tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
                         wind_list.append(tempWin)
+                         
                     else:
                         tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
                         wind_list.append(tempWin)
- 
+                        
+                 
 #       print(wind_list)
 #       print(len(wind_list))
 #       sys.exit(1)
@@ -196,41 +226,43 @@ def padding(link_list):
 ################################################################################
 
 ######################################Training and Test Data##############
-def svm_learning(X, y):
-       
-    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
-
-###################################Creating my Model##############################3
-##Supervised Learning Estimators
-
-    svc= SVC(kernel='linear')
-
-##Supervised learning
-    svc.fit(X_train, y_train)
-
-##Supervised Estimators
-    y_pred = svc.predict(X_test) #p.random.random(()
-
-##################################Evaluate my Model's Preformance########################
-	
-#Accuracy Score
-#knn.score(X_test, y_test)
-    from sklearn.metrics import accuracy_score
-    accuracy_score(y_test, y_pred)
-
-#Classification Report
-	from sklearn.metrics import classification_report
-	print(classification_report(y_test,y_pred))
-
-#ConfusionMatrix
-	from sklearn.metrics import confusion_matrix
-	print(confusion_matrix(y_test, y_pred))
-
-#Cross Validation
-
-
-    print(cross_val_score(svc, X_train, y_train, cv=5))
-    print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()*2))
+#def svm_learning(X, y):
+#       
+#    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+#
+####################################Creating my Model##############################3
+###Supervised Learning Estimators
+#
+#    svc= SVC(kernel='linear')
+#
+###Supervised learning
+#    svc.fit(X_train, y_train)
+#
+###Supervised Estimators
+#
+#    y_pred = svc.predict(X_test) #p.random.random(())
+#    for i in len(y_pred):
+#        if y_pred[i] == top_dict_inv.keys[i]:
+#            print(top_dict_inv.keys[i])
+#            
+###################################Evaluate my Model's Preformance########################
+#
+##Accuracy Score
+##knn.score(X_test, y_test)
+#    from sklearn.metrics import accuracy_score
+#    accuracy_score(y_test, y_pred)
+#
+##Classification Report
+#    from sklearn.metrics import classification_report
+#    print(classification_report(y_test,y_pred))
+#
+##ConfusionMatrix
+#    from sklearn.metrics import confusion_matrix
+#    print(confusion_matrix(y_test, y_pred))
+#
+##Cross Validation
+#    score = cross_val_score(svc, X_train, y_train, cv=5)
+#    print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
 
 
 
@@ -256,7 +288,13 @@ def svm_learning(X, y):
 
 ################################################Calling functions###############################
 #encoding_list(file1)
-encoding(out_sparse1)   #Possible out file - , out_formatted
+
+for tnfile in file_lists:
+    print(tnfile)
+    encoding(tnfile)
+    
+
+#Possible out file - , out_formatted
 #svm_learning(X, y)
 #training_svm(X, Y)
 #padding(link_list)

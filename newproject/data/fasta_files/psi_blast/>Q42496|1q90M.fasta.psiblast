@@ -1,0 +1,1593 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: uniref90
+           52,629,880 sequences; 17,866,164,385 total letters
+
+Results from round 1
+
+
+Query= Q42496|1q90M
+
+Length=99
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplasti...  188     2e-59
+  UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvoc...  158     1e-47
+  UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloropl...  80.5    3e-17
+  UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamy...  80.5    4e-17
+  UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis...  68.6    1e-12
+  UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1...  63.2    5e-11
+  UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloropl...  61.6    5e-10
+  UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subel...  57.8    1e-08
+  UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=...  48.5    3e-05
+  UniRef90_A0A090M0B3 PetM of cytochrome b6/f complex subunit 7 n...  45.8    1e-04
+  UniRef90_C1EDK8 Cytochrome b6/f complex subunit PetM n=1 Tax=Mi...  43.9    7e-04
+
+
+> UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=3 Tax=Chlamydomonas TaxID=3052 RepID=PETM_CHLRE
+Length=99
+
+ Score = 188 bits (478),  Expect = 2e-59, Method: Compositional matrix adjust.
+ Identities = 99/99 (100%), Positives = 99/99 (100%), Gaps = 0/99 (0%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+           MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA
+Sbjct  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+
+Query  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI
+Sbjct  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+
+
+> UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvocaceae 
+TaxID=3065 RepID=D8U4X4_VOLCA
+Length=99
+
+ Score = 158 bits (400),  Expect = 1e-47, Method: Compositional matrix adjust.
+ Identities = 86/100 (86%), Positives = 93/100 (93%), Gaps = 2/100 (2%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKA-APSRGVATKAVNELAMI  59
+           MAMS+A R+AC GVAAPRS+T RVAAARPAVRP+LRT GQKA APSRGVATKA+NELAMI
+Sbjct  1   MAMSLA-RTACSGVAAPRSATTRVAAARPAVRPTLRTVGQKAPAPSRGVATKAINELAMI  59
+
+Query  60  AGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           AGE  FIAGTALTMVG+TLVGLAIGFVLLRVESLVEEGK+
+Sbjct  60  AGEGGFIAGTALTMVGITLVGLAIGFVLLRVESLVEEGKL  99
+
+
+> UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=1 Tax=Monoraphidium neglectum TaxID=145388 RepID=A0A0D2LEJ0_9CHLO
+Length=99
+
+ Score = 80.5 bits (197),  Expect = 3e-17, Method: Compositional matrix adjust.
+ Identities = 59/105 (56%), Positives = 74/105 (70%), Gaps = 13/105 (12%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAV----RPSLRTAGQKAAPSRGVAT--KAVN  54
+           MA++  + +AC  VAA RS    + AARP +    +P++RTA +KAAP+   AT  KA+ 
+Sbjct  1   MALAQKSAAACSRVAA-RS----MGAARPVLPAVSKPAVRTA-RKAAPASRAATVTKALP  54
+
+Query  55  -ELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            E+AM+AGE  FI G ALTM  +TLVGLAIGFVLLRVESL EEGK
+Sbjct  55  MEVAMVAGEGAFIGGVALTMTAITLVGLAIGFVLLRVESLAEEGK  99
+
+
+> UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamydomonas 
+sp. HS-5 TaxID=108458 RepID=Q9XFU3_9CHLO
+Length=97
+
+ Score = 80.5 bits (197),  Expect = 4e-17, Method: Compositional matrix adjust.
+ Identities = 54/98 (55%), Positives = 70/98 (71%), Gaps = 8/98 (8%)
+
+Query  4   SIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPS-----RGVATKAVNELAM  58
+           SIAAR+A  G+ APR++  RV++ARP +  +     + AA       RGVAT A  E+A 
+Sbjct  3   SIAARAAT-GLTAPRAA--RVSSARPTLSVNRAALRKAAAAPSSSPARGVATAAGVEIAQ  59
+
+Query  59  IAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEE  96
+           +AGEA FIAGTA TM+G+TL+GLA+GFVLLRVE+ VEE
+Sbjct  60  VAGEAGFIAGTAFTMIGITLLGLAVGFVLLRVEAAVEE  97
+
+
+> UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis 
+sp. GSL018 TaxID=582737 RepID=A0A061SEM5_9CHLO
+Length=110
+
+ Score = 68.6 bits (166),  Expect = 1e-12, Method: Compositional matrix adjust.
+ Identities = 40/58 (69%), Positives = 43/58 (74%), Gaps = 1/58 (2%)
+
+Query  43   APSRG-VATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            AP R  V TKA  E+A IAGEA FI G A  M   TLVGLA+GFVLLRVESLVEEGK+
+Sbjct  53   APRRNTVETKAAVEVAQIAGEAGFIGGVAGVMFVTTLVGLAVGFVLLRVESLVEEGKL  110
+
+
+> UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1 
+Tax=Chlorella variabilis TaxID=554065 RepID=E1Z5F2_CHLVA
+Length=59
+
+ Score = 63.2 bits (152),  Expect = 5e-11, Method: Compositional matrix adjust.
+ Identities = 35/59 (59%), Positives = 42/59 (71%), Gaps = 0/59 (0%)
+
+Query  41  KAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           KA     V  +A  E+A +AGEA FI G +  MVG+TL+GLA GFVLLRVESL EEGK+
+Sbjct  1   KAQRRAAVQPQASMEVAQLAGEAGFIFGVSGVMVGITLIGLAFGFVLLRVESLAEEGKV  59
+
+
+> UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=2 Tax=Auxenochlorella protothecoides TaxID=3075 RepID=A0A087STG6_AUXPR
+Length=106
+
+ Score = 61.6 bits (148),  Expect = 5e-10, Method: Compositional matrix adjust.
+ Identities = 29/46 (63%), Positives = 37/46 (80%), Gaps = 0/46 (0%)
+
+Query  54   NELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            +E+A +AGE  FIAG A  M G+TL+GLA+GFV+LR E+L EEGKI
+Sbjct  61   SEIAQLAGEGGFIAGVASVMFGITLLGLAVGFVILRFEALTEEGKI  106
+
+
+> UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subellipsoidea 
+(strain C-169) TaxID=574566 RepID=I0Z7N9_COCSC
+Length=117
+
+ Score = 57.8 bits (138),  Expect = 1e-08, Method: Compositional matrix adjust.
+ Identities = 44/113 (39%), Positives = 59/113 (52%), Gaps = 14/113 (12%)
+
+Query  1    MAMSIAARSACCGVAAP-----RSSTVRVAAARPAVRP--SLRT-------AGQKAAPSR  46
+            M+ +I + SAC   A       R+S    A  RP   P  SL++       A Q     +
+Sbjct  5    MSAAITSSSACVCTAKTSRRPVRASLGHAAGLRPQGAPLRSLQSTLVAQPRAKQTQTLRQ  64
+
+Query  47   GVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+             V T A  E+  +A E  +I+G A     +TLVGLA+GFVLLRVE+L EEGK+
+Sbjct  65   NVKTAAAMEIYQVADELSYISGVAGVCFAITLVGLAVGFVLLRVEALTEEGKL  117
+
+
+> UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=Bathycoccus 
+prasinos TaxID=41875 RepID=K8EZL4_9CHLO
+Length=160
+
+ Score = 48.5 bits (114),  Expect = 3e-05, Method: Compositional matrix adjust.
+ Identities = 28/52 (54%), Positives = 36/52 (69%), Gaps = 2/52 (4%)
+
+Query  46   RGVATKAVN--ELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            + VAT A++  E++ IA  A  I   A T+ G TL+GLA+GFVLLRVES VE
+Sbjct  106  KSVATAALSPMEISQIADAAAEIGDVATTLFGCTLIGLALGFVLLRVESTVE  157
+
+
+> UniRef90_A0A090M0B3 PetM of cytochrome b6/f complex subunit 7 
+n=1 Tax=Ostreococcus tauri TaxID=70448 RepID=A0A090M0B3_OSTTA
+Length=64
+
+ Score = 45.8 bits (107),  Expect = 1e-04, Method: Compositional matrix adjust.
+ Identities = 29/47 (62%), Positives = 32/47 (68%), Gaps = 1/47 (2%)
+
+Query  46  RGVATKA-VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVE  91
+           RGVATKA   EL  +A +   IA  A T   +TLVGLAIGFVLLRVE
+Sbjct  11  RGVATKASAVELMQVANQGAEIASVATTCFAITLVGLAIGFVLLRVE  57
+
+
+> UniRef90_C1EDK8 Cytochrome b6/f complex subunit PetM n=1 Tax=Micromonas 
+commoda (strain RCC299 / NOUM17 / CCMP2709) TaxID=296587 
+RepID=C1EDK8_MICCC
+Length=66
+
+ Score = 43.9 bits (102),  Expect = 7e-04, Method: Compositional matrix adjust.
+ Identities = 29/64 (45%), Positives = 39/64 (61%), Gaps = 3/64 (5%)
+
+Query  32  RPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVE  91
+           RP+   AG + A +   +   + ELA +  E   IA  A+T   +TLVGLA+GFVLLRVE
+Sbjct  3   RPTKLVAGSRRAATTTASALPLAELAAVGPE---IAEVAITCFSITLVGLAVGFVLLRVE  59
+
+Query  92  SLVE  95
+           + VE
+Sbjct  60  AAVE  63
+
+
+
+Lambda      K        H        a         alpha
+   0.320    0.129    0.347    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 442907308895
+Results from round 2
+
+
+Query= Q42496|1q90M
+
+Length=99
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplasti...  83.7    2e-18
+  UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvoc...  79.5    8e-17
+  UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subel...  75.2    5e-15
+  UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1...  62.9    7e-11
+  UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=...  64.5    9e-11
+  UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloropl...  59.8    2e-09
+  UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis...  56.0    6e-08
+  UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloropl...  51.0    3e-06
+  UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamy...  49.8    9e-06
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_A4RWH7 PetM subunit of cytochrome b6f complex (Fragmen...  46.0    1e-04
+  UniRef90_M0S8Q8 Uncharacterized protein n=2 Tax=Musa acuminata ...  46.7    4e-04
+
+
+> UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=3 Tax=Chlamydomonas TaxID=3052 RepID=PETM_CHLRE
+Length=99
+
+ Score = 83.7 bits (205),  Expect = 2e-18, Method: Composition-based stats.
+ Identities = 99/99 (100%), Positives = 99/99 (100%), Gaps = 0/99 (0%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+           MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA
+Sbjct  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+
+Query  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI
+Sbjct  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+
+
+> UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvocaceae 
+TaxID=3065 RepID=D8U4X4_VOLCA
+Length=99
+
+ Score = 79.5 bits (194),  Expect = 8e-17, Method: Composition-based stats.
+ Identities = 82/94 (87%), Positives = 88/94 (94%), Gaps = 1/94 (1%)
+
+Query  7   ARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKA-APSRGVATKAVNELAMIAGEAEF  65
+           AR+AC GVAAPRS+T RVAAARPAVRP+LRT GQKA APSRGVATKA+NELAMIAGE  F
+Sbjct  6   ARTACSGVAAPRSATTRVAAARPAVRPTLRTVGQKAPAPSRGVATKAINELAMIAGEGGF  65
+
+Query  66  IAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           IAGTALTMVG+TLVGLAIGFVLLRVESLVEEGK+
+Sbjct  66  IAGTALTMVGITLVGLAIGFVLLRVESLVEEGKL  99
+
+
+> UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subellipsoidea 
+(strain C-169) TaxID=574566 RepID=I0Z7N9_COCSC
+Length=117
+
+ Score = 75.2 bits (183),  Expect = 5e-15, Method: Composition-based stats.
+ Identities = 42/113 (37%), Positives = 55/113 (49%), Gaps = 14/113 (12%)
+
+Query  1    MAMSIAARSACCGVAAP-----RSSTVRVAAARPAVRPSLRT---------AGQKAAPSR  46
+            M+ +I + SAC   A       R+S    A  RP   P             A Q     +
+Sbjct  5    MSAAITSSSACVCTAKTSRRPVRASLGHAAGLRPQGAPLRSLQSTLVAQPRAKQTQTLRQ  64
+
+Query  47   GVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+             V T A  E+  +A E  +I+G A     +TLVGLA+GFVLLRVE+L EEGK+
+Sbjct  65   NVKTAAAMEIYQVADELSYISGVAGVCFAITLVGLAVGFVLLRVEALTEEGKL  117
+
+
+> UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1 
+Tax=Chlorella variabilis TaxID=554065 RepID=E1Z5F2_CHLVA
+Length=59
+
+ Score = 62.9 bits (151),  Expect = 7e-11, Method: Composition-based stats.
+ Identities = 35/59 (59%), Positives = 42/59 (71%), Gaps = 0/59 (0%)
+
+Query  41  KAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           KA     V  +A  E+A +AGEA FI G +  MVG+TL+GLA GFVLLRVESL EEGK+
+Sbjct  1   KAQRRAAVQPQASMEVAQLAGEAGFIFGVSGVMVGITLIGLAFGFVLLRVESLAEEGKV  59
+
+
+> UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=Bathycoccus 
+prasinos TaxID=41875 RepID=K8EZL4_9CHLO
+Length=160
+
+ Score = 64.5 bits (155),  Expect = 9e-11, Method: Composition-based stats.
+ Identities = 29/65 (45%), Positives = 37/65 (57%), Gaps = 0/65 (0%)
+
+Query  31   VRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRV  90
+            +R       QK+  S   A  +  E++ IA  A  I   A T+ G TL+GLA+GFVLLRV
+Sbjct  93   LRNKRNVVQQKSRKSVATAALSPMEISQIADAAAEIGDVATTLFGCTLIGLALGFVLLRV  152
+
+Query  91   ESLVE  95
+            ES VE
+Sbjct  153  ESTVE  157
+
+
+> UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=2 Tax=Auxenochlorella protothecoides TaxID=3075 RepID=A0A087STG6_AUXPR
+Length=106
+
+ Score = 59.8 bits (143),  Expect = 2e-09, Method: Composition-based stats.
+ Identities = 39/87 (45%), Positives = 50/87 (57%), Gaps = 3/87 (3%)
+
+Query  13   GVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALT  72
+               A R    R AA+   VRP+ +         R  A    +E+A +AGE  FIAG A  
+Sbjct  23   RATAVRGIHGRSAAS---VRPARQITTVPCQLRRVRAQAIPSEIAQLAGEGGFIAGVASV  79
+
+Query  73   MVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            M G+TL+GLA+GFV+LR E+L EEGKI
+Sbjct  80   MFGITLLGLAVGFVILRFEALTEEGKI  106
+
+
+> UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis 
+sp. GSL018 TaxID=582737 RepID=A0A061SEM5_9CHLO
+Length=110
+
+ Score = 56.0 bits (133),  Expect = 6e-08, Method: Composition-based stats.
+ Identities = 44/95 (46%), Positives = 58/95 (61%), Gaps = 0/95 (0%)
+
+Query  5    IAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAE  64
+            +A R +   V A   + +R A +  +++ ++     +A     V TKA  E+A IAGEA 
+Sbjct  16   LAQRQSARSVGAKAFTGLRPAVSTGSLKRTVAAPVLRAPRRNTVETKAAVEVAQIAGEAG  75
+
+Query  65   FIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            FI G A  M   TLVGLA+GFVLLRVESLVEEGK+
+Sbjct  76   FIGGVAGVMFVTTLVGLAVGFVLLRVESLVEEGKL  110
+
+
+> UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=1 Tax=Monoraphidium neglectum TaxID=145388 RepID=A0A0D2LEJ0_9CHLO
+Length=99
+
+ Score = 51.0 bits (120),  Expect = 3e-06, Method: Composition-based stats.
+ Identities = 51/100 (51%), Positives = 62/100 (62%), Gaps = 3/100 (3%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSR--GVATKAVNELAM  58
+           MA++  + +AC  VAA RS            +P++RTA + A  SR   V      E+AM
+Sbjct  1   MALAQKSAAACSRVAA-RSMGAARPVLPAVSKPAVRTARKAAPASRAATVTKALPMEVAM  59
+
+Query  59  IAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+           +AGE  FI G ALTM  +TLVGLAIGFVLLRVESL EEGK
+Sbjct  60  VAGEGAFIGGVALTMTAITLVGLAIGFVLLRVESLAEEGK  99
+
+
+> UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamydomonas 
+sp. HS-5 TaxID=108458 RepID=Q9XFU3_9CHLO
+Length=97
+
+ Score = 49.8 bits (117),  Expect = 9e-06, Method: Composition-based stats.
+ Identities = 51/99 (52%), Positives = 67/99 (68%), Gaps = 7/99 (7%)
+
+Query  3   MSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPS-----RGVATKAVNELA  57
+           M+  A  A  G+ APR++  RV++ARP +  +     + AA       RGVAT A  E+A
+Sbjct  1   MASIAARAATGLTAPRAA--RVSSARPTLSVNRAALRKAAAAPSSSPARGVATAAGVEIA  58
+
+Query  58  MIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEE  96
+            +AGEA FIAGTA TM+G+TL+GLA+GFVLLRVE+ VEE
+Sbjct  59  QVAGEAGFIAGTAFTMIGITLLGLAVGFVLLRVEAAVEE  97
+
+
+> UniRef90_A4RWH7 PetM subunit of cytochrome b6f complex (Fragment) 
+n=1 Tax=Ostreococcus lucimarinus (strain CCE9901) TaxID=436017 
+RepID=A4RWH7_OSTLU
+Length=67
+
+ Score = 46.0 bits (107),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 25/67 (37%), Positives = 34/67 (51%), Gaps = 0/67 (0%)
+
+Query  32  RPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVE  91
+           R +     +       V   ++ E+A IA +   IA  A T   +TL+GLA GFVLLRVE
+Sbjct  1   RSARVAPRKSVRGGAAVTKASMVEVAQIANQGAEIASIATTCFIITLIGLAFGFVLLRVE  60
+
+Query  92  SLVEEGK  98
+             V  G+
+Sbjct  61  DSVVNGE  67
+
+
+> UniRef90_M0S8Q8 Uncharacterized protein n=2 Tax=Musa acuminata 
+subsp. malaccensis TaxID=214687 RepID=M0S8Q8_MUSAM
+Length=225
+
+ Score = 46.7 bits (109),  Expect = 4e-04, Method: Composition-based stats.
+ Identities = 25/63 (40%), Positives = 33/63 (52%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      AP +G        L+     AE I   A  M G+ LVG+A+GFVLLRVE+ VE
+Sbjct  162  KVLSSLRAPPKGKTKSRGGALSSTCNAAEEIFRIAAIMNGLVLVGVAVGFVLLRVEAWVE  221
+
+Query  96   EGK  98
+            E +
+Sbjct  222  ESE  224
+
+
+
+Lambda      K        H        a         alpha
+   0.308    0.121    0.291    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0367    0.140     1.90     42.6     43.6 
+
+Effective search space used: 442907308895
+Results from round 3
+
+
+Query= Q42496|1q90M
+
+Length=99
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplasti...  76.4    1e-15
+  UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=...  75.2    1e-14
+  UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloropl...  71.8    9e-14
+  UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvoc...  69.8    4e-13
+  UniRef90_M0S8Q8 Uncharacterized protein n=2 Tax=Musa acuminata ...  71.4    5e-13
+  UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subel...  69.5    8e-13
+  UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis...  66.0    1e-11
+  UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1...  61.8    2e-10
+  UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloropl...  59.4    3e-09
+  UniRef90_A4RWH7 PetM subunit of cytochrome b6f complex (Fragmen...  57.1    1e-08
+  UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamy...  51.0    3e-06
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_F6HQF8 Putative uncharacterized protein n=2 Tax=Vitis ...  67.5    1e-10
+  UniRef90_A0A1J7GTM4 Uncharacterized protein n=1 Tax=Lupinus ang...  63.3    2e-09
+  UniRef90_UPI00057A623A PREDICTED: uncharacterized protein LOC10...  57.9    2e-08
+  UniRef90_A0A0A0K4W4 Uncharacterized protein n=1 Tax=Cucumis sat...  58.3    2e-08
+  UniRef90_M1CFK6 Uncharacterized protein n=2 Tax=Solanum tuberos...  58.7    4e-08
+  UniRef90_A0A0E0KJF5 Uncharacterized protein n=1 Tax=Oryza punct...  56.4    6e-08
+  UniRef90_A0A0D9ZDL7 Uncharacterized protein n=7 Tax=Oryza TaxID...  56.4    1e-07
+  UniRef90_UPI0002B4517D PREDICTED: uncharacterized protein LOC10...  54.8    2e-07
+  UniRef90_D7LDJ9 Putative uncharacterized protein n=1 Tax=Arabid...  54.8    2e-07
+  UniRef90_UPI00051C007E PREDICTED: uncharacterized protein LOC10...  54.1    5e-07
+  UniRef90_UPI00092F8F3A UPI00092F8F3A related cluster n=1 Tax=un...  53.3    7e-07
+  UniRef90_B9R7K1 Plastoquinol-plastocyanin reductase, putative n...  52.5    1e-06
+  UniRef90_A0A1J7H7G1 Uncharacterized protein n=1 Tax=Lupinus ang...  52.5    1e-06
+  UniRef90_UPI0007873277 UPI0007873277 related cluster n=2 Tax=un...  52.5    1e-06
+  UniRef90_A0A1J3GNI9 Cytochrome b6-f complex subunit 7 (Fragment...  52.5    2e-06
+  UniRef90_B9MVI6 Uncharacterized protein n=1 Tax=Populus trichoc...  51.7    2e-06
+  UniRef90_A0A078FEV0 BnaA09g40450D protein n=5 Tax=Brassica TaxI...  51.0    3e-06
+  UniRef90_A0A0D2V437 Uncharacterized protein n=3 Tax=Gossypium r...  51.0    4e-06
+  UniRef90_A0A0D2RLR3 Uncharacterized protein n=4 Tax=Gossypium r...  51.0    4e-06
+  UniRef90_A0A0K9P7M7 Cytochrome b6f complex subunit, putative, e...  50.6    5e-06
+  UniRef90_V4N2S6 Uncharacterized protein n=1 Tax=Eutrema salsugi...  50.6    7e-06
+  UniRef90_A0A061FJG1 Cytochrome b6-f complex subunit 7, putative...  49.4    1e-05
+  UniRef90_I3T2X1 Uncharacterized protein n=2 Tax=Lotus japonicus...  48.7    3e-05
+  UniRef90_A0A1J3ETE9 Cytochrome b6-f complex subunit 7 n=3 Tax=N...  48.3    3e-05
+  UniRef90_A0A0D9VZF0 Uncharacterized protein n=1 Tax=Leersia per...  48.3    3e-05
+  UniRef90_A0A151SNN3 Cytochrome b6-f complex subunit 7 n=1 Tax=C...  47.9    4e-05
+  UniRef90_UPI0008DC8396 UPI0008DC8396 related cluster n=1 Tax=un...  48.3    4e-05
+  UniRef90_U5D633 Uncharacterized protein n=1 Tax=Amborella trich...  47.9    5e-05
+  UniRef90_UPI000579EC5E PREDICTED: uncharacterized protein LOC10...  47.9    5e-05
+  UniRef90_UPI0002C2E040 PREDICTED: uncharacterized protein LOC10...  47.9    5e-05
+  UniRef90_A0A067L2T5 Uncharacterized protein n=1 Tax=Jatropha cu...  47.9    5e-05
+  UniRef90_A0A0B2P5K1 Cytochrome b6-f complex subunit 7 n=4 Tax=S...  47.9    5e-05
+  UniRef90_UPI00032A78C4 PREDICTED: uncharacterized protein LOC10...  47.9    5e-05
+  UniRef90_A0A0D2NR38 Uncharacterized protein n=4 Tax=Gossypium r...  47.5    5e-05
+  UniRef90_V7AWR2 Uncharacterized protein n=6 Tax=Phaseoleae TaxI...  47.1    7e-05
+  UniRef90_UPI00077E6654 UPI00077E6654 related cluster n=2 Tax=un...  47.1    9e-05
+  UniRef90_A0A103YKJ7 Uncharacterized protein n=1 Tax=Cynara card...  46.7    1e-04
+  UniRef90_O48717 At2g26500 n=6 Tax=Camelineae TaxID=980083 RepID...  46.7    1e-04
+  UniRef90_UPI0004A5F1C2 PREDICTED: uncharacterized protein LOC10...  46.7    1e-04
+  UniRef90_UPI0009015D76 UPI0009015D76 related cluster n=1 Tax=un...  46.7    1e-04
+  UniRef90_B7FM90 Cytochrome b6f complex subunit (PetM), putative...  46.7    1e-04
+  UniRef90_UPI00053C82A5 PREDICTED: uncharacterized protein LOC10...  46.3    2e-04
+  UniRef90_A9PFI7 Cytochrome b6f complex subuni family protein n=...  46.3    2e-04
+  UniRef90_U5G6E5 Uncharacterized protein n=2 Tax=Populus TaxID=3...  46.0    2e-04
+  UniRef90_I1ND22 Uncharacterized protein n=3 Tax=Soja TaxID=1462...  46.0    2e-04
+  UniRef90_A0A0B2SM45 Cytochrome b6-f complex subunit 7 n=2 Tax=S...  46.0    2e-04
+  UniRef90_A5AN62 Putative uncharacterized protein n=1 Tax=Vitis ...  46.0    2e-04
+  UniRef90_UPI00057AB5AA PREDICTED: uncharacterized protein LOC10...  46.0    2e-04
+  UniRef90_V7C8D4 Uncharacterized protein n=1 Tax=Phaseolus vulga...  45.6    2e-04
+  UniRef90_A0A175YDA2 Uncharacterized protein n=1 Tax=Daucus caro...  45.6    2e-04
+  UniRef90_UPI0002C309DD PREDICTED: uncharacterized protein LOC10...  45.6    3e-04
+  UniRef90_A9TM48 Predicted protein n=1 Tax=Physcomitrella patens...  45.2    3e-04
+  UniRef90_UPI00052EF765 PREDICTED: uncharacterized protein LOC10...  45.6    3e-04
+  UniRef90_UPI00052EB7EF PREDICTED: uncharacterized protein LOC10...  45.6    3e-04
+  UniRef90_A0A061DYR7 Cytochrome P450 82C4, putative isoform 1 n=...  47.9    3e-04
+  UniRef90_W9R158 Cytochrome b6-f complex subunit 7 n=1 Tax=Morus...  44.8    5e-04
+  UniRef90_A0A1D1XUQ2 Cytochrome b6-f complex subunit 7 n=1 Tax=A...  44.8    6e-04
+  UniRef90_A0A166GGY9 Uncharacterized protein n=1 Tax=Daucus caro...  44.8    6e-04
+  UniRef90_UPI000581376D PREDICTED: uncharacterized protein LOC10...  44.8    6e-04
+  UniRef90_K4B3B8 Uncharacterized protein n=4 Tax=Lycopersicon Ta...  44.4    7e-04
+  UniRef90_A0A061DXT9 Cytochrome P450 82C4, putative isoform 2 n=...  44.4    7e-04
+  UniRef90_J3LT57 Uncharacterized protein n=2 Tax=Oryza TaxID=452...  44.4    7e-04
+  UniRef90_A0A1J6ISE9 Uncharacterized protein n=2 Tax=Nicotiana T...  44.4    8e-04
+
+
+> UniRef90_Q42496 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=3 Tax=Chlamydomonas TaxID=3052 RepID=PETM_CHLRE
+Length=99
+
+ Score = 76.4 bits (186),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 99/99 (100%), Positives = 99/99 (100%), Gaps = 0/99 (0%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+           MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA
+Sbjct  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+
+Query  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI
+Sbjct  61  GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+
+
+> UniRef90_K8EZL4 PetM subunit of cytochrome b6f complex n=1 Tax=Bathycoccus 
+prasinos TaxID=41875 RepID=K8EZL4_9CHLO
+Length=160
+
+ Score = 75.2 bits (183),  Expect = 1e-14, Method: Composition-based stats.
+ Identities = 29/65 (45%), Positives = 37/65 (57%), Gaps = 0/65 (0%)
+
+Query  31   VRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRV  90
+            +R       QK+  S   A  +  E++ IA  A  I   A T+ G TL+GLA+GFVLLRV
+Sbjct  93   LRNKRNVVQQKSRKSVATAALSPMEISQIADAAAEIGDVATTLFGCTLIGLALGFVLLRV  152
+
+Query  91   ESLVE  95
+            ES VE
+Sbjct  153  ESTVE  157
+
+
+> UniRef90_A0A087STG6 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=2 Tax=Auxenochlorella protothecoides TaxID=3075 RepID=A0A087STG6_AUXPR
+Length=106
+
+ Score = 71.8 bits (174),  Expect = 9e-14, Method: Composition-based stats.
+ Identities = 39/99 (39%), Positives = 52/99 (53%), Gaps = 3/99 (3%)
+
+Query  1    MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIA  60
+            +  +           A R    R AA+   VRP+ +         R  A    +E+A +A
+Sbjct  11   IPAASLGPRLPLRATAVRGIHGRSAAS---VRPARQITTVPCQLRRVRAQAIPSEIAQLA  67
+
+Query  61   GEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            GE  FIAG A  M G+TL+GLA+GFV+LR E+L EEGKI
+Sbjct  68   GEGGFIAGVASVMFGITLLGLAVGFVILRFEALTEEGKI  106
+
+
+> UniRef90_D8U4X4 Putative uncharacterized protein n=2 Tax=Volvocaceae 
+TaxID=3065 RepID=D8U4X4_VOLCA
+Length=99
+
+ Score = 69.8 bits (169),  Expect = 4e-13, Method: Composition-based stats.
+ Identities = 81/98 (83%), Positives = 87/98 (89%), Gaps = 1/98 (1%)
+
+Query  3   MSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAA-PSRGVATKAVNELAMIAG  61
+               AR+AC GVAAPRS+T RVAAARPAVRP+LRT GQKA  PSRGVATKA+NELAMIAG
+Sbjct  2   AMSLARTACSGVAAPRSATTRVAAARPAVRPTLRTVGQKAPAPSRGVATKAINELAMIAG  61
+
+Query  62  EAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           E  FIAGTALTMVG+TLVGLAIGFVLLRVESLVEEGK+
+Sbjct  62  EGGFIAGTALTMVGITLVGLAIGFVLLRVESLVEEGKL  99
+
+
+> UniRef90_M0S8Q8 Uncharacterized protein n=2 Tax=Musa acuminata 
+subsp. malaccensis TaxID=214687 RepID=M0S8Q8_MUSAM
+Length=225
+
+ Score = 71.4 bits (173),  Expect = 5e-13, Method: Composition-based stats.
+ Identities = 25/63 (40%), Positives = 33/63 (52%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      AP +G        L+     AE I   A  M G+ LVG+A+GFVLLRVE+ VE
+Sbjct  162  KVLSSLRAPPKGKTKSRGGALSSTCNAAEEIFRIAAIMNGLVLVGVAVGFVLLRVEAWVE  221
+
+Query  96   EGK  98
+            E +
+Sbjct  222  ESE  224
+
+
+> UniRef90_I0Z7N9 Uncharacterized protein n=1 Tax=Coccomyxa subellipsoidea 
+(strain C-169) TaxID=574566 RepID=I0Z7N9_COCSC
+Length=117
+
+ Score = 69.5 bits (168),  Expect = 8e-13, Method: Composition-based stats.
+ Identities = 42/113 (37%), Positives = 55/113 (49%), Gaps = 14/113 (12%)
+
+Query  1    MAMSIAARSACCGVAAP-----RSSTVRVAAARPAVRPSLRT---------AGQKAAPSR  46
+            M+ +I + SAC   A       R+S    A  RP   P             A Q     +
+Sbjct  5    MSAAITSSSACVCTAKTSRRPVRASLGHAAGLRPQGAPLRSLQSTLVAQPRAKQTQTLRQ  64
+
+Query  47   GVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+             V T A  E+  +A E  +I+G A     +TLVGLA+GFVLLRVE+L EEGK+
+Sbjct  65   NVKTAAAMEIYQVADELSYISGVAGVCFAITLVGLAVGFVLLRVEALTEEGKL  117
+
+
+> UniRef90_A0A061SEM5 Uncharacterized protein n=1 Tax=Tetraselmis 
+sp. GSL018 TaxID=582737 RepID=A0A061SEM5_9CHLO
+Length=110
+
+ Score = 66.0 bits (159),  Expect = 1e-11, Method: Composition-based stats.
+ Identities = 44/95 (46%), Positives = 58/95 (61%), Gaps = 0/95 (0%)
+
+Query  5    IAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAE  64
+            +A R +   V A   + +R A +  +++ ++     +A     V TKA  E+A IAGEA 
+Sbjct  16   LAQRQSARSVGAKAFTGLRPAVSTGSLKRTVAAPVLRAPRRNTVETKAAVEVAQIAGEAG  75
+
+Query  65   FIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+            FI G A  M   TLVGLA+GFVLLRVESLVEEGK+
+Sbjct  76   FIGGVAGVMFVTTLVGLAVGFVLLRVESLVEEGKL  110
+
+
+> UniRef90_F6HQF8 Putative uncharacterized protein n=2 Tax=Vitis 
+vinifera TaxID=29760 RepID=F6HQF8_VITVI
+Length=1171
+
+ Score = 67.5 bits (163),  Expect = 1e-10, Method: Composition-based stats.
+ Identities = 23/63 (37%), Positives = 33/63 (52%), Gaps = 1/63 (2%)
+
+Query  36    RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+             +  G   +PS+G        L+        I   A  M G+ LVG+A+GFVLLR+E+ VE
+Sbjct  1110  KIVGSLKSPSQGKGRG-GGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEASVE  1168
+
+Query  96    EGK  98
+             E +
+Sbjct  1169  EAE  1171
+
+
+> UniRef90_E1Z5F2 Putative uncharacterized protein (Fragment) n=1 
+Tax=Chlorella variabilis TaxID=554065 RepID=E1Z5F2_CHLVA
+Length=59
+
+ Score = 61.8 bits (148),  Expect = 2e-10, Method: Composition-based stats.
+ Identities = 35/59 (59%), Positives = 42/59 (71%), Gaps = 0/59 (0%)
+
+Query  41  KAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGKI  99
+           KA     V  +A  E+A +AGEA FI G +  MVG+TL+GLA GFVLLRVESL EEGK+
+Sbjct  1   KAQRRAAVQPQASMEVAQLAGEAGFIFGVSGVMVGITLIGLAFGFVLLRVESLAEEGKV  59
+
+
+> UniRef90_A0A1J7GTM4 Uncharacterized protein n=1 Tax=Lupinus angustifolius 
+TaxID=3871 RepID=A0A1J7GTM4_LUPAN
+Length=417
+
+ Score = 63.3 bits (152),  Expect = 2e-09, Method: Composition-based stats.
+ Identities = 22/63 (35%), Positives = 28/63 (44%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+                     S     K    L+     A  I   A  + G+ LVG+AIGFVLLR+E  VE
+Sbjct  61   NIVSSLKTTSSSYKGKGGGALSSTCNAAGEIFTIASIINGLVLVGVAIGFVLLRIEGFVE  120
+
+Query  96   EGK  98
+            E +
+Sbjct  121  EQE  123
+
+
+> UniRef90_A0A0D2LEJ0 Cytochrome b6-f complex subunit 7, chloroplastic 
+n=1 Tax=Monoraphidium neglectum TaxID=145388 RepID=A0A0D2LEJ0_9CHLO
+Length=99
+
+ Score = 59.4 bits (142),  Expect = 3e-09, Method: Composition-based stats.
+ Identities = 51/100 (51%), Positives = 62/100 (62%), Gaps = 3/100 (3%)
+
+Query  1   MAMSIAARSACCGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRG--VATKAVNELAM  58
+           MA++  + +AC  VAA RS            +P++RTA + A  SR   V      E+AM
+Sbjct  1   MALAQKSAAACSRVAA-RSMGAARPVLPAVSKPAVRTARKAAPASRAATVTKALPMEVAM  59
+
+Query  59  IAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+           +AGE  FI G ALTM  +TLVGLAIGFVLLRVESL EEGK
+Sbjct  60  VAGEGAFIGGVALTMTAITLVGLAIGFVLLRVESLAEEGK  99
+
+
+> UniRef90_A4RWH7 PetM subunit of cytochrome b6f complex (Fragment) 
+n=1 Tax=Ostreococcus lucimarinus (strain CCE9901) TaxID=436017 
+RepID=A4RWH7_OSTLU
+Length=67
+
+ Score = 57.1 bits (136),  Expect = 1e-08, Method: Composition-based stats.
+ Identities = 25/67 (37%), Positives = 34/67 (51%), Gaps = 0/67 (0%)
+
+Query  32  RPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVE  91
+           R +     +       V   ++ E+A IA +   IA  A T   +TL+GLA GFVLLRVE
+Sbjct  1   RSARVAPRKSVRGGAAVTKASMVEVAQIANQGAEIASIATTCFIITLIGLAFGFVLLRVE  60
+
+Query  92  SLVEEGK  98
+             V  G+
+Sbjct  61  DSVVNGE  67
+
+
+> UniRef90_UPI00057A623A PREDICTED: uncharacterized protein LOC105130182 
+n=1 Tax=Populus euphratica TaxID=75702 RepID=UPI00057A623A
+Length=163
+
+ Score = 57.9 bits (138),  Expect = 2e-08, Method: Composition-based stats.
+ Identities = 23/63 (37%), Positives = 31/63 (49%), Gaps = 1/63 (2%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      A S G        L+   G+   I   A  M G+ LVG+A+GFVLLRVE+  E
+Sbjct  102  KVISSLRAASNGKG-GDGGALSSKCGDVGEIFRIAAIMNGLVLVGVAVGFVLLRVEAWYE  160
+
+Query  96   EGK  98
+            E +
+Sbjct  161  ENE  163
+
+
+> UniRef90_A0A0A0K4W4 Uncharacterized protein n=1 Tax=Cucumis sativus 
+TaxID=3659 RepID=A0A0A0K4W4_CUCSA
+Length=201
+
+ Score = 58.3 bits (139),  Expect = 2e-08, Method: Composition-based stats.
+ Identities = 21/63 (33%), Positives = 32/63 (51%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +       PS+G        L+     A  I   A  + G+ L+G+A+GFVLLR+E+ VE
+Sbjct  139  KIVSSLKYPSKGKGKNGGGALSSTCNAAGEIFRIAAIINGLVLIGVAVGFVLLRIEASVE  198
+
+Query  96   EGK  98
+            E +
+Sbjct  199  EAE  201
+
+
+> UniRef90_M1CFK6 Uncharacterized protein n=2 Tax=Solanum tuberosum 
+TaxID=4113 RepID=M1CFK6_SOLTU
+Length=290
+
+ Score = 58.7 bits (140),  Expect = 4e-08, Method: Composition-based stats.
+ Identities = 22/79 (28%), Positives = 36/79 (46%), Gaps = 0/79 (0%)
+
+Query  20   STVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLV  79
+            +   VA+    +      A   ++     +      L+     A  I   A  + G+ LV
+Sbjct  212  ANNHVASLGLPMSTEQAFAKIVSSLKTPSSQANGGALSSTCNAALEIFRIATIIPGLVLV  271
+
+Query  80   GLAIGFVLLRVESLVEEGK  98
+            G+A+GFVLLR+E+ VEE +
+Sbjct  272  GVAVGFVLLRIEATVEESE  290
+
+
+> UniRef90_A0A0E0KJF5 Uncharacterized protein n=1 Tax=Oryza punctata 
+TaxID=4537 RepID=A0A0E0KJF5_ORYPU
+Length=192
+
+ Score = 56.4 bits (134),  Expect = 6e-08, Method: Composition-based stats.
+ Identities = 23/61 (38%), Positives = 29/61 (48%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+            A   A  S                 A  I   A+ M G+ LVG+A+GFVLLRVE+ VEE 
+Sbjct  132  AKVVAKLSPVGGKSRGGAFGAQCNAAGEIFRIAVIMNGLVLVGVAVGFVLLRVEAAVEES  191
+
+Query  98   K  98
+            +
+Sbjct  192  E  192
+
+
+> UniRef90_A0A0D9ZDL7 Uncharacterized protein n=7 Tax=Oryza TaxID=4527 
+RepID=A0A0D9ZDL7_9ORYZ
+Length=238
+
+ Score = 56.4 bits (134),  Expect = 1e-07, Method: Composition-based stats.
+ Identities = 23/61 (38%), Positives = 29/61 (48%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+            A   A  S                 A  I   A+ M G+ LVG+A+GFVLLRVE+ VEE 
+Sbjct  178  AKVVAKLSPAGGKSRGGAFGAQCNAAGEIFRIAVIMNGLVLVGVAVGFVLLRVEAAVEES  237
+
+Query  98   K  98
+            +
+Sbjct  238  E  238
+
+
+> UniRef90_UPI0002B4517D PREDICTED: uncharacterized protein LOC101210164 
+n=1 Tax=Cucumis sativus TaxID=3659 RepID=UPI0002B4517D
+Length=169
+
+ Score = 54.8 bits (130),  Expect = 2e-07, Method: Composition-based stats.
+ Identities = 21/63 (33%), Positives = 32/63 (51%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +       PS+G        L+     A  I   A  + G+ L+G+A+GFVLLR+E+ VE
+Sbjct  107  KIVSSLKYPSKGKGKNGGGALSSTCNAAGEIFRIAAIINGLVLIGVAVGFVLLRIEASVE  166
+
+Query  96   EGK  98
+            E +
+Sbjct  167  EAE  169
+
+
+> UniRef90_D7LDJ9 Putative uncharacterized protein n=1 Tax=Arabidopsis 
+lyrata subsp. lyrata TaxID=81972 RepID=D7LDJ9_ARALL
+Length=190
+
+ Score = 54.8 bits (130),  Expect = 2e-07, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 26/46 (57%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+        I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  143  GGALSTTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIETSVEEAE  188
+
+
+> UniRef90_UPI00051C007E PREDICTED: uncharacterized protein LOC104106393 
+n=2 Tax=Nicotiana tomentosiformis TaxID=4098 RepID=UPI00051C007E
+Length=180
+
+ Score = 54.1 bits (128),  Expect = 5e-07, Method: Composition-based stats.
+ Identities = 19/53 (36%), Positives = 28/53 (53%), Gaps = 0/53 (0%)
+
+Query  46   RGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            +  +      L+     A  I   A  + G+ LVG+A+GFVLLR+E+ VEE  
+Sbjct  128  KTPSQAKGGALSSTCSVAGEIFRIASIIPGLVLVGVAVGFVLLRIEATVEEAD  180
+
+
+> UniRef90_UPI00092F8F3A UPI00092F8F3A related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI00092F8F3A
+Length=127
+
+ Score = 53.3 bits (126),  Expect = 7e-07, Method: Composition-based stats.
+ Identities = 22/65 (34%), Positives = 30/65 (46%), Gaps = 0/65 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +   +  K   S     K     +     A  I   A  + G+ LVG+AIGFVLLR E+ 
+Sbjct  62   AKIVSSLKTTSSSNGKGKRGGAFSSTCNAAGEIFTIASIINGLVLVGVAIGFVLLRFEAF  121
+
+Query  94   VEEGK  98
+            VEE +
+Sbjct  122  VEEQE  126
+
+
+> UniRef90_B9R7K1 Plastoquinol-plastocyanin reductase, putative 
+n=1 Tax=Ricinus communis TaxID=3988 RepID=B9R7K1_RICCO
+Length=128
+
+ Score = 52.5 bits (124),  Expect = 1e-06, Method: Composition-based stats.
+ Identities = 21/48 (44%), Positives = 28/48 (58%), Gaps = 0/48 (0%)
+
+Query  51   KAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            K    L+    +   I   A  M G+ LVG+AIGFVLLR+E+ VEE +
+Sbjct  81   KGGGALSSKCSKIGEIFQIAAIMNGLVLVGVAIGFVLLRIEAFVEESE  128
+
+
+> UniRef90_A0A1J7H7G1 Uncharacterized protein n=1 Tax=Lupinus angustifolius 
+TaxID=3871 RepID=A0A1J7H7G1_LUPAN
+Length=125
+
+ Score = 52.5 bits (124),  Expect = 1e-06, Method: Composition-based stats.
+ Identities = 22/64 (34%), Positives = 29/64 (45%), Gaps = 0/64 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+                     S     K    L+     A  I   A  + G+ LVG+AIGFVLLR+E  VE
+Sbjct  61   NIVSSLKTTSSSYKGKGGGALSSTCNAAGEIFTIASIINGLVLVGVAIGFVLLRIEGFVE  120
+
+Query  96   EGKI  99
+            E ++
+Sbjct  121  EQEV  124
+
+
+> UniRef90_UPI0007873277 UPI0007873277 related cluster n=2 Tax=unknown 
+TaxID= RepID=UPI0007873277
+Length=131
+
+ Score = 52.5 bits (124),  Expect = 1e-06, Method: Composition-based stats.
+ Identities = 23/82 (28%), Positives = 34/82 (41%), Gaps = 0/82 (0%)
+
+Query  17   PRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGM  76
+              ++ V       +              ++    K    L+     A  I   A  M G+
+Sbjct  48   KATNGVVSMGLPLSTENCFAKMVSSVKANKASNGKKGGALSSTCNAAAEIFTIAAIMNGL  107
+
+Query  77   TLVGLAIGFVLLRVESLVEEGK  98
+             LVG+A+GFVLLRVE+ VEE +
+Sbjct  108  VLVGVAVGFVLLRVEAWVEETE  129
+
+
+> UniRef90_A0A1J3GNI9 Cytochrome b6-f complex subunit 7 (Fragment) 
+n=1 Tax=Noccaea caerulescens TaxID=107243 RepID=A0A1J3GNI9_NOCCA
+Length=184
+
+ Score = 52.5 bits (124),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 20/49 (41%), Positives = 27/49 (55%), Gaps = 0/49 (0%)
+
+Query  50   TKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            T     L+        I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  136  TSGGGSLSTTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIEASVEEAE  184
+
+
+> UniRef90_B9MVI6 Uncharacterized protein n=1 Tax=Populus trichocarpa 
+TaxID=3694 RepID=B9MVI6_POPTR
+Length=125
+
+ Score = 51.7 bits (122),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 21/61 (34%), Positives = 29/61 (48%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+                   +          L+   G+A  I   A  M G+ LVG+A+GFVLLRVE+  EE 
+Sbjct  65   VVSSLRAASNGKGGGGGALSSKCGDAGEIFRIAAIMNGLVLVGVAVGFVLLRVEAWYEEN  124
+
+Query  98   K  98
+            +
+Sbjct  125  E  125
+
+
+> UniRef90_Q9XFU3 Putative uncharacterized protein n=1 Tax=Chlamydomonas 
+sp. HS-5 TaxID=108458 RepID=Q9XFU3_9CHLO
+Length=97
+
+ Score = 51.0 bits (120),  Expect = 3e-06, Method: Composition-based stats.
+ Identities = 48/97 (49%), Positives = 63/97 (65%), Gaps = 3/97 (3%)
+
+Query  3   MSIAARSACCGVAAPRS---STVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMI  59
+           M+  A  A  G+ APR+   S+ R   +          A   ++P+RGVAT A  E+A +
+Sbjct  1   MASIAARAATGLTAPRAARVSSARPTLSVNRAALRKAAAAPSSSPARGVATAAGVEIAQV  60
+
+Query  60  AGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEE  96
+           AGEA FIAGTA TM+G+TL+GLA+GFVLLRVE+ VEE
+Sbjct  61  AGEAGFIAGTAFTMIGITLLGLAVGFVLLRVEAAVEE  97
+
+
+> UniRef90_A0A078FEV0 BnaA09g40450D protein n=5 Tax=Brassica TaxID=3705 
+RepID=A0A078FEV0_BRANA
+Length=123
+
+ Score = 51.0 bits (120),  Expect = 3e-06, Method: Composition-based stats.
+ Identities = 20/49 (41%), Positives = 26/49 (53%), Gaps = 0/49 (0%)
+
+Query  50   TKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            T     L         I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  75   TSRGGALTSTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIEASVEEAE  123
+
+
+> UniRef90_A0A0D2V437 Uncharacterized protein n=3 Tax=Gossypium 
+raimondii TaxID=29730 RepID=A0A0D2V437_GOSRA
+Length=126
+
+ Score = 51.0 bits (120),  Expect = 4e-06, Method: Composition-based stats.
+ Identities = 20/43 (47%), Positives = 28/43 (65%), Gaps = 0/43 (0%)
+
+Query  56   LAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            L+    EA  I   A  M G+ LVG+A+GFVLLR+E+ +EE +
+Sbjct  83   LSSTCNEAAEIFKIAAIMNGLVLVGVAVGFVLLRIEAWLEESE  125
+
+
+> UniRef90_A0A0D2RLR3 Uncharacterized protein n=4 Tax=Gossypium 
+raimondii TaxID=29730 RepID=A0A0D2RLR3_GOSRA
+Length=124
+
+ Score = 51.0 bits (120),  Expect = 4e-06, Method: Composition-based stats.
+ Identities = 21/65 (32%), Positives = 30/65 (46%), Gaps = 0/65 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +   +  KA             L+        I   A  M G+ LVG+A+GFVLLR+E+ 
+Sbjct  60   ANVVSSLKAPTKGKTGKSGGGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEAS  119
+
+Query  94   VEEGK  98
+            VEE +
+Sbjct  120  VEEAE  124
+
+
+> UniRef90_A0A0K9P7M7 Cytochrome b6f complex subunit, putative, 
+expressed n=1 Tax=Zostera marina TaxID=29655 RepID=A0A0K9P7M7_ZOSMR
+Length=121
+
+ Score = 50.6 bits (119),  Expect = 5e-06, Method: Composition-based stats.
+ Identities = 20/46 (43%), Positives = 29/46 (63%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+      + I   A  M G+TLVG+A+GFVLL++ES+VEE +
+Sbjct  76   GGALSSTCSAPDEIFKIAAIMNGLTLVGVAVGFVLLKIESIVEETE  121
+
+
+> UniRef90_V4N2S6 Uncharacterized protein n=1 Tax=Eutrema salsugineum 
+TaxID=72664 RepID=V4N2S6_EUTSA
+Length=176
+
+ Score = 50.6 bits (119),  Expect = 7e-06, Method: Composition-based stats.
+ Identities = 19/49 (39%), Positives = 26/49 (53%), Gaps = 0/49 (0%)
+
+Query  50   TKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            T     +         I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  128  TSGGGAITSTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIEASVEEAE  176
+
+
+> UniRef90_A0A061FJG1 Cytochrome b6-f complex subunit 7, putative 
+n=2 Tax=Theobroma cacao TaxID=3641 RepID=A0A061FJG1_THECC
+Length=129
+
+ Score = 49.4 bits (116),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 19/59 (32%), Positives = 31/59 (53%), Gaps = 0/59 (0%)
+
+Query  40   QKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                 + G        L+    +A+ I   A+ M G+ L+G+A+GFVLLR+E+ +EE  
+Sbjct  70   SSLKKAHGEGRTGGGALSSTCNKADEIFNIAVIMNGLVLIGVAVGFVLLRIEASLEESD  128
+
+
+> UniRef90_I3T2X1 Uncharacterized protein n=2 Tax=Lotus japonicus 
+TaxID=34305 RepID=I3T2X1_LOTJA
+Length=132
+
+ Score = 48.7 bits (114),  Expect = 3e-05, Method: Composition-based stats.
+ Identities = 23/63 (37%), Positives = 32/63 (51%), Gaps = 0/63 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +   +  KA  S     K    L+     A  I   A  + G+TLVG+A+GFVLLR+E+ 
+Sbjct  66   AKIVSSVKATSSSTGRGKRGGALSSTCNAAGEIFTIAAIINGLTLVGVAVGFVLLRIEAW  125
+
+Query  94   VEE  96
+             EE
+Sbjct  126  EEE  128
+
+
+> UniRef90_A0A1J3ETE9 Cytochrome b6-f complex subunit 7 n=3 Tax=Noccaea 
+caerulescens TaxID=107243 RepID=A0A1J3ETE9_NOCCA
+Length=124
+
+ Score = 48.3 bits (113),  Expect = 3e-05, Method: Composition-based stats.
+ Identities = 20/49 (41%), Positives = 27/49 (55%), Gaps = 0/49 (0%)
+
+Query  50   TKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            T     L+        I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  76   TSGGGSLSTTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIEASVEEAE  124
+
+
+> UniRef90_A0A0D9VZF0 Uncharacterized protein n=1 Tax=Leersia perrieri 
+TaxID=77586 RepID=A0A0D9VZF0_9ORYZ
+Length=120
+
+ Score = 48.3 bits (113),  Expect = 3e-05, Method: Composition-based stats.
+ Identities = 23/58 (40%), Positives = 31/58 (53%), Gaps = 0/58 (0%)
+
+Query  41   KAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            K +P+                 A  I   A+ M G+TLVG+A+GFVLLRVE+ VEE +
+Sbjct  63   KLSPAGAGGKSRGGAFGATCNAAGEIFRIAVIMNGLTLVGVAVGFVLLRVEAAVEESE  120
+
+
+> UniRef90_A0A151SNN3 Cytochrome b6-f complex subunit 7 n=1 Tax=Cajanus 
+cajan TaxID=3821 RepID=A0A151SNN3_CAJCA
+Length=93
+
+ Score = 47.9 bits (112),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 19/40 (48%), Positives = 25/40 (63%), Gaps = 0/40 (0%)
+
+Query  59  IAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               A  I   A  M G+ LVG+A+GFVLLRVE+ +EE +
+Sbjct  54  TCNAAGEIFQIAAIMNGLVLVGVAVGFVLLRVEASLEEAE  93
+
+
+> UniRef90_UPI0008DC8396 UPI0008DC8396 related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI0008DC8396
+Length=131
+
+ Score = 48.3 bits (113),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 17/65 (26%), Positives = 31/65 (48%), Gaps = 0/65 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +   +  +              L+     A+ I   A+ +  + L+G+A+GFVLLR+E+ 
+Sbjct  66   AKVVSSLRTKSRGKRGGGGGGALSSTCNAADEIFQIAVIINALVLIGVAVGFVLLRIEAF  125
+
+Query  94   VEEGK  98
+            VEE +
+Sbjct  126  VEESE  130
+
+
+> UniRef90_U5D633 Uncharacterized protein n=1 Tax=Amborella trichopoda 
+TaxID=13333 RepID=U5D633_AMBTC
+Length=121
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 23/73 (32%), Positives = 32/73 (44%), Gaps = 0/73 (0%)
+
+Query  26   AARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGF  85
+                +   S          S G +      L+     A  I   A  M G+ LVG+A+GF
+Sbjct  49   GLPKSTDHSFSLFANSMRASMGSSKGKGGALSSTCNAAAEIFKIAAIMNGLVLVGVAVGF  108
+
+Query  86   VLLRVESLVEEGK  98
+            VLLR+E+ VEE +
+Sbjct  109  VLLRIEASVEEAE  121
+
+
+> UniRef90_UPI000579EC5E PREDICTED: uncharacterized protein LOC105060020 
+n=1 Tax=Elaeis guineensis var. tenera TaxID=51953 
+RepID=UPI000579EC5E
+Length=124
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 22/73 (30%), Positives = 30/73 (41%), Gaps = 0/73 (0%)
+
+Query  26   AARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGF  85
+                    S          S          L+    EA  I   A  M G+ L+G+A+GF
+Sbjct  52   GLPACTAQSFAMVVSSLKSSSRGKKGKGGALSSTCNEAAEIFKIAAIMNGLVLIGVAVGF  111
+
+Query  86   VLLRVESLVEEGK  98
+            VLLRVE+ +EE +
+Sbjct  112  VLLRVEAALEEAE  124
+
+
+> UniRef90_UPI0002C2E040 PREDICTED: uncharacterized protein LOC101303081 
+n=2 Tax=Fragaria vesca subsp. vesca TaxID=101020 RepID=UPI0002C2E040
+Length=125
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 20/58 (34%), Positives = 27/58 (47%), Gaps = 0/58 (0%)
+
+Query  40   QKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+                       +    L+        I   A  M G+TLVG+A+GFVLLR+E+ VEE 
+Sbjct  66   SSLRAPSQNQGRGGGALSSTCNAIGEIFKIAAIMNGLTLVGVAVGFVLLRIEAFVEES  123
+
+
+> UniRef90_A0A067L2T5 Uncharacterized protein n=1 Tax=Jatropha 
+curcas TaxID=180498 RepID=A0A067L2T5_JATCU
+Length=125
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 20/46 (43%), Positives = 27/46 (59%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+    +   I   A  M G+ LVG+AIGFVLLR+E+ VEE +
+Sbjct  79   GGALSSKCSKIGEIFQIAAIMNGLVLVGVAIGFVLLRIEAYVEESE  124
+
+
+> UniRef90_A0A0B2P5K1 Cytochrome b6-f complex subunit 7 n=4 Tax=Soja 
+TaxID=1462606 RepID=A0A0B2P5K1_GLYSO
+Length=124
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 22/82 (27%), Positives = 32/82 (39%), Gaps = 0/82 (0%)
+
+Query  17   PRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGM  76
+              S+ V       +              +          L+     A  I   A  + G+
+Sbjct  41   KASNGVVSLGIPMSTEKCFAKVVSSVKAATSNGKGKGGALSSTCNAAGEIFTIAAIINGL  100
+
+Query  77   TLVGLAIGFVLLRVESLVEEGK  98
+             LVG+A+GFVLLRVE+ VEE +
+Sbjct  101  VLVGVAVGFVLLRVEAWVEESE  122
+
+
+> UniRef90_UPI00032A78C4 PREDICTED: uncharacterized protein LOC101488973 
+n=1 Tax=Cicer arietinum TaxID=3827 RepID=UPI00032A78C4
+Length=127
+
+ Score = 47.9 bits (112),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 21/65 (32%), Positives = 32/65 (49%), Gaps = 0/65 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +      K     G  +     ++     A  I   A  + G+TLVG+A+GFVLLR+E+ 
+Sbjct  63   AKVMMSLKYPSKGGRRSGGGGAVSSTCNAAGEIFQIAAIINGLTLVGVAVGFVLLRIEAA  122
+
+Query  94   VEEGK  98
+            VEE +
+Sbjct  123  VEEAE  127
+
+
+> UniRef90_A0A0D2NR38 Uncharacterized protein n=4 Tax=Gossypium 
+raimondii TaxID=29730 RepID=A0A0D2NR38_GOSRA
+Length=124
+
+ Score = 47.5 bits (111),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 18/61 (30%), Positives = 26/61 (43%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+                              L+        I   A  M G+ LVG+A+GFVLLR+E+ +EE 
+Sbjct  64   VVSSLRAPSKGKGSGGGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEASLEEA  123
+
+Query  98   K  98
+            +
+Sbjct  124  E  124
+
+
+> UniRef90_V7AWR2 Uncharacterized protein n=6 Tax=Phaseoleae TaxID=163735 
+RepID=V7AWR2_PHAVU
+Length=129
+
+ Score = 47.1 bits (110),  Expect = 7e-05, Method: Composition-based stats.
+ Identities = 21/63 (33%), Positives = 31/63 (49%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      A +     K    L+     A  I   A  + G+ LVG+A+GFVLLR+E+ VE
+Sbjct  65   KIVSSVKATASNGKGKRGGALSSTCNAAGEIFTIAAIINGLVLVGVAVGFVLLRIEAWVE  124
+
+Query  96   EGK  98
+            E +
+Sbjct  125  ESE  127
+
+
+> UniRef90_UPI00077E6654 UPI00077E6654 related cluster n=2 Tax=unknown 
+TaxID= RepID=UPI00077E6654
+Length=136
+
+ Score = 47.1 bits (110),  Expect = 9e-05, Method: Composition-based stats.
+ Identities = 23/63 (37%), Positives = 35/63 (56%), Gaps = 1/63 (2%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      +PS+G  T +   L+     A  I   A  + G+ LVG+A+GFVLLR+E+ VE
+Sbjct  74   KVVSSLRSPSKGKGT-SGGALSSTCNAAGEIFRIAAIINGLVLVGVAVGFVLLRMEAFVE  132
+
+Query  96   EGK  98
+            E +
+Sbjct  133  ESE  135
+
+
+> UniRef90_A0A103YKJ7 Uncharacterized protein n=1 Tax=Cynara cardunculus 
+var. scolymus TaxID=59895 RepID=A0A103YKJ7_CYNCS
+Length=128
+
+ Score = 46.7 bits (109),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 21/59 (36%), Positives = 28/59 (47%), Gaps = 0/59 (0%)
+
+Query  40   QKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                PS          L         I   A  M G+TLVG+A+GF+LLR+E+ VEE +
+Sbjct  70   SLKKPSSNNRRGGGGALTSTCNAVAEIFRIAAIMNGLTLVGVAVGFILLRIEAFVEEAE  128
+
+
+> UniRef90_O48717 At2g26500 n=6 Tax=Camelineae TaxID=980083 RepID=O48717_ARATH
+Length=125
+
+ Score = 46.7 bits (109),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 26/46 (57%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+        I   A  M  +TLVG+A+GFVLLR+E+ VEE +
+Sbjct  78   GGALSTTCNAVGEIFKIAAIMNALTLVGVAVGFVLLRIETSVEEAE  123
+
+
+> UniRef90_UPI0004A5F1C2 PREDICTED: uncharacterized protein LOC103495201 
+n=1 Tax=Cucumis melo TaxID=3656 RepID=UPI0004A5F1C2
+Length=125
+
+ Score = 46.7 bits (109),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 21/63 (33%), Positives = 32/63 (51%), Gaps = 0/63 (0%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +       PS+G        L+     A  I   A  + G+ L+G+A+GFVLLR+E+ VE
+Sbjct  63   KIVSSLKYPSKGKGKNGGGALSSTCNAAGEIFRIAAIINGLVLIGVAVGFVLLRIEASVE  122
+
+Query  96   EGK  98
+            E +
+Sbjct  123  EAE  125
+
+
+> UniRef90_UPI0009015D76 UPI0009015D76 related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI0009015D76
+Length=127
+
+ Score = 46.7 bits (109),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 23/79 (29%), Positives = 34/79 (43%), Gaps = 0/79 (0%)
+
+Query  20   STVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLV  79
+            +   VAA    V      A   ++            L+        I   A  + G+ LV
+Sbjct  48   AHNHVAALGVPVCADHSFAKIVSSLRPRGKGNGGGALSASCNAIAEIFRIAAIIPGLVLV  107
+
+Query  80   GLAIGFVLLRVESLVEEGK  98
+            G+A+GFVLLRVE+ +EE +
+Sbjct  108  GVAVGFVLLRVEAYLEESE  126
+
+
+> UniRef90_B7FM90 Cytochrome b6f complex subunit (PetM), putative 
+n=1 Tax=Medicago truncatula TaxID=3880 RepID=B7FM90_MEDTR
+Length=127
+
+ Score = 46.7 bits (109),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 20/40 (50%), Positives = 26/40 (65%), Gaps = 0/40 (0%)
+
+Query  59   IAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                A  I   A  M G+TLVG+A+GFVLLR+E+ VEE +
+Sbjct  88   TCNAAGEIFQIAAIMNGLTLVGVAVGFVLLRIEAAVEEAE  127
+
+
+> UniRef90_UPI00053C82A5 PREDICTED: uncharacterized protein LOC104803691 
+n=1 Tax=Tarenaya hassleriana TaxID=28532 RepID=UPI00053C82A5
+Length=122
+
+ Score = 46.3 bits (108),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/45 (42%), Positives = 26/45 (58%), Gaps = 0/45 (0%)
+
+Query  54   NELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+              L+        I   A  M G+ LVG+A+GFVLLR+E+ VEE +
+Sbjct  78   GSLSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEASVEEAE  122
+
+
+> UniRef90_A9PFI7 Cytochrome b6f complex subuni family protein 
+n=3 Tax=Populus TaxID=3689 RepID=A9PFI7_POPTR
+Length=122
+
+ Score = 46.3 bits (108),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/59 (32%), Positives = 27/59 (46%), Gaps = 0/59 (0%)
+
+Query  40   QKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                        +   L+        I   A  M G+ LVG+A+GFVLLR+E+ VEE +
+Sbjct  64   SSLKAPSKGKGGSGGALSSTCSNVGEIFRIAAVMNGLVLVGVAVGFVLLRIEAFVEETE  122
+
+
+> UniRef90_U5G6E5 Uncharacterized protein n=2 Tax=Populus TaxID=3689 
+RepID=U5G6E5_POPTR
+Length=122
+
+ Score = 46.0 bits (107),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 23/60 (38%), Positives = 32/60 (53%), Gaps = 1/60 (2%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +      APS+G    +   L+    +   I   A  M G+ LVG+A+GFVLLRVE+ VE
+Sbjct  61   KVVSSLRAPSKGKGR-SGGALSSTCSDVGEIFRIAAIMNGLVLVGVAVGFVLLRVEAFVE  119
+
+
+> UniRef90_I1ND22 Uncharacterized protein n=3 Tax=Soja TaxID=1462606 
+RepID=I1ND22_SOYBN
+Length=127
+
+ Score = 46.0 bits (107),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 23/65 (35%), Positives = 30/65 (46%), Gaps = 0/65 (0%)
+
+Query  34   SLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESL  93
+            +   +  K   S     +           A  I   A  M G+ LVG+AIGFVLLRVE+ 
+Sbjct  63   AKVVSSLKYPSSSSRKGRGGGAAFSTCNAAGEIFQIAAIMNGLVLVGVAIGFVLLRVEAF  122
+
+Query  94   VEEGK  98
+            VEE +
+Sbjct  123  VEESE  127
+
+
+> UniRef90_A0A0B2SM45 Cytochrome b6-f complex subunit 7 n=2 Tax=Soja 
+TaxID=1462606 RepID=A0A0B2SM45_GLYSO
+Length=124
+
+ Score = 46.0 bits (107),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 21/46 (46%), Positives = 26/46 (57%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                +     A  I   A  M G+ LVG+AIGFVLLRVE+ VEE +
+Sbjct  79   GGAASSTCNAAGEIFQIAAIMNGLVLVGVAIGFVLLRVEAFVEESE  124
+
+
+> UniRef90_A5AN62 Putative uncharacterized protein n=1 Tax=Vitis 
+vinifera TaxID=29760 RepID=A5AN62_VITVI
+Length=126
+
+ Score = 46.0 bits (107),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 26/46 (57%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+        I   A  M G+ LVG+A+GFVLLR+E+ VEE +
+Sbjct  81   GGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEASVEEAE  126
+
+
+> UniRef90_UPI00057AB5AA PREDICTED: uncharacterized protein LOC105034521 
+n=1 Tax=Elaeis guineensis var. tenera TaxID=51953 
+RepID=UPI00057AB5AA
+Length=124
+
+ Score = 46.0 bits (107),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 22/73 (30%), Positives = 31/73 (42%), Gaps = 0/73 (0%)
+
+Query  26   AARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGF  85
+                    S   A      S     +    L+     A  I   A  M G+ L+G+A+GF
+Sbjct  52   GLPACTAQSFAMAVSTLKSSSQGKKRKGGALSSTCSAASEIFKIAAIMNGLVLIGVAVGF  111
+
+Query  86   VLLRVESLVEEGK  98
+            VLLRVE+ +EE +
+Sbjct  112  VLLRVEATLEEEE  124
+
+
+> UniRef90_V7C8D4 Uncharacterized protein n=1 Tax=Phaseolus vulgaris 
+TaxID=3885 RepID=V7C8D4_PHAVU
+Length=122
+
+ Score = 45.6 bits (106),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 18/47 (38%), Positives = 26/47 (55%), Gaps = 0/47 (0%)
+
+Query  52   AVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                 +     A  I   A  + G+ LVG+A+GFVLLR+E+ VEE +
+Sbjct  76   RGGAASSTCNAAGEIFQIAGILSGLVLVGVAVGFVLLRIEAYVEETE  122
+
+
+> UniRef90_A0A175YDA2 Uncharacterized protein n=1 Tax=Daucus carota 
+subsp. sativus TaxID=79200 RepID=A0A175YDA2_DAUCA
+Length=123
+
+ Score = 45.6 bits (106),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 25/46 (54%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L         I   A  + G+TLVG+ IGFVLLR+E+ VEE +
+Sbjct  78   GGALTSTCNAVAEIFRIAAVINGLTLVGVVIGFVLLRIEAAVEEAE  123
+
+
+> UniRef90_UPI0002C309DD PREDICTED: uncharacterized protein LOC101314888 
+n=1 Tax=Fragaria vesca subsp. vesca TaxID=101020 RepID=UPI0002C309DD
+Length=125
+
+ Score = 45.6 bits (106),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 21/62 (34%), Positives = 30/62 (48%), Gaps = 1/62 (2%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVE  95
+            +       PS+     +   L+        I   A  M  +TLVG+A+GFVLLR+E+ VE
+Sbjct  63   KIVSSLRTPSQNKGR-SGGALSSTCNAIGEIFKIAAIMNALTLVGVAVGFVLLRIEASVE  121
+
+Query  96   EG  97
+            E 
+Sbjct  122  EA  123
+
+
+> UniRef90_A9TM48 Predicted protein n=1 Tax=Physcomitrella patens 
+subsp. patens TaxID=3218 RepID=A9TM48_PHYPA
+Length=90
+
+ Score = 45.2 bits (105),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 23/48 (48%), Positives = 27/48 (56%), Gaps = 0/48 (0%)
+
+Query  51  KAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+                LA     A  I      M G+TLVG+AIGFVLLRVE+ VEE +
+Sbjct  43  SRGGALAANCDVASEIFRIVPIMSGLTLVGIAIGFVLLRVEAAVEESE  90
+
+
+> UniRef90_UPI00052EF765 PREDICTED: uncharacterized protein LOC104595834 
+n=1 Tax=Nelumbo nucifera TaxID=4432 RepID=UPI00052EF765
+Length=126
+
+ Score = 45.6 bits (106),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 19/44 (43%), Positives = 27/44 (61%), Gaps = 0/44 (0%)
+
+Query  55   ELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+             L+     A  I   A  M G+ LVG+A+GFVLLR+E+ +EE +
+Sbjct  83   ALSSTCNAAAEIFKIAAIMNGLVLVGVAVGFVLLRIEASLEEAE  126
+
+
+> UniRef90_UPI00052EB7EF PREDICTED: uncharacterized protein LOC104601975 
+n=1 Tax=Nelumbo nucifera TaxID=4432 RepID=UPI00052EB7EF
+Length=128
+
+ Score = 45.6 bits (106),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 27/46 (59%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L+     A  I   A  M G+ LVG+A+GFVLLR+E+ +EE +
+Sbjct  83   GGALSSTCNAAAEIFRIAAVMNGLVLVGVAVGFVLLRIEASLEEAE  128
+
+
+> UniRef90_A0A061DYR7 Cytochrome P450 82C4, putative isoform 1 
+n=1 Tax=Theobroma cacao TaxID=3641 RepID=A0A061DYR7_THECC
+Length=599
+
+ Score = 47.9 bits (112),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 19/59 (32%), Positives = 28/59 (47%), Gaps = 6/59 (10%)
+
+Query  36   RTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLL---RVE  91
+            +      APS+G   K    L+        I   A  M G+ LVG+A+G+++L   RVE
+Sbjct  62   KVVSSLRAPSKG---KGGGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGYLMLICMRVE  117
+
+
+> UniRef90_W9R158 Cytochrome b6-f complex subunit 7 n=1 Tax=Morus 
+notabilis TaxID=981085 RepID=W9R158_9ROSA
+Length=121
+
+ Score = 44.8 bits (104),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 22/52 (42%), Positives = 29/52 (56%), Gaps = 0/52 (0%)
+
+Query  47   GVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               T     L+     AE I   A  M G+ LVG+A+GFVLLR+E+ VEE +
+Sbjct  69   TAKTGGGGALSSSCNAAEEIFRIAAIMNGLVLVGVAVGFVLLRIEAFVEESE  120
+
+
+> UniRef90_A0A1D1XUQ2 Cytochrome b6-f complex subunit 7 n=1 Tax=Anthurium 
+amnicola TaxID=1678845 RepID=A0A1D1XUQ2_9ARAE
+Length=120
+
+ Score = 44.8 bits (104),  Expect = 6e-04, Method: Composition-based stats.
+ Identities = 29/87 (33%), Positives = 38/87 (44%), Gaps = 0/87 (0%)
+
+Query  12   CGVAAPRSSTVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTAL  71
+             G+ A   S   +     A R   R A    A SRG        L+        I   A 
+Sbjct  33   VGLKAAHKSIASLGLPESADRSFSRVARSLRAASRGRGRGGGGALSSTCSAGAEIFKIAA  92
+
+Query  72   TMVGMTLVGLAIGFVLLRVESLVEEGK  98
+             M G+ LVG+A+GFV+LRVE+ +EE  
+Sbjct  93   IMNGLVLVGVAVGFVILRVEAWLEESD  119
+
+
+> UniRef90_A0A166GGY9 Uncharacterized protein n=1 Tax=Daucus carota 
+subsp. sativus TaxID=79200 RepID=A0A166GGY9_DAUCA
+Length=125
+
+ Score = 44.8 bits (104),  Expect = 6e-04, Method: Composition-based stats.
+ Identities = 19/46 (41%), Positives = 26/46 (57%), Gaps = 0/46 (0%)
+
+Query  53   VNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+               L         I   A  + G+TLVG+A+GFVLLR+E+ VEE +
+Sbjct  80   GGALTSTCNAVAEIFRIAAVINGLTLVGVAVGFVLLRIEAAVEEAE  125
+
+
+> UniRef90_UPI000581376D PREDICTED: uncharacterized protein LOC105169591 
+n=1 Tax=Sesamum indicum TaxID=4182 RepID=UPI000581376D
+Length=118
+
+ Score = 44.8 bits (104),  Expect = 6e-04, Method: Composition-based stats.
+ Identities = 22/77 (29%), Positives = 34/77 (44%), Gaps = 0/77 (0%)
+
+Query  20   STVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLV  79
+            +   VA+    V      A   ++  +    +    L         I   A  M G+ LV
+Sbjct  41   AHNNVASLGLPVCTEQSFAKIVSSLKKPSQDRRGGALTSTCNAVAEIFRIAAIMPGLVLV  100
+
+Query  80   GLAIGFVLLRVESLVEE  96
+            G+A+GFVLLR+E+ +EE
+Sbjct  101  GVAVGFVLLRLEATLEE  117
+
+
+> UniRef90_K4B3B8 Uncharacterized protein n=4 Tax=Lycopersicon 
+TaxID=49274 RepID=K4B3B8_SOLLC
+Length=120
+
+ Score = 44.4 bits (103),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 22/79 (28%), Positives = 36/79 (46%), Gaps = 0/79 (0%)
+
+Query  20   STVRVAAARPAVRPSLRTAGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLV  79
+            +   VA+    +      A   ++     +      L+     A  I   A  + G+ LV
+Sbjct  42   ANNHVASLGLPMSTEQSFAKIVSSLKTPSSQAKGGALSSTCNAALEIFRIASIIPGLVLV  101
+
+Query  80   GLAIGFVLLRVESLVEEGK  98
+            G+A+GFVLLR+E+ VEE +
+Sbjct  102  GVAVGFVLLRIETAVEESE  120
+
+
+> UniRef90_A0A061DXT9 Cytochrome P450 82C4, putative isoform 2 
+n=1 Tax=Theobroma cacao TaxID=3641 RepID=A0A061DXT9_THECC
+Length=121
+
+ Score = 44.4 bits (103),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 20/61 (33%), Positives = 29/61 (48%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+            A   ++       K    L+        I   A  M G+ LVG+A+GFVLLR+E+ +EE 
+Sbjct  61   AKVVSSLRAPSKGKGGGALSSTCNAVGEIFRIAAIMNGLVLVGVAVGFVLLRIEASLEEA  120
+
+Query  98   K  98
+             
+Sbjct  121  D  121
+
+
+> UniRef90_J3LT57 Uncharacterized protein n=2 Tax=Oryza TaxID=4527 
+RepID=J3LT57_ORYBR
+Length=117
+
+ Score = 44.4 bits (103),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 23/61 (38%), Positives = 29/61 (48%), Gaps = 0/61 (0%)
+
+Query  38   AGQKAAPSRGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEG  97
+            A   A  S                 A  I   A+ M G+ LVG+A+GFVLLRVE+ VEE 
+Sbjct  57   ARVVAKLSPAGGKSRGGSFGAQCNAAGEIFRIAVIMNGLVLVGVAVGFVLLRVEAAVEES  116
+
+Query  98   K  98
+            +
+Sbjct  117  E  117
+
+
+> UniRef90_A0A1J6ISE9 Uncharacterized protein n=2 Tax=Nicotiana 
+TaxID=4085 RepID=A0A1J6ISE9_NICAT
+Length=121
+
+ Score = 44.4 bits (103),  Expect = 8e-04, Method: Composition-based stats.
+ Identities = 19/53 (36%), Positives = 28/53 (53%), Gaps = 0/53 (0%)
+
+Query  46   RGVATKAVNELAMIAGEAEFIAGTALTMVGMTLVGLAIGFVLLRVESLVEEGK  98
+            +  +      L+     A  I   A  + G+ LVG+A+GFVLLR+E+ VEE  
+Sbjct  69   KTPSQAKGGALSSTCSVAGEIFKIASIIPGLVLVGVAVGFVLLRIEATVEEAD  121
+
+
+
+Lambda      K        H        a         alpha
+   0.309    0.122    0.274    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0374    0.140     1.90     42.6     43.6 
+
+Effective search space used: 442907308895
+
+
+  Database: uniref90
+    Posted date:  Feb 27, 2017  10:12 AM
+  Number of letters in database: 17,866,164,385
+  Number of sequences in database:  52,629,880
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

@@ -1,0 +1,1271 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: uniref90
+           52,629,880 sequences; 17,866,164,385 total letters
+
+Results from round 1
+
+
+Query= P60460|1rh5C
+
+Length=53
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Met...  107     8e-29
+  UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococ...  100     2e-26
+  UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococ...  94.4    8e-24
+  UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococ...  90.5    3e-22
+  UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methan...  78.6    1e-17
+  UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus m...  73.2    1e-15
+  UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Met...  73.2    2e-15
+  UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 ...  70.9    1e-14
+  UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus v...  63.2    1e-11
+  UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Met...  62.8    2e-11
+  UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus v...  58.9    5e-10
+
+
+> UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Methanocaldococcus 
+TaxID=196118 RepID=SECG_METJA
+Length=53
+
+ Score = 107 bits (266),  Expect = 8e-29, Method: Compositional matrix adjust.
+ Identities = 53/53 (100%), Positives = 53/53 (100%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+
+
+> UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+vulcanius (strain ATCC 700851 / DSM 12094 / M7) TaxID=579137 
+RepID=C9REH9_METVM
+Length=53
+
+ Score = 100 bits (250),  Expect = 2e-26, Method: Compositional matrix adjust.
+ Identities = 47/53 (89%), Positives = 51/53 (96%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSK++VKPEHVIG+T AF+IIEAILTYGRF 
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKVKVKPEHVIGITTAFIIIEAILTYGRFF  53
+
+
+> UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+villosus KIN24-T80 TaxID=1069083 RepID=N6VQ51_9EURY
+Length=53
+
+ Score = 94.4 bits (233),  Expect = 8e-24, Method: Compositional matrix adjust.
+ Identities = 44/53 (83%), Positives = 49/53 (92%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREE GLATSAGL+RYMDE+ SKI+VKPEHVIG+TVAF+IIE ILTYGR L
+Sbjct  1   MSKREERGLATSAGLVRYMDESLSKIKVKPEHVIGLTVAFIIIETILTYGRLL  53
+
+
+> UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+infernus (strain DSM 11812 / JCM 15783 / ME) TaxID=573063 
+RepID=D5VS04_METIM
+Length=53
+
+ Score = 90.5 bits (223),  Expect = 3e-22, Method: Compositional matrix adjust.
+ Identities = 42/53 (79%), Positives = 47/53 (89%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MS+REE GLATSAGLIRYMDE+ SKIRVKPEHVIGVTV  +++E ILTYGRF 
+Sbjct  1   MSRREERGLATSAGLIRYMDESLSKIRVKPEHVIGVTVGIIVLEVILTYGRFF  53
+
+
+> UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methanotorris 
+TaxID=196119 RepID=F6BAC2_METIK
+Length=53
+
+ Score = 78.6 bits (192),  Expect = 1e-17, Method: Compositional matrix adjust.
+ Identities = 36/53 (68%), Positives = 45/53 (85%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKRE+ GLATSAGL+RYMDE+ SKIR++PE VIG+T+  ++ E ILTYG FL
+Sbjct  1   MSKREDRGLATSAGLVRYMDESLSKIRIEPEKVIGITLFIIVAEIILTYGVFL  53
+
+
+> UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus 
+maripaludis TaxID=39152 RepID=Q6LXC4_METMP
+Length=53
+
+ Score = 73.2 bits (178),  Expect = 1e-15, Method: Compositional matrix adjust.
+ Identities = 30/50 (60%), Positives = 42/50 (84%), Gaps = 0/50 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYG  50
+           M+K ++ GL+TSAGL+RYMDE  SKI++ PE V+G+TV+ +IIEA+L YG
+Sbjct  1   MAKNQDAGLSTSAGLVRYMDEDVSKIKIAPEKVLGLTVSIIIIEAVLNYG  50
+
+
+> UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Methanothermococcus 
+okinawensis (strain DSM 14208 / JCM 11175 
+/ IH1) TaxID=647113 RepID=F8AM84_METOI
+Length=54
+
+ Score = 73.2 bits (178),  Expect = 2e-15, Method: Compositional matrix adjust.
+ Identities = 31/51 (61%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K E+ GL+TSAGL+RYMDE  SKI++ PE V+G+TVA +++EAIL YG F+
+Sbjct  4   KNEDVGLSTSAGLVRYMDEDISKIKIAPEKVLGITVAIMVLEAILNYGIFI  54
+
+
+> UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 
+Tax=Methanothermococcus thermolithotrophicus TaxID=2186 RepID=UPI000367F8E8
+Length=55
+
+ Score = 70.9 bits (172),  Expect = 1e-14, Method: Compositional matrix adjust.
+ Identities = 29/51 (57%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K ++ GL+TSAGL+RYMD+  SKI+++PE VIG+T A +++EAIL YG F+
+Sbjct  5   KNDDAGLSTSAGLVRYMDQDVSKIKIEPEKVIGITFAIIVLEAILNYGIFI  55
+
+
+> UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus 
+voltae (strain ATCC BAA-1334 / A3) TaxID=456320 RepID=D7DUB4_METV3
+Length=54
+
+ Score = 63.2 bits (152),  Expect = 1e-11, Method: Compositional matrix adjust.
+ Identities = 26/47 (55%), Positives = 37/47 (79%), Gaps = 0/47 (0%)
+
+Query  4   REETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYG  50
+           + + GL+TSAGL+RYMD   SKI+V+PE V+G+T A ++ EA+L YG
+Sbjct  5   KNDEGLSTSAGLVRYMDTDISKIKVEPEKVLGITFAIIVAEALLNYG  51
+
+
+> UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Methanococcus 
+aeolicus (strain ATCC BAA-1280 / DSM 17508 / OCM 
+812 / Nankai-3) TaxID=419665 RepID=SECG_META3
+Length=54
+
+ Score = 62.8 bits (151),  Expect = 2e-11, Method: Compositional matrix adjust.
+ Identities = 27/51 (53%), Positives = 41/51 (80%), Gaps = 1/51 (2%)
+
+Query  1   MSK-REETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYG  50
+           MSK +++ GL+TSAGL+RYMDE  SKI++ PE V+G+T++ +++  IL YG
+Sbjct  1   MSKNKQDAGLSTSAGLVRYMDEDASKIKIAPEKVLGITISIMVLLFILNYG  51
+
+
+> UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus 
+vannielii (strain ATCC 35089 / DSM 1224 / JCM 13029 / OCM 148 
+/ SB) TaxID=406327 RepID=A6UQ73_METVS
+Length=53
+
+ Score = 58.9 bits (141),  Expect = 5e-10, Method: Compositional matrix adjust.
+ Identities = 33/53 (62%), Positives = 42/53 (79%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           M+K  + GL+TSAGL+RYMDE  SKI+V PE VIG+TV+ +IIEA+L YG  L
+Sbjct  1   MAKNSDAGLSTSAGLVRYMDEDVSKIKVAPEKVIGITVSIIIIEAVLNYGILL  53
+
+
+
+Lambda      K        H        a         alpha
+   0.325    0.140    0.381    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 445440262635
+Results from round 2
+
+
+Query= P60460|1rh5C
+
+Length=53
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococ...  84.2    9e-20
+  UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Met...  83.8    1e-19
+  UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococ...  82.7    3e-19
+  UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococ...  81.5    9e-19
+  UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 ...  80.8    2e-18
+  UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus m...  79.6    4e-18
+  UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Met...  78.5    1e-17
+  UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methan...  78.5    1e-17
+  UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus v...  74.6    4e-16
+  UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Met...  73.4    1e-15
+  UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus v...  69.2    6e-14
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_A0A0Q4BBY6 Preprotein translocase subunit SecG n=1 Tax...  42.2    9e-04
+  UniRef90_A0A166F4G5 Preprotein translocase subunit SecG n=1 Tax...  42.2    0.001
+
+
+> UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+vulcanius (strain ATCC 700851 / DSM 12094 / M7) TaxID=579137 
+RepID=C9REH9_METVM
+Length=53
+
+ Score = 84.2 bits (207),  Expect = 9e-20, Method: Composition-based stats.
+ Identities = 47/53 (89%), Positives = 51/53 (96%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSK++VKPEHVIG+T AF+IIEAILTYGRF 
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKVKVKPEHVIGITTAFIIIEAILTYGRFF  53
+
+
+> UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Methanocaldococcus 
+TaxID=196118 RepID=SECG_METJA
+Length=53
+
+ Score = 83.8 bits (206),  Expect = 1e-19, Method: Composition-based stats.
+ Identities = 53/53 (100%), Positives = 53/53 (100%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+
+
+> UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+infernus (strain DSM 11812 / JCM 15783 / ME) TaxID=573063 
+RepID=D5VS04_METIM
+Length=53
+
+ Score = 82.7 bits (203),  Expect = 3e-19, Method: Composition-based stats.
+ Identities = 42/53 (79%), Positives = 47/53 (89%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MS+REE GLATSAGLIRYMDE+ SKIRVKPEHVIGVTV  +++E ILTYGRF 
+Sbjct  1   MSRREERGLATSAGLIRYMDESLSKIRVKPEHVIGVTVGIIVLEVILTYGRFF  53
+
+
+> UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+villosus KIN24-T80 TaxID=1069083 RepID=N6VQ51_9EURY
+Length=53
+
+ Score = 81.5 bits (200),  Expect = 9e-19, Method: Composition-based stats.
+ Identities = 44/53 (83%), Positives = 49/53 (92%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREE GLATSAGL+RYMDE+ SKI+VKPEHVIG+TVAF+IIE ILTYGR L
+Sbjct  1   MSKREERGLATSAGLVRYMDESLSKIKVKPEHVIGLTVAFIIIETILTYGRLL  53
+
+
+> UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 
+Tax=Methanothermococcus thermolithotrophicus TaxID=2186 RepID=UPI000367F8E8
+Length=55
+
+ Score = 80.8 bits (198),  Expect = 2e-18, Method: Composition-based stats.
+ Identities = 29/51 (57%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K ++ GL+TSAGL+RYMD+  SKI+++PE VIG+T A +++EAIL YG F+
+Sbjct  5   KNDDAGLSTSAGLVRYMDQDVSKIKIEPEKVIGITFAIIVLEAILNYGIFI  55
+
+
+> UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus 
+maripaludis TaxID=39152 RepID=Q6LXC4_METMP
+Length=53
+
+ Score = 79.6 bits (195),  Expect = 4e-18, Method: Composition-based stats.
+ Identities = 30/53 (57%), Positives = 43/53 (81%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           M+K ++ GL+TSAGL+RYMDE  SKI++ PE V+G+TV+ +IIEA+L YG  +
+Sbjct  1   MAKNQDAGLSTSAGLVRYMDEDVSKIKIAPEKVLGLTVSIIIIEAVLNYGILI  53
+
+
+> UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Methanothermococcus 
+okinawensis (strain DSM 14208 / JCM 11175 
+/ IH1) TaxID=647113 RepID=F8AM84_METOI
+Length=54
+
+ Score = 78.5 bits (192),  Expect = 1e-17, Method: Composition-based stats.
+ Identities = 31/51 (61%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K E+ GL+TSAGL+RYMDE  SKI++ PE V+G+TVA +++EAIL YG F+
+Sbjct  4   KNEDVGLSTSAGLVRYMDEDISKIKIAPEKVLGITVAIMVLEAILNYGIFI  54
+
+
+> UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methanotorris 
+TaxID=196119 RepID=F6BAC2_METIK
+Length=53
+
+ Score = 78.5 bits (192),  Expect = 1e-17, Method: Composition-based stats.
+ Identities = 36/53 (68%), Positives = 45/53 (85%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKRE+ GLATSAGL+RYMDE+ SKIR++PE VIG+T+  ++ E ILTYG FL
+Sbjct  1   MSKREDRGLATSAGLVRYMDESLSKIRIEPEKVIGITLFIIVAEIILTYGVFL  53
+
+
+> UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus 
+voltae (strain ATCC BAA-1334 / A3) TaxID=456320 RepID=D7DUB4_METV3
+Length=54
+
+ Score = 74.6 bits (182),  Expect = 4e-16, Method: Composition-based stats.
+ Identities = 26/50 (52%), Positives = 38/50 (76%), Gaps = 0/50 (0%)
+
+Query  4   REETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           + + GL+TSAGL+RYMD   SKI+V+PE V+G+T A ++ EA+L YG  +
+Sbjct  5   KNDEGLSTSAGLVRYMDTDISKIKVEPEKVLGITFAIIVAEALLNYGFLI  54
+
+
+> UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Methanococcus 
+aeolicus (strain ATCC BAA-1280 / DSM 17508 / OCM 
+812 / Nankai-3) TaxID=419665 RepID=SECG_META3
+Length=54
+
+ Score = 73.4 bits (179),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 27/53 (51%), Positives = 40/53 (75%), Gaps = 1/53 (2%)
+
+Query  1   MSKR-EETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRF  52
+           MSK  ++ GL+TSAGL+RYMDE  SKI++ PE V+G+T++ +++  IL YG  
+Sbjct  1   MSKNKQDAGLSTSAGLVRYMDEDASKIKIAPEKVLGITISIMVLLFILNYGLL  53
+
+
+> UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus 
+vannielii (strain ATCC 35089 / DSM 1224 / JCM 13029 / OCM 148 
+/ SB) TaxID=406327 RepID=A6UQ73_METVS
+Length=53
+
+ Score = 69.2 bits (168),  Expect = 6e-14, Method: Composition-based stats.
+ Identities = 33/53 (62%), Positives = 42/53 (79%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           M+K  + GL+TSAGL+RYMDE  SKI+V PE VIG+TV+ +IIEA+L YG  L
+Sbjct  1   MAKNSDAGLSTSAGLVRYMDEDVSKIKVAPEKVIGITVSIIIIEAVLNYGILL  53
+
+
+> UniRef90_A0A0Q4BBY6 Preprotein translocase subunit SecG n=1 Tax=Methanomassiliicoccales 
+archaeon RumEn M2 TaxID=1713725 RepID=A0A0Q4BBY6_9EURY
+Length=54
+
+ Score = 42.2 bits (98),  Expect = 9e-04, Method: Composition-based stats.
+ Identities = 18/48 (38%), Positives = 29/48 (60%), Gaps = 1/48 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKI-RVKPEHVIGVTVAFVIIEAIL  47
+           M+K+++ G  + AGL+RY D    K  +V P+ VIG+ +   I+  IL
+Sbjct  1   MAKKKDGGFQSQAGLVRYFDTKNDKAPKVSPKAVIGIALGMCIVILIL  48
+
+
+> UniRef90_A0A166F4G5 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+filiformis TaxID=55758 RepID=A0A166F4G5_9EURY
+Length=57
+
+ Score = 42.2 bits (98),  Expect = 0.001, Method: Composition-based stats.
+ Identities = 19/51 (37%), Positives = 31/51 (61%), Gaps = 1/51 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYG  50
+           M K+++  L +S AGL+RY DE  +  ++ PEHV+ +TV   +   IL + 
+Sbjct  1   MGKKDKISLPSSGAGLVRYFDEESNGPKLSPEHVVAITVILGVFCLILRFA  51
+
+
+
+Lambda      K        H        a         alpha
+   0.314    0.145    0.386    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0443    0.140     1.90     42.6     43.6 
+
+Effective search space used: 445440262635
+Results from round 3
+
+
+Query= P60460|1rh5C
+
+Length=53
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococ...  78.4    2e-17
+  UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Met...  78.0    2e-17
+  UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococ...  77.2    4e-17
+  UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococ...  76.9    6e-17
+  UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 ...  74.5    4e-16
+  UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus m...  74.2    5e-16
+  UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methan...  73.4    1e-15
+  UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Met...  73.0    2e-15
+  UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus v...  70.7    1e-14
+  UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Met...  68.4    1e-13
+  UniRef90_A0A166F4G5 Preprotein translocase subunit SecG n=1 Tax...  65.7    1e-12
+  UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus v...  64.9    2e-12
+  UniRef90_A0A0Q4BBY6 Preprotein translocase subunit SecG n=1 Tax...  60.3    1e-10
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_UPI0005B2A080 preprotein translocase subunit SecG n=1 ...  55.3    1e-08
+  UniRef90_R7PV24 Preprotein translocase subunit SecG n=6 Tax=roo...  53.0    8e-08
+  UniRef90_A0A166CLN7 Preprotein translocase subunit SecG n=2 Tax...  53.0    1e-07
+  UniRef90_A0A0U3CJH5 Preprotein translocase subunit SecG n=3 Tax...  52.2    2e-07
+  UniRef90_D3DZD6 Preprotein translocase subunit SecG n=1 Tax=Met...  51.4    3e-07
+  UniRef90_A0A125RAD7 Preprotein translocase subunit SecG n=1 Tax...  50.3    8e-07
+  UniRef90_A0A1D2WM50 Preprotein translocase subunit SecG n=1 Tax...  49.5    2e-06
+  UniRef90_P60461 Preprotein translocase subunit SecG n=4 Tax=Met...  48.7    3e-06
+  UniRef90_A0A090I3T6 Preprotein translocase subunit SecG n=5 Tax...  48.4    4e-06
+  UniRef90_A0A0X8V014 Preprotein translocase subunit SecG n=1 Tax...  48.0    6e-06
+  UniRef90_F0T7R4 Preprotein translocase subunit SecG n=2 Tax=Met...  47.6    1e-05
+  UniRef90_R9SHZ3 Preprotein translocase subunit SecG n=1 Tax=Met...  47.2    1e-05
+  UniRef90_UPI0005B2C248 preprotein translocase subunit SecG n=1 ...  47.2    1e-05
+  UniRef90_A0A126QY33 Preprotein translocase subunit SecG n=1 Tax...  46.8    2e-05
+  UniRef90_A0A151EFZ4 Preprotein translocase subunit SecG n=1 Tax...  46.4    3e-05
+  UniRef90_F4C0R2 Preprotein translocase subunit SecG n=3 Tax=roo...  46.0    4e-05
+  UniRef90_A0A166CRF8 Preprotein translocase subunit SecG n=1 Tax...  45.7    4e-05
+  UniRef90_A0A1F9YQI9 Preprotein translocase subunit SecG n=1 Tax...  46.0    4e-05
+  UniRef90_F6D7R7 Preprotein translocase subunit SecG n=2 Tax=Met...  45.7    4e-05
+  UniRef90_A0A1D2W8E0 Preprotein translocase subunit SecG n=2 Tax...  45.7    5e-05
+  UniRef90_A0A0A7LEE8 Preprotein translocase subunit SecG n=1 Tax...  45.3    7e-05
+  UniRef90_A0A151EVH9 Preprotein translocase subunit SecG n=1 Tax...  45.3    7e-05
+  UniRef90_A0A166STF2 Preprotein translocase subunit SecG n=1 Tax...  45.3    8e-05
+  UniRef90_Q5JDK7 Preprotein translocase subunit SecG n=2 Tax=The...  44.9    8e-05
+  UniRef90_W8NWF6 Preprotein translocase subunit SecG n=2 Tax=The...  44.5    1e-04
+  UniRef90_X1L8I4 Uncharacterized protein (Fragment) n=1 Tax=mari...  44.1    1e-04
+  UniRef90_A0A151EA90 Preprotein translocase subunit SecG n=1 Tax...  44.1    2e-04
+  UniRef90_M4YUL6 Preprotein translocase subunit SecG n=1 Tax=The...  44.1    2e-04
+  UniRef90_I3ZT94 Preprotein translocase subunit SecG n=2 Tax=The...  44.1    2e-04
+  UniRef90_UPI000678294D preprotein translocase subunit SecG n=1 ...  44.1    2e-04
+  UniRef90_UPI000299F082 preprotein translocase subunit SecG n=1 ...  44.1    2e-04
+  UniRef90_C7NX85 Preprotein translocase subunit SecG n=2 Tax=Hal...  44.1    2e-04
+  UniRef90_V4YFP9 Preprotein translocase subunit SecG n=3 Tax=Arc...  43.7    2e-04
+  UniRef90_M0D273 Preprotein translocase subunit SecG n=1 Tax=Hal...  43.7    2e-04
+  UniRef90_B6YW71 Preprotein translocase subunit SecG n=4 Tax=The...  43.7    2e-04
+  UniRef90_UPI000679288A preprotein translocase subunit SecG n=1 ...  43.7    3e-04
+  UniRef90_E3GYJ2 Preprotein translocase subunit SecG n=1 Tax=Met...  43.3    3e-04
+  UniRef90_C5A4H9 Preprotein translocase subunit SecG n=3 Tax=The...  43.3    4e-04
+  UniRef90_H3ZQK6 Preprotein translocase subunit SecG n=5 Tax=The...  43.0    5e-04
+  UniRef90_F8D8W8 Preprotein translocase subunit SecG n=2 Tax=Nat...  43.0    5e-04
+  UniRef90_D2RR07 Preprotein translocase subunit SecG n=3 Tax=Nat...  43.0    5e-04
+  UniRef90_M0N2Y3 Preprotein translocase subunit SecG n=3 Tax=Hal...  43.0    5e-04
+  UniRef90_A0A0A7GC81 Preprotein translocase subunit SecG n=1 Tax...  43.0    5e-04
+  UniRef90_UPI00064FB464 preprotein translocase subunit SecG n=1 ...  42.6    6e-04
+  UniRef90_T1BZG1 Preprotein translocase subunit SecG n=1 Tax=min...  42.6    6e-04
+  UniRef90_A0A0F7DBE7 Preprotein translocase subunit SecG n=1 Tax...  42.6    7e-04
+  UniRef90_U1R2L8 Preprotein translocase subunit SecG n=1 Tax=hal...  42.2    7e-04
+  UniRef90_X1L488 Uncharacterized protein (Fragment) n=1 Tax=mari...  42.2    8e-04
+  UniRef90_J1APX4 Preprotein translocase subunit SecG n=2 Tax=Met...  42.2    0.001
+  UniRef90_M0M3A1 Preprotein translocase subunit SecG n=1 Tax=Hal...  42.2    0.001
+  UniRef90_D2RH87 Preprotein translocase subunit SecG n=1 Tax=Arc...  42.2    0.001
+
+
+> UniRef90_C9REH9 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+vulcanius (strain ATCC 700851 / DSM 12094 / M7) TaxID=579137 
+RepID=C9REH9_METVM
+Length=53
+
+ Score = 78.4 bits (192),  Expect = 2e-17, Method: Composition-based stats.
+ Identities = 47/53 (89%), Positives = 51/53 (96%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSK++VKPEHVIG+T AF+IIEAILTYGRF 
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKVKVKPEHVIGITTAFIIIEAILTYGRFF  53
+
+
+> UniRef90_P60460 Preprotein translocase subunit SecG n=4 Tax=Methanocaldococcus 
+TaxID=196118 RepID=SECG_METJA
+Length=53
+
+ Score = 78.0 bits (191),  Expect = 2e-17, Method: Composition-based stats.
+ Identities = 53/53 (100%), Positives = 53/53 (100%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL
+Sbjct  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+
+
+> UniRef90_D5VS04 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+infernus (strain DSM 11812 / JCM 15783 / ME) TaxID=573063 
+RepID=D5VS04_METIM
+Length=53
+
+ Score = 77.2 bits (189),  Expect = 4e-17, Method: Composition-based stats.
+ Identities = 42/53 (79%), Positives = 47/53 (89%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MS+REE GLATSAGLIRYMDE+ SKIRVKPEHVIGVTV  +++E ILTYGRF 
+Sbjct  1   MSRREERGLATSAGLIRYMDESLSKIRVKPEHVIGVTVGIIVLEVILTYGRFF  53
+
+
+> UniRef90_N6VQ51 Uncharacterized protein n=1 Tax=Methanocaldococcus 
+villosus KIN24-T80 TaxID=1069083 RepID=N6VQ51_9EURY
+Length=53
+
+ Score = 76.9 bits (188),  Expect = 6e-17, Method: Composition-based stats.
+ Identities = 44/53 (83%), Positives = 49/53 (92%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKREE GLATSAGL+RYMDE+ SKI+VKPEHVIG+TVAF+IIE ILTYGR L
+Sbjct  1   MSKREERGLATSAGLVRYMDESLSKIKVKPEHVIGLTVAFIIIETILTYGRLL  53
+
+
+> UniRef90_UPI000367F8E8 preprotein translocase subunit SecG n=1 
+Tax=Methanothermococcus thermolithotrophicus TaxID=2186 RepID=UPI000367F8E8
+Length=55
+
+ Score = 74.5 bits (182),  Expect = 4e-16, Method: Composition-based stats.
+ Identities = 29/51 (57%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K ++ GL+TSAGL+RYMD+  SKI+++PE VIG+T A +++EAIL YG F+
+Sbjct  5   KNDDAGLSTSAGLVRYMDQDVSKIKIEPEKVIGITFAIIVLEAILNYGIFI  55
+
+
+> UniRef90_Q6LXC4 Uncharacterized protein n=5 Tax=Methanococcus 
+maripaludis TaxID=39152 RepID=Q6LXC4_METMP
+Length=53
+
+ Score = 74.2 bits (181),  Expect = 5e-16, Method: Composition-based stats.
+ Identities = 30/53 (57%), Positives = 43/53 (81%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           M+K ++ GL+TSAGL+RYMDE  SKI++ PE V+G+TV+ +IIEA+L YG  +
+Sbjct  1   MAKNQDAGLSTSAGLVRYMDEDVSKIKIAPEKVLGLTVSIIIIEAVLNYGILI  53
+
+
+> UniRef90_F6BAC2 Putative uncharacterized protein n=2 Tax=Methanotorris 
+TaxID=196119 RepID=F6BAC2_METIK
+Length=53
+
+ Score = 73.4 bits (179),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 36/53 (68%), Positives = 45/53 (85%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           MSKRE+ GLATSAGL+RYMDE+ SKIR++PE VIG+T+  ++ E ILTYG FL
+Sbjct  1   MSKREDRGLATSAGLVRYMDESLSKIRIEPEKVIGITLFIIVAEIILTYGVFL  53
+
+
+> UniRef90_F8AM84 Preprotein translocase subunit SecG n=1 Tax=Methanothermococcus 
+okinawensis (strain DSM 14208 / JCM 11175 
+/ IH1) TaxID=647113 RepID=F8AM84_METOI
+Length=54
+
+ Score = 73.0 bits (178),  Expect = 2e-15, Method: Composition-based stats.
+ Identities = 31/51 (61%), Positives = 42/51 (82%), Gaps = 0/51 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           K E+ GL+TSAGL+RYMDE  SKI++ PE V+G+TVA +++EAIL YG F+
+Sbjct  4   KNEDVGLSTSAGLVRYMDEDISKIKIAPEKVLGITVAIMVLEAILNYGIFI  54
+
+
+> UniRef90_D7DUB4 Uncharacterized protein n=1 Tax=Methanococcus 
+voltae (strain ATCC BAA-1334 / A3) TaxID=456320 RepID=D7DUB4_METV3
+Length=54
+
+ Score = 70.7 bits (172),  Expect = 1e-14, Method: Composition-based stats.
+ Identities = 26/50 (52%), Positives = 38/50 (76%), Gaps = 0/50 (0%)
+
+Query  4   REETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           + + GL+TSAGL+RYMD   SKI+V+PE V+G+T A ++ EA+L YG  +
+Sbjct  5   KNDEGLSTSAGLVRYMDTDISKIKVEPEKVLGITFAIIVAEALLNYGFLI  54
+
+
+> UniRef90_A6UWW7 Preprotein translocase subunit SecG n=1 Tax=Methanococcus 
+aeolicus (strain ATCC BAA-1280 / DSM 17508 / OCM 
+812 / Nankai-3) TaxID=419665 RepID=SECG_META3
+Length=54
+
+ Score = 68.4 bits (166),  Expect = 1e-13, Method: Composition-based stats.
+ Identities = 27/53 (51%), Positives = 41/53 (77%), Gaps = 1/53 (2%)
+
+Query  1   MSK-REETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRF  52
+           MSK +++ GL+TSAGL+RYMDE  SKI++ PE V+G+T++ +++  IL YG  
+Sbjct  1   MSKNKQDAGLSTSAGLVRYMDEDASKIKIAPEKVLGITISIMVLLFILNYGLL  53
+
+
+> UniRef90_A0A166F4G5 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+filiformis TaxID=55758 RepID=A0A166F4G5_9EURY
+Length=57
+
+ Score = 65.7 bits (159),  Expect = 1e-12, Method: Composition-based stats.
+ Identities = 19/51 (37%), Positives = 31/51 (61%), Gaps = 1/51 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYG  50
+           M K+++  L +S AGL+RY DE  +  ++ PEHV+ +TV   +   IL + 
+Sbjct  1   MGKKDKISLPSSGAGLVRYFDEESNGPKLSPEHVVAITVILGVFCLILRFA  51
+
+
+> UniRef90_A6UQ73 Uncharacterized protein n=1 Tax=Methanococcus 
+vannielii (strain ATCC 35089 / DSM 1224 / JCM 13029 / OCM 148 
+/ SB) TaxID=406327 RepID=A6UQ73_METVS
+Length=53
+
+ Score = 64.9 bits (157),  Expect = 2e-12, Method: Composition-based stats.
+ Identities = 33/53 (62%), Positives = 42/53 (79%), Gaps = 0/53 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGRFL  53
+           M+K  + GL+TSAGL+RYMDE  SKI+V PE VIG+TV+ +IIEA+L YG  L
+Sbjct  1   MAKNSDAGLSTSAGLVRYMDEDVSKIKVAPEKVIGITVSIIIIEAVLNYGILL  53
+
+
+> UniRef90_A0A0Q4BBY6 Preprotein translocase subunit SecG n=1 Tax=Methanomassiliicoccales 
+archaeon RumEn M2 TaxID=1713725 RepID=A0A0Q4BBY6_9EURY
+Length=54
+
+ Score = 60.3 bits (145),  Expect = 1e-10, Method: Composition-based stats.
+ Identities = 18/48 (38%), Positives = 29/48 (60%), Gaps = 1/48 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSK-IRVKPEHVIGVTVAFVIIEAIL  47
+           M+K+++ G  + AGL+RY D    K  +V P+ VIG+ +   I+  IL
+Sbjct  1   MAKKKDGGFQSQAGLVRYFDTKNDKAPKVSPKAVIGIALGMCIVILIL  48
+
+
+> UniRef90_UPI0005B2A080 preprotein translocase subunit SecG n=1 
+Tax=Methanobrevibacter arboriphilus TaxID=39441 RepID=UPI0005B2A080
+Length=52
+
+ Score = 55.3 bits (132),  Expect = 1e-08, Method: Composition-based stats.
+ Identities = 19/50 (38%), Positives = 30/50 (60%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLA-TSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  T AGL+RY DE  +  ++ PE V+ VT+   I   IL +
+Sbjct  1   MAKKDQNMLPPTGAGLVRYFDEESTGPKISPEGVVIVTIILGIFCFILNF  50
+
+
+> UniRef90_R7PV24 Preprotein translocase subunit SecG n=6 Tax=root 
+TaxID=1 RepID=R7PV24_9EURY
+Length=53
+
+ Score = 53.0 bits (126),  Expect = 8e-08, Method: Composition-based stats.
+ Identities = 20/51 (39%), Positives = 29/51 (57%), Gaps = 2/51 (4%)
+
+Query  1   MSKREE--TGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           MSK+ +  +   T AGL+RY DE     ++ PEHVI +TV   I   +L +
+Sbjct  1   MSKKNDKISMPQTGAGLVRYFDEESVGPKLSPEHVIVITVILAIFCFVLRF  51
+
+
+> UniRef90_A0A166CLN7 Preprotein translocase subunit SecG n=2 Tax=Methanobrevibacter 
+curvatus TaxID=49547 RepID=A0A166CLN7_9EURY
+Length=59
+
+ Score = 53.0 bits (126),  Expect = 1e-07, Method: Composition-based stats.
+ Identities = 16/50 (32%), Positives = 29/50 (58%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLA-TSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  T AGL+RY DE  +  ++ PE ++ +T+       IL +
+Sbjct  9   MAKKDKNALPPTGAGLVRYFDEESTGPKLSPEQIVIITIILAAFCFILRF  58
+
+
+> UniRef90_A0A0U3CJH5 Preprotein translocase subunit SecG n=3 Tax=Methanobrevibacter 
+TaxID=2172 RepID=A0A0U3CJH5_9EURY
+Length=53
+
+ Score = 52.2 bits (124),  Expect = 2e-07, Method: Composition-based stats.
+ Identities = 19/51 (37%), Positives = 29/51 (57%), Gaps = 2/51 (4%)
+
+Query  1   MSKREE--TGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K++   +   T AGL+RY DE     ++ PEHV+ +TV   I   +L Y
+Sbjct  1   MAKKDNKISMPQTGAGLVRYFDEESVGPKLSPEHVVVLTVILAIFCFVLRY  51
+
+
+> UniRef90_D3DZD6 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+ruminantium (strain ATCC 35063 / DSM 1093 
+/ JCM 13430 / OCM 146 / M1) TaxID=634498 RepID=D3DZD6_METRM
+Length=53
+
+ Score = 51.4 bits (122),  Expect = 3e-07, Method: Composition-based stats.
+ Identities = 19/53 (36%), Positives = 30/53 (57%), Gaps = 2/53 (4%)
+
+Query  1   MSKREET-GLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGR  51
+           M+K+++   +  S AGL+RY D+     ++ PE+VI +TV   I   IL Y  
+Sbjct  1   MAKKDDKYSMPMSGAGLVRYFDDESVGPKIAPEYVIALTVILGIFCFILRYSI  53
+
+
+> UniRef90_A0A125RAD7 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+sp. YE315 TaxID=1609968 RepID=A0A125RAD7_9EURY
+Length=53
+
+ Score = 50.3 bits (119),  Expect = 8e-07, Method: Composition-based stats.
+ Identities = 17/48 (35%), Positives = 26/48 (54%), Gaps = 1/48 (2%)
+
+Query  3   KREETGLA-TSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           K ++  +  T AGL+RY DE     ++ PEH+I  T+   I   +L Y
+Sbjct  4   KNDKISMPQTGAGLVRYFDEESLGPKLAPEHIIVATIILAIFCFVLRY  51
+
+
+> UniRef90_A0A1D2WM50 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+sp. A27 TaxID=1860099 RepID=A0A1D2WM50_9EURY
+Length=53
+
+ Score = 49.5 bits (117),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 19/51 (37%), Positives = 29/51 (57%), Gaps = 2/51 (4%)
+
+Query  1   MSKREE--TGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K++   +   T AGL+RY DE     ++ PEH+I  TV   I+  +L Y
+Sbjct  1   MAKKDNKISMPQTGAGLVRYFDEESLGPKLSPEHIIVATVIVAILCFVLRY  51
+
+
+> UniRef90_P60461 Preprotein translocase subunit SecG n=4 Tax=Methanobacteriaceae 
+TaxID=2159 RepID=SECG_METTH
+Length=52
+
+ Score = 48.7 bits (115),  Expect = 3e-06, Method: Composition-based stats.
+ Identities = 14/50 (28%), Positives = 29/50 (58%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  S AGL+RY +E     ++ PE V+ +++   +   +L +
+Sbjct  1   MAKKDKKTLPPSGAGLVRYFEEETKGPKLTPEQVVVMSIILAVFCLVLRF  50
+
+
+> UniRef90_A0A090I3T6 Preprotein translocase subunit SecG n=5 Tax=Methanobacterium 
+TaxID=2160 RepID=A0A090I3T6_METFO
+Length=53
+
+ Score = 48.4 bits (114),  Expect = 4e-06, Method: Composition-based stats.
+ Identities = 17/50 (34%), Positives = 28/50 (56%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+E+  L  S AGL+RY +E     ++ PE V+ +TV   +    L +
+Sbjct  1   MAKKEKKYLPPSGAGLVRYFEEETKGPKLSPEQVVIMTVILAVFCIALRF  50
+
+
+> UniRef90_A0A0X8V014 Preprotein translocase subunit SecG n=1 Tax=methanogenic 
+archaeon ISO4-H5 TaxID=1495144 RepID=A0A0X8V014_9EURY
+Length=55
+
+ Score = 48.0 bits (113),  Expect = 6e-06, Method: Composition-based stats.
+ Identities = 19/48 (40%), Positives = 30/48 (63%), Gaps = 1/48 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K +  G ++SAGL+RY D E    I+V P+ V+G+ + F +I   L
+Sbjct  1   MAKDKGEGFSSSAGLMRYFDSEDNKGIKVGPKLVVGIAIVFTVIILCL  48
+
+
+> UniRef90_F0T7R4 Preprotein translocase subunit SecG n=2 Tax=Methanobacterium 
+TaxID=2160 RepID=F0T7R4_METLA
+Length=53
+
+ Score = 47.6 bits (112),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 15/50 (30%), Positives = 28/50 (56%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  S AGL+RY ++     ++ PE V+ +TV   +    L +
+Sbjct  1   MAKKDKQVLPPSGAGLVRYFEDETKGPKLSPEQVVIMTVVLAVFCIALRF  50
+
+
+> UniRef90_R9SHZ3 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+sp. AbM4 TaxID=224719 RepID=R9SHZ3_9EURY
+Length=53
+
+ Score = 47.2 bits (111),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 14/40 (35%), Positives = 22/40 (55%), Gaps = 0/40 (0%)
+
+Query  10  ATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+            T AGL+RY DE     ++ PE V+ +T+   I   +L +
+Sbjct  12  QTGAGLVRYFDEESVGPKLSPEQVVIMTIILAIFCFVLRF  51
+
+
+> UniRef90_UPI0005B2C248 preprotein translocase subunit SecG n=1 
+Tax=Methanobrevibacter wolinii TaxID=190977 RepID=UPI0005B2C248
+Length=53
+
+ Score = 47.2 bits (111),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 17/51 (33%), Positives = 27/51 (53%), Gaps = 2/51 (4%)
+
+Query  1   MSKREET--GLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           MS++++      T AGL+RY DE     ++ PE V+  T+   I   +L Y
+Sbjct  1   MSRKDDKIDMPQTGAGLVRYFDEESVGPKLSPEIVVVATIILAIFCFVLRY  51
+
+
+> UniRef90_A0A126QY33 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+olleyae TaxID=294671 RepID=A0A126QY33_9EURY
+Length=53
+
+ Score = 46.8 bits (110),  Expect = 2e-05, Method: Composition-based stats.
+ Identities = 16/50 (32%), Positives = 26/50 (52%), Gaps = 1/50 (2%)
+
+Query  3   KREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGR  51
+           K ++  +  S AGL+RY D+     ++ PE VI +T+   I   IL +  
+Sbjct  4   KNDKMNMPMSGAGLVRYFDDESVGPKIAPEIVIAITIILGIFCFILKFSV  53
+
+
+> UniRef90_A0A151EFZ4 Preprotein translocase subunit SecG n=1 Tax=Thermoplasmatales 
+archaeon DG-70-1 TaxID=1803814 RepID=A0A151EFZ4_9EURY
+Length=61
+
+ Score = 46.4 bits (109),  Expect = 3e-05, Method: Composition-based stats.
+ Identities = 20/48 (42%), Positives = 28/48 (58%), Gaps = 2/48 (4%)
+
+Query  3   KREETGL--ATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           KR E G+   T AGLIRY DE     +++P H++ V V  +I E +L 
+Sbjct  5   KRSEGGVLPPTGAGLIRYFDEDTKGFKLRPMHIVFVAVGIIIFELVLR  52
+
+
+> UniRef90_F4C0R2 Preprotein translocase subunit SecG n=3 Tax=root 
+TaxID=1 RepID=F4C0R2_METCG
+Length=63
+
+ Score = 46.0 bits (108),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 16/49 (33%), Positives = 25/49 (51%), Gaps = 0/49 (0%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTYGR  51
+           K E +GL +SAGL+RY +     I+  P+ V+GV +    +   L    
+Sbjct  11  KNEGSGLQSSAGLMRYFEADDDSIKFSPKMVLGVCIGAGAVVMGLNIAF  59
+
+
+> UniRef90_A0A166CRF8 Preprotein translocase subunit SecG n=1 Tax=Methanobrevibacter 
+cuticularis TaxID=47311 RepID=A0A166CRF8_9EURY
+Length=53
+
+ Score = 45.7 bits (107),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 17/51 (33%), Positives = 28/51 (55%), Gaps = 2/51 (4%)
+
+Query  1   MSKREETGLA-TSAGLIRYM-DETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+ +  L  T AGL+RY  DE     ++ PE V+ +T+   +   IL +
+Sbjct  1   MAKKSKEMLPPTGAGLVRYFEDEETGGPKLTPEQVVVMTIILAVFCIILRF  51
+
+
+> UniRef90_A0A1F9YQI9 Preprotein translocase subunit SecG n=1 Tax=Euryarchaeota 
+archaeon RBG_16_62_10 TaxID=1797979 RepID=A0A1F9YQI9_9EURY
+Length=69
+
+ Score = 46.0 bits (108),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 17/49 (35%), Positives = 26/49 (53%), Gaps = 1/49 (2%)
+
+Query  3   KREETGLATSAGLIRYMDETFSKI-RVKPEHVIGVTVAFVIIEAILTYG  50
+           K++  G  ++AGLIRY D    K  +V P  VIG+ +    +  + TY 
+Sbjct  18  KKKSEGFHSAAGLIRYFDSEDDKALKVNPWFVIGLCIGVSALVLVFTYA  66
+
+
+> UniRef90_F6D7R7 Preprotein translocase subunit SecG n=2 Tax=Methanobacterium 
+TaxID=2160 RepID=F6D7R7_METPW
+Length=53
+
+ Score = 45.7 bits (107),  Expect = 4e-05, Method: Composition-based stats.
+ Identities = 16/50 (32%), Positives = 28/50 (56%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  S AGL+RY +E     ++ PE V+ +TV    +   L +
+Sbjct  1   MAKKDKKVLPPSGAGLVRYFEEETKGPKLTPEQVVIMTVVLAALCIALRF  50
+
+
+> UniRef90_A0A1D2W8E0 Preprotein translocase subunit SecG n=2 Tax=Methanobacteriaceae 
+TaxID=2159 RepID=A0A1D2W8E0_9EURY
+Length=54
+
+ Score = 45.7 bits (107),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 16/50 (32%), Positives = 27/50 (54%), Gaps = 1/50 (2%)
+
+Query  1   MSKREETGLATS-AGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           M+K+++  L  S AGL+RY +E     ++ PE VI  +    +I   L +
+Sbjct  1   MAKKDKKSLPPSGAGLVRYFEEETRGPKLTPEQVIIGSALLGVICIALRF  50
+
+
+> UniRef90_A0A0A7LEE8 Preprotein translocase subunit SecG n=1 Tax=Candidatus 
+Methanoplasma termitum TaxID=1577791 RepID=A0A0A7LEE8_9EURY
+Length=54
+
+ Score = 45.3 bits (106),  Expect = 7e-05, Method: Composition-based stats.
+ Identities = 18/48 (38%), Positives = 31/48 (65%), Gaps = 1/48 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + +G ++SAGL+RY D E    +++ P  VIG  +AF ++  +L
+Sbjct  1   MAKEKNSGFSSSAGLMRYFDVEDDRGLKINPRLVIGAAIAFTVLILLL  48
+
+
+> UniRef90_A0A151EVH9 Preprotein translocase subunit SecG n=1 Tax=Thermoplasmatales 
+archaeon DG-70 TaxID=1803813 RepID=A0A151EVH9_9EURY
+Length=61
+
+ Score = 45.3 bits (106),  Expect = 7e-05, Method: Composition-based stats.
+ Identities = 22/48 (46%), Positives = 28/48 (58%), Gaps = 2/48 (4%)
+
+Query  3   KREETGL--ATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           KR E G    T AGLIRY DE    I++KP +V+ + V  +I E IL 
+Sbjct  5   KRSEGGALPPTGAGLIRYFDEDTRGIKLKPVYVLILAVGIIIFELILR  52
+
+
+> UniRef90_A0A166STF2 Preprotein translocase subunit SecG n=1 Tax=Haladaptatus 
+sp. R4 TaxID=1679489 RepID=A0A166STF2_9EURY
+Length=54
+
+ Score = 45.3 bits (106),  Expect = 8e-05, Method: Composition-based stats.
+ Identities = 19/49 (39%), Positives = 27/49 (55%), Gaps = 1/49 (2%)
+
+Query  2   SKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           S +   GL +SAGL+RY D E  + IR+ P  V+   V F +   +L Y
+Sbjct  3   SGQNSGGLMSSAGLVRYFDAEDRNAIRIDPRSVVAFGVFFGVAILVLNY  51
+
+
+> UniRef90_Q5JDK7 Preprotein translocase subunit SecG n=2 Tax=Thermococcus 
+TaxID=2263 RepID=SECG_THEKO
+Length=56
+
+ Score = 44.9 bits (105),  Expect = 8e-05, Method: Composition-based stats.
+ Identities = 18/47 (38%), Positives = 28/47 (60%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + T   T AGL+R+ DE    ++V P+ VI +T+  +  E IL
+Sbjct  1   MAKEKATLPPTGAGLMRFFDEDTRAVKVSPKGVIALTLLLIAFEFIL  47
+
+
+> UniRef90_W8NWF6 Preprotein translocase subunit SecG n=2 Tax=Thermococcus 
+TaxID=2263 RepID=W8NWF6_9EURY
+Length=56
+
+ Score = 44.5 bits (104),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 20/47 (43%), Positives = 29/47 (62%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + T   T AGL+R+ DE    I+V P+ VI +T+  V IE +L
+Sbjct  1   MAKEKTTLPPTGAGLMRFFDEDTRAIKVSPKGVIAMTLILVAIEFLL  47
+
+
+> UniRef90_X1L8I4 Uncharacterized protein (Fragment) n=1 Tax=marine 
+sediment metagenome TaxID=412755 RepID=X1L8I4_9ZZZZ
+Length=48
+
+ Score = 44.1 bits (103),  Expect = 1e-04, Method: Composition-based stats.
+ Identities = 19/48 (40%), Positives = 27/48 (56%), Gaps = 0/48 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M +RE+    T AGLIRY  E    I++ P+ V+  T+A +I E  L 
+Sbjct  1   MKRREQEMPPTGAGLIRYFKEEGHGIKISPKSVVIFTIAVIIFEIFLR  48
+
+
+> UniRef90_A0A151EA90 Preprotein translocase subunit SecG n=1 Tax=Euryarchaeota 
+archaeon SG8-5 TaxID=1803822 RepID=A0A151EA90_9EURY
+Length=54
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 15/46 (33%), Positives = 28/46 (61%), Gaps = 1/46 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSK-IRVKPEHVIGVTVAFVIIEA  45
+           M+K++  G  ++AGLIRY DE   K +++ P  V+G+ +   ++  
+Sbjct  1   MAKKKGEGFHSAAGLIRYFDEEDEKSLKINPWLVVGMCIGSAVVCT  46
+
+
+> UniRef90_M4YUL6 Preprotein translocase subunit SecG n=1 Tax=Thermoplasmatales 
+archaeon BRNA1 TaxID=1054217 RepID=M4YUL6_9EURY
+Length=55
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 17/48 (35%), Positives = 29/48 (60%), Gaps = 1/48 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K +    ++SAGL+RY D E    I++ P  VI + +AF ++  +L
+Sbjct  1   MAKEKGESFSSSAGLMRYFDSEDDKGIKLGPRTVIAIAIAFTVLILVL  48
+
+
+> UniRef90_I3ZT94 Preprotein translocase subunit SecG n=2 Tax=Thermococcus 
+TaxID=2263 RepID=I3ZT94_9EURY
+Length=56
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 18/47 (38%), Positives = 28/47 (60%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M++ + T   T AGL+R+ DE    I++ P  VI VT+  V +E +L
+Sbjct  1   MAREKTTLPPTGAGLMRFFDEDTRAIKISPRGVIAVTLILVALEILL  47
+
+
+> UniRef90_UPI000678294D preprotein translocase subunit SecG n=1 
+Tax=Haloplanus natans TaxID=376171 RepID=UPI000678294D
+Length=53
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 20/49 (41%), Positives = 29/49 (59%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           MS  +  GL +SAGL+RY D E  + IR+ P+ V+   V F ++  IL 
+Sbjct  1   MSGSQSGGLMSSAGLVRYFDAEDRNAIRIDPKTVVAFGVLFGVLVQILN  49
+
+
+> UniRef90_UPI000299F082 preprotein translocase subunit SecG n=1 
+Tax=Thermococcus zilligii TaxID=54076 RepID=UPI000299F082
+Length=56
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/47 (40%), Positives = 27/47 (57%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + T   T AGL+R+ DE    I+V P+ VI +T+  V  E  L
+Sbjct  1   MAKDKTTLPPTGAGLMRFFDEDTRAIKVSPKGVIALTLILVAFEIFL  47
+
+
+> UniRef90_C7NX85 Preprotein translocase subunit SecG n=2 Tax=Halomicrobium 
+TaxID=203135 RepID=C7NX85_HALMD
+Length=57
+
+ Score = 44.1 bits (103),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/49 (39%), Positives = 28/49 (57%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           MS  +  GL +SAGL+RY D E  + IR+ P  V+   V F ++  +L 
+Sbjct  1   MSSSDSGGLMSSAGLVRYFDAEDSNTIRMDPRSVVAFGVLFGVLILMLN  49
+
+
+> UniRef90_V4YFP9 Preprotein translocase subunit SecG n=3 Tax=Archaea 
+TaxID=2157 RepID=V4YFP9_9ARCH
+Length=52
+
+ Score = 43.7 bits (102),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 20/49 (41%), Positives = 30/49 (61%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+   ++GL +SAGL+RY D E  + IR+ P+ V+   + F I   ILT
+Sbjct  1   MASSGDSGLMSSAGLVRYFDSEDRNAIRIDPKTVMAFALLFGIFVQILT  49
+
+
+> UniRef90_M0D273 Preprotein translocase subunit SecG n=1 Tax=Halosimplex 
+carlsbadense 2-9-1 TaxID=797114 RepID=M0D273_9EURY
+Length=52
+
+ Score = 43.7 bits (102),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 19/49 (39%), Positives = 27/49 (55%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           MS  +  GL +SAGL+RY D E  + IR+ P+ VI     F  +  +L 
+Sbjct  1   MSSNDGGGLMSSAGLVRYFDAEDRNAIRIDPKTVIAFGAMFGFLVLVLR  49
+
+
+> UniRef90_B6YW71 Preprotein translocase subunit SecG n=4 Tax=Thermococcus 
+TaxID=2263 RepID=SECG_THEON
+Length=56
+
+ Score = 43.7 bits (102),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 17/47 (36%), Positives = 28/47 (60%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + T   T AGL+R+ DE    +++ P  VI +T+  V +E +L
+Sbjct  1   MAKEKATLPPTGAGLMRFFDEDTKAVKISPRGVIALTLILVALEILL  47
+
+
+> UniRef90_UPI000679288A preprotein translocase subunit SecG n=1 
+Tax=Halococcus sediminicola TaxID=1264579 RepID=UPI000679288A
+Length=53
+
+ Score = 43.7 bits (102),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 21/51 (41%), Positives = 29/51 (57%), Gaps = 1/51 (2%)
+
+Query  2   SKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILTYGR  51
+           S     GL +SAGL+RY D E  + IR+ P+ V+   VAF I+  +L  G 
+Sbjct  3   SGENSGGLMSSAGLVRYFDAEDQNAIRIDPKTVVAFGVAFGILIMVLRIGL  53
+
+
+> UniRef90_E3GYJ2 Preprotein translocase subunit SecG n=1 Tax=Methanothermus 
+fervidus (strain ATCC 43054 / DSM 2088 / JCM 10308 
+/ V24 S) TaxID=523846 RepID=E3GYJ2_METFV
+Length=53
+
+ Score = 43.3 bits (101),  Expect = 3e-04, Method: Composition-based stats.
+ Identities = 17/51 (33%), Positives = 28/51 (55%), Gaps = 2/51 (4%)
+
+Query  1   MSKREETGLA-TSAGLIRYMDETFS-KIRVKPEHVIGVTVAFVIIEAILTY  49
+           M K+++  L  T AGL+RY +E       + PEHV+ +T+   I   +L +
+Sbjct  1   MGKKDKKRLPPTGAGLVRYYEEEEKMGPALTPEHVVVITILLAIFCIVLRF  51
+
+
+> UniRef90_C5A4H9 Preprotein translocase subunit SecG n=3 Tax=Thermococcus 
+TaxID=2263 RepID=SECG_THEGJ
+Length=56
+
+ Score = 43.3 bits (101),  Expect = 4e-04, Method: Composition-based stats.
+ Identities = 17/47 (36%), Positives = 26/47 (55%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + T   T AGL+R+ DE    I+V P+ VI + +  +  E  L
+Sbjct  1   MAKDKTTLPPTGAGLMRFFDEDTRAIKVSPKGVIAIVLVLIAFEVFL  47
+
+
+> UniRef90_H3ZQK6 Preprotein translocase subunit SecG n=5 Tax=Thermococcales 
+TaxID=2258 RepID=H3ZQK6_THELN
+Length=56
+
+ Score = 43.0 bits (100),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 18/48 (38%), Positives = 28/48 (58%), Gaps = 0/48 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+K + T   T AGL+R+ DE    I++ P+  I + + FV IE +L 
+Sbjct  1   MAKEKTTLPPTGAGLMRFFDEDTRAIKISPKGAIAIVLIFVAIEILLN  48
+
+
+> UniRef90_F8D8W8 Preprotein translocase subunit SecG n=2 Tax=Natrialbaceae 
+TaxID=1644061 RepID=F8D8W8_HALXS
+Length=53
+
+ Score = 43.0 bits (100),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 17/47 (36%), Positives = 28/47 (60%), Gaps = 1/47 (2%)
+
+Query  4   REETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           +   GL +SAGL+RY D E  + I++ P+ VI   V   ++  +LT+
+Sbjct  5   QNSGGLMSSAGLVRYFDSEDSNAIKINPKTVIATGVLIGVLVQLLTF  51
+
+
+> UniRef90_D2RR07 Preprotein translocase subunit SecG n=3 Tax=Natrialbaceae 
+TaxID=1644061 RepID=D2RR07_HALTV
+Length=53
+
+ Score = 43.0 bits (100),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 17/47 (36%), Positives = 28/47 (60%), Gaps = 1/47 (2%)
+
+Query  4   REETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+           +   GL +SAGL+RY D E  + I++ P+ VI   V   ++  +LT+
+Sbjct  5   QNSGGLMSSAGLVRYFDSEDSNAIKIDPKTVIATGVMIGVLVQLLTF  51
+
+
+> UniRef90_M0N2Y3 Preprotein translocase subunit SecG n=3 Tax=Halococcus 
+TaxID=2249 RepID=M0N2Y3_9EURY
+Length=52
+
+ Score = 43.0 bits (100),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 19/48 (40%), Positives = 28/48 (58%), Gaps = 1/48 (2%)
+
+Query  2   SKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           S     GL +SAGL+RY D E  + IRV P+ ++   VAF ++  +L 
+Sbjct  3   SGENSGGLMSSAGLVRYFDAEDRNAIRVDPKTIVAFGVAFGVLILVLN  50
+
+
+> UniRef90_A0A0A7GC81 Preprotein translocase subunit SecG n=1 Tax=Geoglobus 
+acetivorans TaxID=565033 RepID=A0A0A7GC81_9EURY
+Length=57
+
+ Score = 43.0 bits (100),  Expect = 5e-04, Method: Composition-based stats.
+ Identities = 16/49 (33%), Positives = 31/49 (63%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETG-LATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+K+E+   L +SAG++RY +E  ++ +V P+ V+   +A  I+  I+ 
+Sbjct  1   MAKKEKAPPLMSSAGIMRYFEEEKTQFKVSPKAVVAFGLAVGILAIIMN  49
+
+
+> UniRef90_UPI00064FB464 preprotein translocase subunit SecG n=1 
+Tax=Palaeococcus ferrophilus TaxID=83868 RepID=UPI00064FB464
+Length=56
+
+ Score = 42.6 bits (99),  Expect = 6e-04, Method: Composition-based stats.
+ Identities = 16/47 (34%), Positives = 27/47 (57%), Gaps = 0/47 (0%)
+
+Query  1   MSKREETGLATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAIL  47
+           M+K + +   T AGL+R+ DE    I+V P   I + + F+ +E +L
+Sbjct  1   MAKEKTSLPPTGAGLMRFFDEDTPGIKVSPRGAIAIVLIFIALEILL  47
+
+
+> UniRef90_T1BZG1 Preprotein translocase subunit SecG n=1 Tax=mine 
+drainage metagenome TaxID=410659 RepID=T1BZG1_9ZZZZ
+Length=56
+
+ Score = 42.6 bits (99),  Expect = 6e-04, Method: Composition-based stats.
+ Identities = 15/49 (31%), Positives = 27/49 (55%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+ ++++G  + AGLIRY D E  +   + P  VI + V   ++  +L 
+Sbjct  1   MADKKDSGFQSGAGLIRYFDEEEINGPSIHPVVVISIAVILAVVVELLK  49
+
+
+> UniRef90_A0A0F7DBE7 Preprotein translocase subunit SecG n=1 Tax=Geoglobus 
+ahangari TaxID=113653 RepID=A0A0F7DBE7_9EURY
+Length=57
+
+ Score = 42.6 bits (99),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 15/49 (31%), Positives = 30/49 (61%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETG-LATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+K+E+   L +SAG++RY +E  ++I++ P+ V+   +    +  IL 
+Sbjct  1   MAKKEKAPPLMSSAGIMRYFEEEKTQIKISPKAVLAFGLVVGFLTIILN  49
+
+
+> UniRef90_U1R2L8 Preprotein translocase subunit SecG n=1 Tax=halophilic 
+archaeon J07HB67 TaxID=1085029 RepID=U1R2L8_9EURY
+Length=53
+
+ Score = 42.2 bits (98),  Expect = 7e-04, Method: Composition-based stats.
+ Identities = 16/51 (31%), Positives = 29/51 (57%), Gaps = 1/51 (2%)
+
+Query  2   SKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILTYGR  51
+           S +   GL +SAGL+RY D E  + I++ P+ V+ + V F ++  +  +  
+Sbjct  3   SGQNTGGLMSSAGLVRYFDAEDRNAIKLDPKTVVALGVTFGVLVLLAQFAV  53
+
+
+> UniRef90_X1L488 Uncharacterized protein (Fragment) n=1 Tax=marine 
+sediment metagenome TaxID=412755 RepID=X1L488_9ZZZZ
+Length=50
+
+ Score = 42.2 bits (98),  Expect = 8e-04, Method: Composition-based stats.
+ Identities = 16/40 (40%), Positives = 23/40 (58%), Gaps = 0/40 (0%)
+
+Query  10  ATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILTY  49
+            T AGLIRY  E    I++ P+ V+  T+A +I E  L +
+Sbjct  3   PTGAGLIRYFKEEGHGIKISPKSVVIFTIAIIIFEIFLRF  42
+
+
+> UniRef90_J1APX4 Preprotein translocase subunit SecG n=2 Tax=Methanofollis 
+liminatans TaxID=2201 RepID=J1APX4_9EURY
+Length=58
+
+ Score = 42.2 bits (98),  Expect = 0.001, Method: Composition-based stats.
+ Identities = 17/49 (35%), Positives = 28/49 (57%), Gaps = 1/49 (2%)
+
+Query  1   MSKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+K+    L +SAGL+ Y D E    + + P HVI ++VA  ++  +L 
+Sbjct  7   MAKKSGGRLVSSAGLVNYYDSEDRRAVHINPVHVIAISVAIGVVIFLLN  55
+
+
+> UniRef90_M0M3A1 Preprotein translocase subunit SecG n=1 Tax=Halococcus 
+hamelinensis 100A6 TaxID=1132509 RepID=M0M3A1_9EURY
+Length=53
+
+ Score = 42.2 bits (98),  Expect = 0.001, Method: Composition-based stats.
+ Identities = 20/48 (42%), Positives = 28/48 (58%), Gaps = 1/48 (2%)
+
+Query  2   SKREETGLATSAGLIRYMD-ETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           S +   GL +SAGL+RY D E  + IR+ PE V+   VAF +    L+
+Sbjct  3   SGQNSGGLMSSAGLVRYFDAEDQNAIRISPESVVAFGVAFGLFVMALS  50
+
+
+> UniRef90_D2RH87 Preprotein translocase subunit SecG n=1 Tax=Archaeoglobus 
+profundus (strain DSM 5631 / JCM 9629 / NBRC 100127 
+/ Av18) TaxID=572546 RepID=D2RH87_ARCPA
+Length=59
+
+ Score = 42.2 bits (98),  Expect = 0.001, Method: Composition-based stats.
+ Identities = 17/51 (33%), Positives = 31/51 (61%), Gaps = 3/51 (6%)
+
+Query  1   MSKREETG---LATSAGLIRYMDETFSKIRVKPEHVIGVTVAFVIIEAILT  48
+           M+KRE+     L +SAG++RY +E  ++IR+ P+ V+   +   ++  IL 
+Sbjct  1   MAKREKVKTPPLMSSAGIMRYFEEEKTQIRISPKSVLAFGLTVGVLVIILN  51
+
+
+
+Lambda      K        H        a         alpha
+   0.320    0.150    0.403    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0464    0.140     1.90     42.6     43.6 
+
+Effective search space used: 445440262635
+
+
+  Database: uniref90
+    Posted date:  Feb 27, 2017  10:12 AM
+  Number of letters in database: 17,866,164,385
+  Number of sequences in database:  52,629,880
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

@@ -1,0 +1,939 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: uniref90
+           52,629,880 sequences; 17,866,164,385 total letters
+
+Results from round 1
+
+
+Query= Q7B2Z6|2itaA
+
+Length=82
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodoba...  167     8e-52
+  UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter Tax...  152     7e-46
+  UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rho...  55.5    4e-08
+  UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp....  47.4    3e-05
+
+
+> UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodobacter 
+TaxID=1060 RepID=PUFX_RHOS4
+Length=82
+
+ Score = 167 bits (424),  Expect = 8e-52, Method: Compositional matrix adjust.
+ Identities = 82/82 (100%), Positives = 82/82 (100%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN
+Sbjct  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+           QAPAPNITGALETGIELIKHLV
+Sbjct  61  QAPAPNITGALETGIELIKHLV  82
+
+
+> UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter TaxID=1060 
+RepID=A4WU55_RHOS5
+Length=82
+
+ Score = 152 bits (385),  Expect = 7e-46, Method: Compositional matrix adjust.
+ Identities = 73/82 (89%), Positives = 77/82 (94%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIF+DHL TNPKTNLRLWVAFQMMKGAGWAG VFFGTLL+IGFFRV+GR LPI EN
+Sbjct  1   MADKTIFDDHLKTNPKTNLRLWVAFQMMKGAGWAGAVFFGTLLMIGFFRVLGRALPIDEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+            APAPN+TGALETGIELIKHLV
+Sbjct  61  PAPAPNLTGALETGIELIKHLV  82
+
+
+> UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rhodobacteraceae 
+bacterium HL-91 TaxID=1666912 RepID=A0A0P8A6W7_9RHOB
+Length=76
+
+ Score = 55.5 bits (132),  Expect = 4e-08, Method: Compositional matrix adjust.
+ Identities = 26/68 (38%), Positives = 37/68 (54%), Gaps = 0/68 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           +D++N  P   LR W+  +M++GAG+A  V  G   +IG   VVG+ LP     AP P  
+Sbjct  4   HDYINETPGQRLRNWILSEMLRGAGYAAAVLLGIGAIIGLIWVVGQFLPEDSKNAPPPMP  63
+
+Query  68  TGALETGI  75
+             ALE  +
+Sbjct  64  YSALEAPV  71
+
+
+> UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp. 
+CACIA14H1 TaxID=1408890 RepID=V7EN35_9RHOB
+Length=76
+
+ Score = 47.4 bits (111),  Expect = 3e-05, Method: Compositional matrix adjust.
+ Identities = 22/62 (35%), Positives = 31/62 (50%), Gaps = 0/62 (0%)
+
+Query  5   TIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPA  64
+           T+ +D +   P   LR W  +QMM GAGWA         ++     +G +LP +  QAP 
+Sbjct  2   TMSDDFIQQKPGAALRSWALYQMMAGAGWAALFVLSVAAILFAVWGIGLLLPEESKQAPD  61
+
+Query  65  PN  66
+           PN
+Sbjct  62  PN  63
+
+
+
+Lambda      K        H        a         alpha
+   0.326    0.142    0.444    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 437226641605
+Results from round 2
+
+
+Query= Q7B2Z6|2itaA
+
+Length=82
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodoba...  132     7e-38
+  UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter Tax...  130     4e-37
+  UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rho...  100     2e-25
+  UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp....  85.5    1e-19
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_UPI0008F7ED7E UPI0008F7ED7E related cluster n=2 Tax=un...  83.9    5e-19
+  UniRef90_UPI000469AA2E hypothetical protein n=1 Tax=Sulfitobact...  57.3    8e-09
+  UniRef90_A3V2Q0 1-deoxy-D-xylulose-5-phosphate synthase n=1 Tax...  52.7    4e-07
+  UniRef90_C7DFQ0 Uncharacterized protein n=1 Tax=Thalassobium sp...  52.7    4e-07
+  UniRef90_UPI0009102FE8 UPI0009102FE8 related cluster n=1 Tax=un...  52.7    4e-07
+  UniRef90_A0A0Q2UK68 1-deoxy-D-xylulose-5-phosphate synthase n=1...  51.9    7e-07
+  UniRef90_A0A0M6YCJ2 Intrinsic membrane protein PufX n=1 Tax=Jan...  51.9    8e-07
+  UniRef90_UPI000912C5DC UPI000912C5DC related cluster n=1 Tax=un...  48.1    2e-05
+  UniRef90_UPI000566B49E hypothetical protein n=1 Tax=Maribius sp...  47.7    2e-05
+  UniRef90_J7G0K3 Uncharacterized protein n=1 Tax=Sulfitobacter g...  47.7    2e-05
+  UniRef90_B6B3Q9 Putative uncharacterized protein n=2 Tax=Rhodob...  47.7    3e-05
+  UniRef90_A0A0N8KDK8 Light-harvesting complex I photosynthetic r...  46.9    5e-05
+  UniRef90_A0A0Q0ZJC3 1-deoxy-D-xylulose-5-phosphate synthase n=2...  46.9    5e-05
+  UniRef90_A4EG57 Uncharacterized protein n=1 Tax=Roseobacter sp....  46.6    6e-05
+  UniRef90_Q58PS0 Hypothetical intrinsic membrane protein n=1 Tax...  45.0    2e-04
+  UniRef90_Q65YR2 PufX n=1 Tax=Rhodobacter blasticus TaxID=1075 R...  44.2    4e-04
+
+
+> UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodobacter 
+TaxID=1060 RepID=PUFX_RHOS4
+Length=82
+
+ Score = 132 bits (332),  Expect = 7e-38, Method: Composition-based stats.
+ Identities = 82/82 (100%), Positives = 82/82 (100%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN
+Sbjct  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+           QAPAPNITGALETGIELIKHLV
+Sbjct  61  QAPAPNITGALETGIELIKHLV  82
+
+
+> UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter TaxID=1060 
+RepID=A4WU55_RHOS5
+Length=82
+
+ Score = 130 bits (327),  Expect = 4e-37, Method: Composition-based stats.
+ Identities = 73/82 (89%), Positives = 77/82 (94%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIF+DHL TNPKTNLRLWVAFQMMKGAGWAG VFFGTLL+IGFFRV+GR LPI EN
+Sbjct  1   MADKTIFDDHLKTNPKTNLRLWVAFQMMKGAGWAGAVFFGTLLMIGFFRVLGRALPIDEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+            APAPN+TGALETGIELIKHLV
+Sbjct  61  PAPAPNLTGALETGIELIKHLV  82
+
+
+> UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rhodobacteraceae 
+bacterium HL-91 TaxID=1666912 RepID=A0A0P8A6W7_9RHOB
+Length=76
+
+ Score = 100 bits (249),  Expect = 2e-25, Method: Composition-based stats.
+ Identities = 26/68 (38%), Positives = 37/68 (54%), Gaps = 0/68 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           +D++N  P   LR W+  +M++GAG+A  V  G   +IG   VVG+ LP     AP P  
+Sbjct  4   HDYINETPGQRLRNWILSEMLRGAGYAAAVLLGIGAIIGLIWVVGQFLPEDSKNAPPPMP  63
+
+Query  68  TGALETGI  75
+             ALE  +
+Sbjct  64  YSALEAPV  71
+
+
+> UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp. 
+CACIA14H1 TaxID=1408890 RepID=V7EN35_9RHOB
+Length=76
+
+ Score = 85.5 bits (210),  Expect = 1e-19, Method: Composition-based stats.
+ Identities = 22/62 (35%), Positives = 31/62 (50%), Gaps = 0/62 (0%)
+
+Query  5   TIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPA  64
+           T+ +D +   P   LR W  +QMM GAGWA         ++     +G +LP +  QAP 
+Sbjct  2   TMSDDFIQQKPGAALRSWALYQMMAGAGWAALFVLSVAAILFAVWGIGLLLPEESKQAPD  61
+
+Query  65  PN  66
+           PN
+Sbjct  62  PN  63
+
+
+> UniRef90_UPI0008F7ED7E UPI0008F7ED7E related cluster n=2 Tax=unknown 
+TaxID= RepID=UPI0008F7ED7E
+Length=76
+
+ Score = 83.9 bits (206),  Expect = 5e-19, Method: Composition-based stats.
+ Identities = 21/70 (30%), Positives = 35/70 (50%), Gaps = 0/70 (0%)
+
+Query  6   IFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           + +D++   P   LR WV  +M++GAG+A  +     +  G    VG++LP +   AP P
+Sbjct  2   VEHDYIQETPTARLRNWVMSEMLRGAGYAALLLLVIGVSYGIIWGVGQLLPSESKNAPPP  61
+
+Query  66  NITGALETGI  75
+               AL   +
+Sbjct  62  MPYSALHAPL  71
+
+
+> UniRef90_UPI000469AA2E hypothetical protein n=1 Tax=Sulfitobacter 
+noctilucicola TaxID=1342301 RepID=UPI000469AA2E
+Length=78
+
+ Score = 57.3 bits (137),  Expect = 8e-09, Method: Composition-based stats.
+ Identities = 23/66 (35%), Positives = 29/66 (44%), Gaps = 1/66 (2%)
+
+Query  5   TIFNDHLNTNPKT-NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAP  63
+           T  ND+L T   T  LR  V   M+KGAG+A    F     I     VG +LP +  +A 
+Sbjct  2   TDNNDYLRTGDSTFRLRADVLALMLKGAGYAALFCFVVGFFIWVIYAVGLLLPEESKEAD  61
+
+Query  64  APNITG  69
+            P    
+Sbjct  62  DPTPYS  67
+
+
+> UniRef90_A3V2Q0 1-deoxy-D-xylulose-5-phosphate synthase n=1 Tax=Loktanella 
+vestfoldensis SKA53 TaxID=314232 RepID=A3V2Q0_9RHOB
+Length=74
+
+ Score = 52.7 bits (125),  Expect = 4e-07, Method: Composition-based stats.
+ Identities = 21/58 (36%), Positives = 28/58 (48%), Gaps = 0/58 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           ND L  N K+ L   + F M+KGAG+A          IG F ++G  LP +    P P
+Sbjct  4   NDILQMNSKSRLTADITFLMLKGAGYAALFVVAIWFFIGAFALIGEALPEESRSTPDP  61
+
+
+> UniRef90_C7DFQ0 Uncharacterized protein n=1 Tax=Thalassobium 
+sp. R2A62 TaxID=633131 RepID=C7DFQ0_9RHOB
+Length=79
+
+ Score = 52.7 bits (125),  Expect = 4e-07, Method: Composition-based stats.
+ Identities = 17/64 (27%), Positives = 28/64 (44%), Gaps = 2/64 (3%)
+
+Query  8   NDHLNTNPKTNLRLW--VAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           +D+L+T+  +  RL   V   M+KGAG+A         ++     +G +LP      P P
+Sbjct  5   HDYLSTSENSKFRLSADVLMLMLKGAGYAAAFCLALWFILVALHWIGLLLPEDSKYRPDP  64
+
+Query  66  NITG  69
+               
+Sbjct  65  TPYS  68
+
+
+> UniRef90_UPI0009102FE8 UPI0009102FE8 related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI0009102FE8
+Length=77
+
+ Score = 52.7 bits (125),  Expect = 4e-07, Method: Composition-based stats.
+ Identities = 20/65 (31%), Positives = 30/65 (46%), Gaps = 0/65 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           ++ LN   +T L   +   M+KGAG+A  +     L+I     +GR LP      P P  
+Sbjct  4   DNILNLEGRTRLSADITLLMLKGAGYAAVLVLAIWLVIAVIAGIGRALPEDSRNTPDPIN  63
+
+Query  68  TGALE  72
+             +LE
+Sbjct  64  RSSLE  68
+
+
+> UniRef90_A0A0Q2UK68 1-deoxy-D-xylulose-5-phosphate synthase n=1 
+Tax=Loktanella sp. 3ANDIMAR09 TaxID=1225657 RepID=A0A0Q2UK68_9RHOB
+Length=80
+
+ Score = 51.9 bits (123),  Expect = 7e-07, Method: Composition-based stats.
+ Identities = 20/69 (29%), Positives = 30/69 (43%), Gaps = 0/69 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           M+      + L  + K+ L   V   M+KGAG+A  V      +I    ++GR LP +  
+Sbjct  1   MSSDETSTNLLGVSNKSRLAGDVLMLMLKGAGYAAIVVLSIWAVIAIIALIGRALPEESR  60
+
+Query  61  QAPAPNITG  69
+           Q P P    
+Sbjct  61  QQPDPTPLS  69
+
+
+> UniRef90_A0A0M6YCJ2 Intrinsic membrane protein PufX n=1 Tax=Jannaschia 
+donghaensis TaxID=420998 RepID=A0A0M6YCJ2_9RHOB
+Length=79
+
+ Score = 51.9 bits (123),  Expect = 8e-07, Method: Composition-based stats.
+ Identities = 22/70 (31%), Positives = 35/70 (50%), Gaps = 3/70 (4%)
+
+Query  8   NDHLNT--NPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           +D+L+    P++ L   +   M+KGAG+A       +L + FF  VG +LP +    P P
+Sbjct  4   HDYLSAGGTPESRLYGDITLLMLKGAGYAAVFSLSVVLFVAFFAWVGGLLPEESQDQPDP  63
+
+Query  66  N-ITGALETG  74
+           N    +LE  
+Sbjct  64  NPPRSSLEVP  73
+
+
+> UniRef90_UPI000912C5DC UPI000912C5DC related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI000912C5DC
+Length=78
+
+ Score = 48.1 bits (113),  Expect = 2e-05, Method: Composition-based stats.
+ Identities = 24/74 (32%), Positives = 32/74 (43%), Gaps = 3/74 (4%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           M +KT   + L  + K  L   V   M+KGAG+A  V     L I     +GR LP +  
+Sbjct  1   MTEKT---NILGVSDKARLTGDVTLLMLKGAGYAAIVVLALWLTISVIAFIGRALPEESR  57
+
+Query  61  QAPAPNITGALETG  74
+           Q P P    +L   
+Sbjct  58  QQPDPTPQSSLVLP  71
+
+
+> UniRef90_UPI000566B49E hypothetical protein n=1 Tax=Maribius 
+sp. MOLA 401 TaxID=1530186 RepID=UPI000566B49E
+Length=71
+
+ Score = 47.7 bits (112),  Expect = 2e-05, Method: Composition-based stats.
+ Identities = 22/64 (34%), Positives = 32/64 (50%), Gaps = 8/64 (13%)
+
+Query  18  NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALETGIEL  77
+           +LR+WV  QM  GA +A  VFFG + ++   R +  +LP             ALE G +L
+Sbjct  15  SLRMWVFTQMTVGAAYAAAVFFGAIAIVLIIRAISYLLPED--------PYAALEHGQQL  66
+
+Query  78  IKHL  81
+           +  L
+Sbjct  67  LTLL  70
+
+
+> UniRef90_J7G0K3 Uncharacterized protein n=1 Tax=Sulfitobacter 
+guttiformis TaxID=74349 RepID=J7G0K3_9RHOB
+Length=79
+
+ Score = 47.7 bits (112),  Expect = 2e-05, Method: Composition-based stats.
+ Identities = 20/75 (27%), Positives = 32/75 (43%), Gaps = 3/75 (4%)
+
+Query  8   NDHLNTNPKT--NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           +D+L T+      LR  V   M+KGAG+A          +     +G +LP +  +AP P
+Sbjct  5   HDYLGTSNNATFRLRADVLTLMLKGAGYAAVFCLVVGAFLAVTIWIGGLLPAESKEAPDP  64
+
+Query  66  NITGALETGIELIKH  80
+                +    E+  H
+Sbjct  65  TPLSFV-LPAEITVH  78
+
+
+> UniRef90_B6B3Q9 Putative uncharacterized protein n=2 Tax=Rhodobacteraceae 
+bacterium HTCC2083 TaxID=314270 RepID=B6B3Q9_9RHOB
+Length=78
+
+ Score = 47.7 bits (112),  Expect = 3e-05, Method: Composition-based stats.
+ Identities = 16/64 (25%), Positives = 28/64 (44%), Gaps = 0/64 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           +D+L T   + L     F M+KGAG+A        + +   + +G +LP +  +   P  
+Sbjct  5   HDYLGTGNTSRLTADATFLMLKGAGYAMMFCLVIWVSLVALQGIGLLLPEESRETEDPTP  64
+
+Query  68  TGAL  71
+              L
+Sbjct  65  FSHL  68
+
+
+> UniRef90_A0A0N8KDK8 Light-harvesting complex I photosynthetic 
+reaction center protein PufX n=1 Tax=Rhodobacteraceae bacterium 
+HLUCCA09 TaxID=1666915 RepID=A0A0N8KDK8_9RHOB
+Length=78
+
+ Score = 46.9 bits (110),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 19/51 (37%), Positives = 29/51 (57%), Gaps = 1/51 (2%)
+
+Query  27  MMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALETGIEL  77
+           M KGA +   VFFG + +I     +G  LP +  +AP P++ GA+E   E+
+Sbjct  26  MAKGAAYGAAVFFGAMAIIFILIAIGATLPPESKEAPDPSL-GAIEAPSEI  75
+
+
+> UniRef90_A0A0Q0ZJC3 1-deoxy-D-xylulose-5-phosphate synthase n=2 
+Tax=Loktanella TaxID=245186 RepID=A0A0Q0ZJC3_9RHOB
+Length=79
+
+ Score = 46.9 bits (110),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 20/72 (28%), Positives = 34/72 (47%), Gaps = 2/72 (3%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           ++ L+ + K+ L   +   M+KGAG+A         +I     +GR+LP +    P P  
+Sbjct  5   DNILDMSEKSRLTADITLLMLKGAGYAAIFVLAIWFVIAAMAFIGRILPEESRDTPDPIN  64
+
+Query  68  TGAL--ETGIEL  77
+             +L  E G E+
+Sbjct  65  RSSLMIEAGPEV  76
+
+
+> UniRef90_A4EG57 Uncharacterized protein n=1 Tax=Roseobacter sp. 
+CCS2 TaxID=391593 RepID=A4EG57_9RHOB
+Length=79
+
+ Score = 46.6 bits (109),  Expect = 6e-05, Method: Composition-based stats.
+ Identities = 18/64 (28%), Positives = 31/64 (48%), Gaps = 0/64 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           ++ L+ + K+ L   +   M+KGAG+A         +I     +GR+LP Q  + P P  
+Sbjct  5   DNILDMSEKSRLTADITLLMLKGAGYAAVFVLALWFVIAAMAFIGRILPEQSRETPDPIN  64
+
+Query  68  TGAL  71
+             +L
+Sbjct  65  RSSL  68
+
+
+> UniRef90_Q58PS0 Hypothetical intrinsic membrane protein n=1 Tax=uncultured 
+proteobacterium DelRiverFos13D03 TaxID=311564 
+RepID=Q58PS0_9PROT
+Length=75
+
+ Score = 45.0 bits (105),  Expect = 2e-04, Method: Composition-based stats.
+ Identities = 16/60 (27%), Positives = 26/60 (43%), Gaps = 2/60 (3%)
+
+Query  12  NTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGAL  71
+           + +P   LR+W   QM+ G   A        L++     VG++L  +    P+P    AL
+Sbjct  9   DQSPVVRLRVWALGQMIWGGFLAAVGLIALGLVLLVIWCVGQLLDERSKTGPSP--YSAL  66
+
+
+> UniRef90_Q65YR2 PufX n=1 Tax=Rhodobacter blasticus TaxID=1075 
+RepID=Q65YR2_RHOBL
+Length=75
+
+ Score = 44.2 bits (103),  Expect = 4e-04, Method: Composition-based stats.
+ Identities = 22/55 (40%), Positives = 29/55 (53%), Gaps = 2/55 (4%)
+
+Query  18  NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALE  72
+           NLR+W   QM+ GA  A       + L+    + G +LP Q  QAP+P   GALE
+Sbjct  15  NLRVWALGQMVWGAFLAAVGVVVVICLLVGTYLAGLLLPEQSKQAPSP--YGALE  67
+
+
+
+Lambda      K        H        a         alpha
+   0.318    0.138    0.412    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0423    0.140     1.90     42.6     43.6 
+
+Effective search space used: 437226641605
+Results from round 3
+
+
+Query= Q7B2Z6|2itaA
+
+Length=82
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodoba...  109     8e-29
+  UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter Tax...  105     2e-27
+  UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rho...  91.7    6e-22
+  UniRef90_UPI0008F7ED7E UPI0008F7ED7E related cluster n=2 Tax=un...  87.4    2e-20
+  UniRef90_UPI000469AA2E hypothetical protein n=1 Tax=Sulfitobact...  87.4    3e-20
+  UniRef90_C7DFQ0 Uncharacterized protein n=1 Tax=Thalassobium sp...  85.9    8e-20
+  UniRef90_J7G0K3 Uncharacterized protein n=1 Tax=Sulfitobacter g...  85.1    2e-19
+  UniRef90_A0A0Q0ZJC3 1-deoxy-D-xylulose-5-phosphate synthase n=2...  84.3    4e-19
+  UniRef90_B6B3Q9 Putative uncharacterized protein n=2 Tax=Rhodob...  84.3    4e-19
+  UniRef90_A4EG57 Uncharacterized protein n=1 Tax=Roseobacter sp....  82.4    2e-18
+  UniRef90_A0A0Q2UK68 1-deoxy-D-xylulose-5-phosphate synthase n=1...  82.4    2e-18
+  UniRef90_UPI000912C5DC UPI000912C5DC related cluster n=1 Tax=un...  80.9    8e-18
+  UniRef90_A3V2Q0 1-deoxy-D-xylulose-5-phosphate synthase n=1 Tax...  80.5    1e-17
+  UniRef90_UPI0009102FE8 UPI0009102FE8 related cluster n=1 Tax=un...  79.7    2e-17
+  UniRef90_A0A0M6YCJ2 Intrinsic membrane protein PufX n=1 Tax=Jan...  78.6    7e-17
+  UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp....  75.1    1e-15
+  UniRef90_Q58PS0 Hypothetical intrinsic membrane protein n=1 Tax...  68.5    5e-13
+  UniRef90_UPI000566B49E hypothetical protein n=1 Tax=Maribius sp...  62.0    1e-10
+  UniRef90_Q65YR2 PufX n=1 Tax=Rhodobacter blasticus TaxID=1075 R...  60.8    3e-10
+  UniRef90_A0A0N8KDK8 Light-harvesting complex I photosynthetic r...  57.8    5e-09
+
+Sequences not found previously or not previously below threshold:
+
+  UniRef90_A0A076K4B1 Protein PufX n=2 Tax=Proteobacteria TaxID=1...  75.5    1e-15
+  UniRef90_A0A0P7WMT4 Photosystem II assembly protein PufX n=1 Ta...  63.2    5e-11
+  UniRef90_A0A1J0WN89 Uncharacterized protein n=1 Tax=Sulfitobact...  62.8    6e-11
+  UniRef90_UPI00037C6CC4 1-deoxy-D-xylulose-5-phosphate synthase ...  62.4    9e-11
+  UniRef90_A0A0U1NP31 Intrinsic membrane protein PufX n=1 Tax=Ner...  50.1    3e-06
+  UniRef90_UPI00093234BD UPI00093234BD related cluster n=1 Tax=un...  48.1    2e-05
+
+
+> UniRef90_P13402 Intrinsic membrane protein PufX n=6 Tax=Rhodobacter 
+TaxID=1060 RepID=PUFX_RHOS4
+Length=82
+
+ Score = 109 bits (272),  Expect = 8e-29, Method: Composition-based stats.
+ Identities = 82/82 (100%), Positives = 82/82 (100%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN
+Sbjct  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+           QAPAPNITGALETGIELIKHLV
+Sbjct  61  QAPAPNITGALETGIELIKHLV  82
+
+
+> UniRef90_A4WU55 Uncharacterized protein n=2 Tax=Rhodobacter TaxID=1060 
+RepID=A4WU55_RHOS5
+Length=82
+
+ Score = 105 bits (263),  Expect = 2e-27, Method: Composition-based stats.
+ Identities = 73/82 (89%), Positives = 77/82 (94%), Gaps = 0/82 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           MADKTIF+DHL TNPKTNLRLWVAFQMMKGAGWAG VFFGTLL+IGFFRV+GR LPI EN
+Sbjct  1   MADKTIFDDHLKTNPKTNLRLWVAFQMMKGAGWAGAVFFGTLLMIGFFRVLGRALPIDEN  60
+
+Query  61  QAPAPNITGALETGIELIKHLV  82
+            APAPN+TGALETGIELIKHLV
+Sbjct  61  PAPAPNLTGALETGIELIKHLV  82
+
+
+> UniRef90_A0A0P8A6W7 Intrinsic membrane protein PufX n=1 Tax=Rhodobacteraceae 
+bacterium HL-91 TaxID=1666912 RepID=A0A0P8A6W7_9RHOB
+Length=76
+
+ Score = 91.7 bits (226),  Expect = 6e-22, Method: Composition-based stats.
+ Identities = 26/68 (38%), Positives = 37/68 (54%), Gaps = 0/68 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           +D++N  P   LR W+  +M++GAG+A  V  G   +IG   VVG+ LP     AP P  
+Sbjct  4   HDYINETPGQRLRNWILSEMLRGAGYAAAVLLGIGAIIGLIWVVGQFLPEDSKNAPPPMP  63
+
+Query  68  TGALETGI  75
+             ALE  +
+Sbjct  64  YSALEAPV  71
+
+
+> UniRef90_UPI0008F7ED7E UPI0008F7ED7E related cluster n=2 Tax=unknown 
+TaxID= RepID=UPI0008F7ED7E
+Length=76
+
+ Score = 87.4 bits (215),  Expect = 2e-20, Method: Composition-based stats.
+ Identities = 21/70 (30%), Positives = 35/70 (50%), Gaps = 0/70 (0%)
+
+Query  6   IFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAP  65
+           + +D++   P   LR WV  +M++GAG+A  +     +  G    VG++LP +   AP P
+Sbjct  2   VEHDYIQETPTARLRNWVMSEMLRGAGYAALLLLVIGVSYGIIWGVGQLLPSESKNAPPP  61
+
+Query  66  NITGALETGI  75
+               AL   +
+Sbjct  62  MPYSALHAPL  71
+
+
+> UniRef90_UPI000469AA2E hypothetical protein n=1 Tax=Sulfitobacter 
+noctilucicola TaxID=1342301 RepID=UPI000469AA2E
+Length=78
+
+ Score = 87.4 bits (215),  Expect = 3e-20, Method: Composition-based stats.
+ Identities = 23/66 (35%), Positives = 29/66 (44%), Gaps = 1/66 (2%)
+
+Query  5   TIFNDHLNTNPKT-NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAP  63
+           T  ND+L T   T  LR  V   M+KGAG+A    F     I     VG +LP +  +A 
+Sbjct  2   TDNNDYLRTGDSTFRLRADVLALMLKGAGYAALFCFVVGFFIWVIYAVGLLLPEESKEAD  61
+
+Query  64  APNITG  69
+            P    
+Sbjct  62  DPTPYS  67
+
+
+> UniRef90_C7DFQ0 Uncharacterized protein n=1 Tax=Thalassobium 
+sp. R2A62 TaxID=633131 RepID=C7DFQ0_9RHOB
+Length=79
+
+ Score = 85.9 bits (211),  Expect = 8e-20, Method: Composition-based stats.
+ Identities = 16/75 (21%), Positives = 31/75 (41%), Gaps = 2/75 (3%)
+
+Query  5   TIFNDHLNTNPKT--NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQA  62
+           +  +D+L+T+  +   L   V   M+KGAG+A         ++     +G +LP      
+Sbjct  2   SDNHDYLSTSENSKFRLSADVLMLMLKGAGYAAAFCLALWFILVALHWIGLLLPEDSKYR  61
+
+Query  63  PAPNITGALETGIEL  77
+           P P       +  ++
+Sbjct  62  PDPTPYSFYMSDQQI  76
+
+
+> UniRef90_J7G0K3 Uncharacterized protein n=1 Tax=Sulfitobacter 
+guttiformis TaxID=74349 RepID=J7G0K3_9RHOB
+Length=79
+
+ Score = 85.1 bits (209),  Expect = 2e-19, Method: Composition-based stats.
+ Identities = 20/78 (26%), Positives = 33/78 (42%), Gaps = 3/78 (4%)
+
+Query  5   TIFNDHLNTNPKT--NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQA  62
+           +  +D+L T+      LR  V   M+KGAG+A          +     +G +LP +  +A
+Sbjct  2   SDNHDYLGTSNNATFRLRADVLTLMLKGAGYAAVFCLVVGAFLAVTIWIGGLLPAESKEA  61
+
+Query  63  PAPNITGALETGIELIKH  80
+           P P     +    E+  H
+Sbjct  62  PDPTPLSFV-LPAEITVH  78
+
+
+> UniRef90_A0A0Q0ZJC3 1-deoxy-D-xylulose-5-phosphate synthase n=2 
+Tax=Loktanella TaxID=245186 RepID=A0A0Q0ZJC3_9RHOB
+Length=79
+
+ Score = 84.3 bits (207),  Expect = 4e-19, Method: Composition-based stats.
+ Identities = 20/73 (27%), Positives = 34/73 (47%), Gaps = 2/73 (3%)
+
+Query  7   FNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPN  66
+            ++ L+ + K+ L   +   M+KGAG+A         +I     +GR+LP +    P P 
+Sbjct  4   NDNILDMSEKSRLTADITLLMLKGAGYAAIFVLAIWFVIAAMAFIGRILPEESRDTPDPI  63
+
+Query  67  ITGAL--ETGIEL  77
+              +L  E G E+
+Sbjct  64  NRSSLMIEAGPEV  76
+
+
+> UniRef90_B6B3Q9 Putative uncharacterized protein n=2 Tax=Rhodobacteraceae 
+bacterium HTCC2083 TaxID=314270 RepID=B6B3Q9_9RHOB
+Length=78
+
+ Score = 84.3 bits (207),  Expect = 4e-19, Method: Composition-based stats.
+ Identities = 16/73 (22%), Positives = 31/73 (42%), Gaps = 0/73 (0%)
+
+Query  5   TIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPA  64
+           +  +D+L T   + L     F M+KGAG+A        + +   + +G +LP +  +   
+Sbjct  2   SDNHDYLGTGNTSRLTADATFLMLKGAGYAMMFCLVIWVSLVALQGIGLLLPEESRETED  61
+
+Query  65  PNITGALETGIEL  77
+           P     L +   +
+Sbjct  62  PTPFSHLLSDPAI  74
+
+
+> UniRef90_A4EG57 Uncharacterized protein n=1 Tax=Roseobacter sp. 
+CCS2 TaxID=391593 RepID=A4EG57_9RHOB
+Length=79
+
+ Score = 82.4 bits (202),  Expect = 2e-18, Method: Composition-based stats.
+ Identities = 18/65 (28%), Positives = 31/65 (48%), Gaps = 0/65 (0%)
+
+Query  7   FNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPN  66
+            ++ L+ + K+ L   +   M+KGAG+A         +I     +GR+LP Q  + P P 
+Sbjct  4   NDNILDMSEKSRLTADITLLMLKGAGYAAVFVLALWFVIAAMAFIGRILPEQSRETPDPI  63
+
+Query  67  ITGAL  71
+              +L
+Sbjct  64  NRSSL  68
+
+
+> UniRef90_A0A0Q2UK68 1-deoxy-D-xylulose-5-phosphate synthase n=1 
+Tax=Loktanella sp. 3ANDIMAR09 TaxID=1225657 RepID=A0A0Q2UK68_9RHOB
+Length=80
+
+ Score = 82.4 bits (202),  Expect = 2e-18, Method: Composition-based stats.
+ Identities = 20/69 (29%), Positives = 30/69 (43%), Gaps = 0/69 (0%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           M+      + L  + K+ L   V   M+KGAG+A  V      +I    ++GR LP +  
+Sbjct  1   MSSDETSTNLLGVSNKSRLAGDVLMLMLKGAGYAAIVVLSIWAVIAIIALIGRALPEESR  60
+
+Query  61  QAPAPNITG  69
+           Q P P    
+Sbjct  61  QQPDPTPLS  69
+
+
+> UniRef90_UPI000912C5DC UPI000912C5DC related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI000912C5DC
+Length=78
+
+ Score = 80.9 bits (198),  Expect = 8e-18, Method: Composition-based stats.
+ Identities = 24/75 (32%), Positives = 32/75 (43%), Gaps = 3/75 (4%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQEN  60
+           M +KT   + L  + K  L   V   M+KGAG+A  V     L I     +GR LP +  
+Sbjct  1   MTEKT---NILGVSDKARLTGDVTLLMLKGAGYAAIVVLALWLTISVIAFIGRALPEESR  57
+
+Query  61  QAPAPNITGALETGI  75
+           Q P P    +L    
+Sbjct  58  QQPDPTPQSSLVLPA  72
+
+
+> UniRef90_A3V2Q0 1-deoxy-D-xylulose-5-phosphate synthase n=1 Tax=Loktanella 
+vestfoldensis SKA53 TaxID=314232 RepID=A3V2Q0_9RHOB
+Length=74
+
+ Score = 80.5 bits (197),  Expect = 1e-17, Method: Composition-based stats.
+ Identities = 22/64 (34%), Positives = 29/64 (45%), Gaps = 0/64 (0%)
+
+Query  7   FNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPN  66
+            ND L  N K+ L   + F M+KGAG+A          IG F ++G  LP +    P P 
+Sbjct  3   NNDILQMNSKSRLTADITFLMLKGAGYAALFVVAIWFFIGAFALIGEALPEESRSTPDPV  62
+
+Query  67  ITGA  70
+              A
+Sbjct  63  NRAA  66
+
+
+> UniRef90_UPI0009102FE8 UPI0009102FE8 related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI0009102FE8
+Length=77
+
+ Score = 79.7 bits (195),  Expect = 2e-17, Method: Composition-based stats.
+ Identities = 20/66 (30%), Positives = 30/66 (45%), Gaps = 0/66 (0%)
+
+Query  8   NDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNI  67
+           ++ LN   +T L   +   M+KGAG+A  +     L+I     +GR LP      P P  
+Sbjct  4   DNILNLEGRTRLSADITLLMLKGAGYAAVLVLAIWLVIAVIAGIGRALPEDSRNTPDPIN  63
+
+Query  68  TGALET  73
+             +LE 
+Sbjct  64  RSSLEL  69
+
+
+> UniRef90_A0A0M6YCJ2 Intrinsic membrane protein PufX n=1 Tax=Jannaschia 
+donghaensis TaxID=420998 RepID=A0A0M6YCJ2_9RHOB
+Length=79
+
+ Score = 78.6 bits (192),  Expect = 7e-17, Method: Composition-based stats.
+ Identities = 22/71 (31%), Positives = 35/71 (49%), Gaps = 3/71 (4%)
+
+Query  7   FNDHLNT--NPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPA  64
+            +D+L+    P++ L   +   M+KGAG+A       +L + FF  VG +LP +    P 
+Sbjct  3   EHDYLSAGGTPESRLYGDITLLMLKGAGYAAVFSLSVVLFVAFFAWVGGLLPEESQDQPD  62
+
+Query  65  PN-ITGALETG  74
+           PN    +LE  
+Sbjct  63  PNPPRSSLEVP  73
+
+
+> UniRef90_A0A076K4B1 Protein PufX n=2 Tax=Proteobacteria TaxID=1224 
+RepID=A0A076K4B1_9RHOB
+Length=79
+
+ Score = 75.5 bits (184),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 18/63 (29%), Positives = 26/63 (41%), Gaps = 2/63 (3%)
+
+Query  5   TIFNDHLNTNPKT--NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQA  62
+           +   D+L T   T   LR  V   M+KGAG+A          +     +G+ LP +    
+Sbjct  2   SDHQDYLGTGSDTKFRLRADVLMLMLKGAGYAAVFCLVLWFGLMVLYWIGKALPEESRDT  61
+
+Query  63  PAP  65
+           P P
+Sbjct  62  PDP  64
+
+
+> UniRef90_V7EN35 Uncharacterized protein n=1 Tax=Rhodobacter sp. 
+CACIA14H1 TaxID=1408890 RepID=V7EN35_9RHOB
+Length=76
+
+ Score = 75.1 bits (183),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 23/74 (31%), Positives = 35/74 (47%), Gaps = 1/74 (1%)
+
+Query  5   TIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPA  64
+           T+ +D +   P   LR W  +QMM GAGWA         ++     +G +LP +  QAP 
+Sbjct  2   TMSDDFIQQKPGAALRSWALYQMMAGAGWAALFVLSVAAILFAVWGIGLLLPEESKQAPD  61
+
+Query  65  PNITGALETGIELI  78
+           PN    +    E++
+Sbjct  62  PNAF-LITAPAEVM  74
+
+
+> UniRef90_Q58PS0 Hypothetical intrinsic membrane protein n=1 Tax=uncultured 
+proteobacterium DelRiverFos13D03 TaxID=311564 
+RepID=Q58PS0_9PROT
+Length=75
+
+ Score = 68.5 bits (166),  Expect = 5e-13, Method: Composition-based stats.
+ Identities = 17/66 (26%), Positives = 29/66 (44%), Gaps = 3/66 (5%)
+
+Query  8   NDHL-NTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPN  66
+            ++L + +P   LR+W   QM+ G   A        L++     VG++L  +    P+P 
+Sbjct  4   ENYLEDQSPVVRLRVWALGQMIWGGFLAAVGLIALGLVLLVIWCVGQLLDERSKTGPSP-  62
+
+Query  67  ITGALE  72
+              AL 
+Sbjct  63  -YSALH  67
+
+
+> UniRef90_A0A0P7WMT4 Photosystem II assembly protein PufX n=1 
+Tax=Rhodobacteraceae bacterium HLUCCA08 TaxID=1666913 RepID=A0A0P7WMT4_9RHOB
+Length=79
+
+ Score = 63.2 bits (152),  Expect = 5e-11, Method: Composition-based stats.
+ Identities = 24/72 (33%), Positives = 29/72 (40%), Gaps = 4/72 (6%)
+
+Query  1   MADKTIFNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGR-MLPIQE  59
+           MAD    ND L    +  L   V + M+KGAG+A  V     L I F    G  +LP   
+Sbjct  1   MADD---NDMLQLGRRGQLTANVTYLMLKGAGYAAAVVLVVWLGIAFLGWFGSNVLPEDS  57
+
+Query  60  NQAPAPNITGAL  71
+              P P     L
+Sbjct  58  RFTPDPINRSDL  69
+
+
+> UniRef90_A0A1J0WN89 Uncharacterized protein n=1 Tax=Sulfitobacter 
+sp. AM1-D1 TaxID=1917485 RepID=A0A1J0WN89_9RHOB
+Length=78
+
+ Score = 62.8 bits (151),  Expect = 6e-11, Method: Composition-based stats.
+ Identities = 21/70 (30%), Positives = 28/70 (40%), Gaps = 1/70 (1%)
+
+Query  5   TIFNDHLNTNPKT-NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAP  63
+           +  ND L T      LR  V   M+KGAG+A  V     L +     +G +LP Q    P
+Sbjct  2   SDNNDFLRTGSGNFRLRADVTALMLKGAGYAALVCVVVGLCLWLLAALGLLLPEQSRDTP  61
+
+Query  64  APNITGALET  73
+            P     +  
+Sbjct  62  DPTPYSDVPA  71
+
+
+> UniRef90_UPI00037C6CC4 1-deoxy-D-xylulose-5-phosphate synthase 
+n=1 Tax=Loktanella vestfoldensis TaxID=245188 RepID=UPI00037C6CC4
+Length=75
+
+ Score = 62.4 bits (150),  Expect = 9e-11, Method: Composition-based stats.
+ Identities = 22/64 (34%), Positives = 31/64 (48%), Gaps = 0/64 (0%)
+
+Query  7   FNDHLNTNPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPN  66
+            ++ L+ N K+ L   + F M+KGAG+A  V      LI  F  +GR LP +    P P 
+Sbjct  4   EDNILDMNNKSRLTADITFLMLKGAGYAAVVVVAIWFLIAAFAAIGRALPEESRDTPDPI  63
+
+Query  67  ITGA  70
+              A
+Sbjct  64  NRAA  67
+
+
+> UniRef90_UPI000566B49E hypothetical protein n=1 Tax=Maribius 
+sp. MOLA 401 TaxID=1530186 RepID=UPI000566B49E
+Length=71
+
+ Score = 62.0 bits (149),  Expect = 1e-10, Method: Composition-based stats.
+ Identities = 22/68 (32%), Positives = 34/68 (50%), Gaps = 8/68 (12%)
+
+Query  14  NPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALET  73
+           + + +LR+WV  QM  GA +A  VFFG + ++   R +  +LP             ALE 
+Sbjct  11  SDQPSLRMWVFTQMTVGAAYAAAVFFGAIAIVLIIRAISYLLPED--------PYAALEH  62
+
+Query  74  GIELIKHL  81
+           G +L+  L
+Sbjct  63  GQQLLTLL  70
+
+
+> UniRef90_Q65YR2 PufX n=1 Tax=Rhodobacter blasticus TaxID=1075 
+RepID=Q65YR2_RHOBL
+Length=75
+
+ Score = 60.8 bits (146),  Expect = 3e-10, Method: Composition-based stats.
+ Identities = 23/64 (36%), Positives = 31/64 (48%), Gaps = 2/64 (3%)
+
+Query  14  NPKTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALET  73
+           N   NLR+W   QM+ GA  A       + L+    + G +LP Q  QAP+P   GALE 
+Sbjct  11  NAVINLRVWALGQMVWGAFLAAVGVVVVICLLVGTYLAGLLLPEQSKQAPSP--YGALEI  68
+
+Query  74  GIEL  77
+              +
+Sbjct  69  VQTI  72
+
+
+> UniRef90_A0A0N8KDK8 Light-harvesting complex I photosynthetic 
+reaction center protein PufX n=1 Tax=Rhodobacteraceae bacterium 
+HLUCCA09 TaxID=1666915 RepID=A0A0N8KDK8_9RHOB
+Length=78
+
+ Score = 57.8 bits (138),  Expect = 5e-09, Method: Composition-based stats.
+ Identities = 20/54 (37%), Positives = 30/54 (56%), Gaps = 1/54 (2%)
+
+Query  24  AFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALETGIEL  77
+           A  M KGA +   VFFG + +I     +G  LP +  +AP P++ GA+E   E+
+Sbjct  23  AMLMAKGAAYGAAVFFGAMAIIFILIAIGATLPPESKEAPDPSL-GAIEAPSEI  75
+
+
+> UniRef90_A0A0U1NP31 Intrinsic membrane protein PufX n=1 Tax=Nereida 
+ignava TaxID=282199 RepID=A0A0U1NP31_9RHOB
+Length=81
+
+ Score = 50.1 bits (118),  Expect = 3e-06, Method: Composition-based stats.
+ Identities = 13/55 (24%), Positives = 22/55 (40%), Gaps = 0/55 (0%)
+
+Query  16  KTNLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGA  70
+           K  ++  +  QM+ GA  A  V  G ++ +     +G  LP    +A  P     
+Sbjct  14  KARMQSEIFGQMLSGAVIAAAVIGGPIVFVYVLAFLGSFLPEDSKEALDPTPDSF  68
+
+
+> UniRef90_UPI00093234BD UPI00093234BD related cluster n=1 Tax=unknown 
+TaxID= RepID=UPI00093234BD
+Length=75
+
+ Score = 48.1 bits (113),  Expect = 2e-05, Method: Composition-based stats.
+ Identities = 21/64 (33%), Positives = 30/64 (47%), Gaps = 8/64 (13%)
+
+Query  18  NLRLWVAFQMMKGAGWAGGVFFGTLLLIGFFRVVGRMLPIQENQAPAPNITGALETGIEL  77
+           +L +WV  QM  GA +A  VFFG + +I   R +  +LP             ALET  ++
+Sbjct  19  SLYMWVFTQMCLGAVYAAVVFFGVIGVILILRAISFLLPED--------PYAALETMGQV  70
+
+Query  78  IKHL  81
+              L
+Sbjct  71  ATAL  74
+
+
+
+Lambda      K        H        a         alpha
+   0.318    0.134    0.364    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0412    0.140     1.90     42.6     43.6 
+
+Effective search space used: 437226641605
+
+
+  Database: uniref90
+    Posted date:  Feb 27, 2017  10:12 AM
+  Number of letters in database: 17,866,164,385
+  Number of sequences in database:  52,629,880
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

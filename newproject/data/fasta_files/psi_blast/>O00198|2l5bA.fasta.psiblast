@@ -1,0 +1,293 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: uniref90
+           52,629,880 sequences; 17,866,164,385 total letters
+
+Results from round 1
+
+
+Query= O00198|2l5bA
+
+Length=91
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_O00198 Activator of apoptosis harakiri n=33 Tax=Euther...  174     4e-54
+  UniRef90_UPI000717D854 PREDICTED: LOW QUALITY PROTEIN: activato...  100     5e-25
+  UniRef90_UPI000388E03F PREDICTED: activator of apoptosis haraki...  71.6    4e-14
+  UniRef90_P62816 Activator of apoptosis harakiri n=3 Tax=Muroide...  70.5    1e-13
+  UniRef90_F7G1G0 Uncharacterized protein n=1 Tax=Monodelphis dom...  65.1    2e-11
+  UniRef90_UPI0004F0AB1A PREDICTED: activator of apoptosis haraki...  62.8    1e-10
+
+
+> UniRef90_O00198 Activator of apoptosis harakiri n=33 Tax=Eutheria 
+TaxID=9347 RepID=HRK_HUMAN
+Length=91
+
+ Score = 174 bits (441),  Expect = 4e-54, Method: Compositional matrix adjust.
+ Identities = 91/91 (100%), Positives = 91/91 (100%), Gaps = 0/91 (0%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP
+Sbjct  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+
+Query  61  APGALPTYWPWLCAAAQVAALAAWLLGRRNL  91
+           APGALPTYWPWLCAAAQVAALAAWLLGRRNL
+Sbjct  61  APGALPTYWPWLCAAAQVAALAAWLLGRRNL  91
+
+
+> UniRef90_UPI000717D854 PREDICTED: LOW QUALITY PROTEIN: activator 
+of apoptosis harakiri n=1 Tax=Equus caballus TaxID=9796 
+RepID=UPI000717D854
+Length=84
+
+ Score = 100 bits (248),  Expect = 5e-25, Method: Compositional matrix adjust.
+ Identities = 53/66 (80%), Positives = 54/66 (82%), Gaps = 0/66 (0%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLT ARLK L +EL  RTMW     S R P
+Sbjct  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTGARLKVLREELPHRTMWGAPPASPRGP  60
+
+Query  61  APGALP  66
+           APGALP
+Sbjct  61  APGALP  66
+
+
+> UniRef90_UPI000388E03F PREDICTED: activator of apoptosis harakiri, 
+partial n=1 Tax=Chrysemys picta bellii TaxID=8478 RepID=UPI000388E03F
+Length=86
+
+ Score = 71.6 bits (174),  Expect = 4e-14, Method: Compositional matrix adjust.
+ Identities = 51/90 (57%), Positives = 59/90 (66%), Gaps = 4/90 (4%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPC LH G  PPA C CS+ R G R S AQL AARLK +GDEL +RT WRR +  R A 
+Sbjct  1   MCPCALHGG--PPAACLCSSARRGERFSGAQLVAARLKLVGDELQERTAWRRASSRRAAA  58
+
+Query  61  APGALPTYWPWLCAAAQVAALAAWLLGRRN  90
+              +L TY   LCAA QVAAL  WL+ +R+
+Sbjct  59  GR-SLATYLCLLCAATQVAAL-VWLIRKRS  86
+
+
+> UniRef90_P62816 Activator of apoptosis harakiri n=3 Tax=Muroidea 
+TaxID=337687 RepID=HRK_MOUSE
+Length=92
+
+ Score = 70.5 bits (171),  Expect = 1e-13, Method: Compositional matrix adjust.
+ Identities = 64/93 (69%), Positives = 69/93 (74%), Gaps = 5/93 (5%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCP HRGRGPPAVC C   R GLR +AAQ+TA RL+ALGDELH+R M  RR    R P
+Sbjct  1   MCPCPRHRGRGPPAVCGCGDARPGLRWAAAQVTALRLQALGDELHRRAM--RRRARPRDP  58
+
+Query  61  APGALPTY---WPWLCAAAQVAALAAWLLGRRN  90
+            P  LP     WPWLCAAAQVAALAAWLLGRR+
+Sbjct  59  LPALLPALRARWPWLCAAAQVAALAAWLLGRRS  91
+
+
+> UniRef90_F7G1G0 Uncharacterized protein n=1 Tax=Monodelphis domestica 
+TaxID=13616 RepID=F7G1G0_MONDO
+Length=98
+
+ Score = 65.1 bits (157),  Expect = 2e-11, Method: Compositional matrix adjust.
+ Identities = 63/98 (64%), Positives = 67/98 (68%), Gaps = 7/98 (7%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARL-KALGDELHQRTMWRR------R  53
+           MCPCPLHRGRGPPAVCACS+ RL  R++AA    A   KALGDEL +RTMWRR       
+Sbjct  1   MCPCPLHRGRGPPAVCACSSDRLEQRAAAAAQLTAARLKALGDELQERTMWRRRARSRRA  60
+
+Query  54  ARSRRAPAPGALPTYWPWLCAAAQVAALAAWLLGRRNL  91
+           A        G LP YW WLCAAA VAALAAWLL RRNL
+Sbjct  61  AAEAAGSGGGGLPAYWAWLCAAAHVAALAAWLLRRRNL  98
+
+
+> UniRef90_UPI0004F0AB1A PREDICTED: activator of apoptosis harakiri 
+n=1 Tax=Pan paniscus TaxID=9597 RepID=UPI0004F0AB1A
+Length=109
+
+ Score = 62.8 bits (151),  Expect = 1e-10, Method: Compositional matrix adjust.
+ Identities = 44/93 (47%), Positives = 49/93 (53%), Gaps = 27/93 (29%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           M PC LH G    A+ AC AGRLGLRS+ AQLT A                         
+Sbjct  1   MLPCRLHGGHSSLALYACLAGRLGLRSATAQLTTA-------------------------  35
+
+Query  61  APGALP--TYWPWLCAAAQVAALAAWLLGRRNL  91
+             GA P  TYWPWL AA Q+ ALAAWLLGR++L
+Sbjct  36  PKGAAPHRTYWPWLYAAPQLVALAAWLLGRQSL  68
+
+
+
+Lambda      K        H        a         alpha
+   0.327    0.134    0.472    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 439672251150
+Results from round 2
+
+
+Query= O00198|2l5bA
+
+Length=91
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_O00198 Activator of apoptosis harakiri n=33 Tax=Euther...  86.9    7e-20
+  UniRef90_UPI000717D854 PREDICTED: LOW QUALITY PROTEIN: activato...  76.1    1e-15
+  UniRef90_UPI000388E03F PREDICTED: activator of apoptosis haraki...  73.4    1e-14
+  UniRef90_UPI0004F0AB1A PREDICTED: activator of apoptosis haraki...  70.0    3e-13
+  UniRef90_P62816 Activator of apoptosis harakiri n=3 Tax=Muroide...  59.9    1e-09
+  UniRef90_F7G1G0 Uncharacterized protein n=1 Tax=Monodelphis dom...  58.4    6e-09
+
+Sequences not found previously or not previously below threshold:
+
+
+
+> UniRef90_O00198 Activator of apoptosis harakiri n=33 Tax=Eutheria 
+TaxID=9347 RepID=HRK_HUMAN
+Length=91
+
+ Score = 86.9 bits (213),  Expect = 7e-20, Method: Composition-based stats.
+ Identities = 91/91 (100%), Positives = 91/91 (100%), Gaps = 0/91 (0%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP
+Sbjct  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+
+Query  61  APGALPTYWPWLCAAAQVAALAAWLLGRRNL  91
+           APGALPTYWPWLCAAAQVAALAAWLLGRRNL
+Sbjct  61  APGALPTYWPWLCAAAQVAALAAWLLGRRNL  91
+
+
+> UniRef90_UPI000717D854 PREDICTED: LOW QUALITY PROTEIN: activator 
+of apoptosis harakiri n=1 Tax=Equus caballus TaxID=9796 
+RepID=UPI000717D854
+Length=84
+
+ Score = 76.1 bits (185),  Expect = 1e-15, Method: Composition-based stats.
+ Identities = 53/66 (80%), Positives = 54/66 (82%), Gaps = 0/66 (0%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLT ARLK L +EL  RTMW     S R P
+Sbjct  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTGARLKVLREELPHRTMWGAPPASPRGP  60
+
+Query  61  APGALP  66
+           APGALP
+Sbjct  61  APGALP  66
+
+
+> UniRef90_UPI000388E03F PREDICTED: activator of apoptosis harakiri, 
+partial n=1 Tax=Chrysemys picta bellii TaxID=8478 RepID=UPI000388E03F
+Length=86
+
+ Score = 73.4 bits (178),  Expect = 1e-14, Method: Composition-based stats.
+ Identities = 54/90 (60%), Positives = 61/90 (68%), Gaps = 4/90 (4%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPC LH G  PPA C CS+ R G R S AQL AARLK +GDEL +RT   RRA SRRA 
+Sbjct  1   MCPCALHGG--PPAACLCSSARRGERFSGAQLVAARLKLVGDELQERTA-WRRASSRRAA  57
+
+Query  61  APGALPTYWPWLCAAAQVAALAAWLLGRRN  90
+           A  +L TY   LCAA QVAAL  WL+ +R+
+Sbjct  58  AGRSLATYLCLLCAATQVAAL-VWLIRKRS  86
+
+
+> UniRef90_UPI0004F0AB1A PREDICTED: activator of apoptosis harakiri 
+n=1 Tax=Pan paniscus TaxID=9597 RepID=UPI0004F0AB1A
+Length=109
+
+ Score = 70.0 bits (169),  Expect = 3e-13, Method: Composition-based stats.
+ Identities = 44/93 (47%), Positives = 49/93 (53%), Gaps = 27/93 (29%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           M PC LH G    A+ AC AGRLGLRS+ AQLT A                         
+Sbjct  1   MLPCRLHGGHSSLALYACLAGRLGLRSATAQLTTA-------------------------  35
+
+Query  61  APGALP--TYWPWLCAAAQVAALAAWLLGRRNL  91
+             GA P  TYWPWL AA Q+ ALAAWLLGR++L
+Sbjct  36  PKGAAPHRTYWPWLYAAPQLVALAAWLLGRQSL  68
+
+
+> UniRef90_P62816 Activator of apoptosis harakiri n=3 Tax=Muroidea 
+TaxID=337687 RepID=HRK_MOUSE
+Length=92
+
+ Score = 59.9 bits (143),  Expect = 1e-09, Method: Composition-based stats.
+ Identities = 63/93 (68%), Positives = 68/93 (73%), Gaps = 5/93 (5%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARLKALGDELHQRTMWRRRARSRRAP  60
+           MCPCP HRGRGPPAVC C   R GLR +AAQ+TA RL+ALGDELH+R    RR    R P
+Sbjct  1   MCPCPRHRGRGPPAVCGCGDARPGLRWAAAQVTALRLQALGDELHRRA--MRRRARPRDP  58
+
+Query  61  APGALPTY---WPWLCAAAQVAALAAWLLGRRN  90
+            P  LP     WPWLCAAAQVAALAAWLLGRR+
+Sbjct  59  LPALLPALRARWPWLCAAAQVAALAAWLLGRRS  91
+
+
+> UniRef90_F7G1G0 Uncharacterized protein n=1 Tax=Monodelphis domestica 
+TaxID=13616 RepID=F7G1G0_MONDO
+Length=98
+
+ Score = 58.4 bits (139),  Expect = 6e-09, Method: Composition-based stats.
+ Identities = 70/98 (71%), Positives = 74/98 (76%), Gaps = 7/98 (7%)
+
+Query  1   MCPCPLHRGRGPPAVCACSAGRLGLRSSAAQLTAARL-KALGDELHQRTMWRRRARSRRA  59
+           MCPCPLHRGRGPPAVCACS+ RL  R++AA    A   KALGDEL +RTMWRRRARSRRA
+Sbjct  1   MCPCPLHRGRGPPAVCACSSDRLEQRAAAAAQLTAARLKALGDELQERTMWRRRARSRRA  60
+
+Query  60  PAPGA------LPTYWPWLCAAAQVAALAAWLLGRRNL  91
+            A  A      LP YW WLCAAA VAALAAWLL RRNL
+Sbjct  61  AAEAAGSGGGGLPAYWAWLCAAAHVAALAAWLLRRRNL  98
+
+
+
+Lambda      K        H        a         alpha
+   0.300    0.113    0.340    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0359    0.140     1.90     42.6     43.6 
+
+Effective search space used: 439672251150
+
+Search has CONVERGED!
+
+
+  Database: uniref90
+    Posted date:  Feb 27, 2017  10:12 AM
+  Number of letters in database: 17,866,164,385
+  Number of sequences in database:  52,629,880
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40

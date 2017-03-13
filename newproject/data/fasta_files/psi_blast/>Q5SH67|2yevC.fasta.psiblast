@@ -1,0 +1,493 @@
+PSIBLAST 2.2.31+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen F.
+Altschul, John C. Wootton, E. Michael Gertz, Richa Agarwala,
+Aleksandr Morgulis, Alejandro A. Schaffer, and Yi-Kuo Yu (2005)
+"Protein database searches using compositionally adjusted
+substitution matrices", FEBS J. 272:5101-5109.
+
+
+Reference for composition-based statistics starting in round 2:
+Alejandro A. Schaffer, L. Aravind, Thomas L. Madden, Sergei
+Shavirin, John L. Spouge, Yuri I. Wolf, Eugene V. Koonin, and
+Stephen F. Altschul (2001), "Improving the accuracy of PSI-BLAST
+protein database searches with composition-based statistics and
+other refinements", Nucleic Acids Res. 29:2994-3005.
+
+
+
+Database: uniref90
+           52,629,880 sequences; 17,866,164,385 total letters
+
+Results from round 1
+
+
+Query= Q5SH67|2yevC
+
+Length=66
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  UniRef90_Q72HH5 Uncharacterized protein n=7 Tax=Thermus TaxID=2...  122     2e-34
+  UniRef90_UPI0005711A44 hypothetical protein n=1 Tax=Thermus amy...  109     2e-29
+  UniRef90_A0A0A2WR22 Uncharacterized protein n=1 Tax=Thermus fil...  107     9e-29
+  UniRef90_A0A0N0IRQ0 Uncharacterized protein n=14 Tax=Thermus Ta...  107     2e-28
+  UniRef90_K7R0Z4 Uncharacterized protein n=2 Tax=Thermus oshimai...  105     6e-28
+  UniRef90_UPI00037D0588 hypothetical protein n=2 Tax=Meiothermus...  65.1    4e-12
+  UniRef90_D7BBW9 Uncharacterized protein n=1 Tax=Meiothermus sil...  63.9    1e-11
+  UniRef90_D3PST5 Uncharacterized protein n=4 Tax=Meiothermus Tax...  58.2    2e-09
+  UniRef90_F2NNB9 Uncharacterized protein n=2 Tax=Marinithermus T...  57.0    6e-09
+  UniRef90_UPI0003F80048 hypothetical protein n=1 Tax=Meiothermus...  55.8    1e-08
+  UniRef90_UPI0004825335 hypothetical protein n=1 Tax=Meiothermus...  52.8    2e-07
+  UniRef90_E4U6L8 Uncharacterized protein n=2 Tax=Oceanithermus T...  50.1    2e-06
+
+
+> UniRef90_Q72HH5 Uncharacterized protein n=7 Tax=Thermus TaxID=270 
+RepID=Q72HH5_THET2
+Length=66
+
+ Score = 122 bits (307),  Expect = 2e-34, Method: Compositional matrix adjust.
+ Identities = 66/66 (100%), Positives = 66/66 (100%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG
+Sbjct  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+
+Query  61  KAHHLL  66
+           KAHHLL
+Sbjct  61  KAHHLL  66
+
+
+> UniRef90_UPI0005711A44 hypothetical protein n=1 Tax=Thermus amyloliquefaciens 
+TaxID=1449080 RepID=UPI0005711A44
+Length=66
+
+ Score = 109 bits (273),  Expect = 2e-29, Method: Compositional matrix adjust.
+ Identities = 57/66 (86%), Positives = 61/66 (92%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M YIALFALGAALVTL FYLILNPRVLTTEGETFDLRF+LFML+LI+LAA TVALML +G
+Sbjct  1   MAYIALFALGAALVTLLFYLILNPRVLTTEGETFDLRFILFMLMLIILAASTVALMLTLG  60
+
+Query  61  KAHHLL  66
+           K HHLL
+Sbjct  61  KMHHLL  66
+
+
+> UniRef90_A0A0A2WR22 Uncharacterized protein n=1 Tax=Thermus filiformis 
+TaxID=276 RepID=A0A0A2WR22_THEFI
+Length=67
+
+ Score = 107 bits (268),  Expect = 9e-29, Method: Compositional matrix adjust.
+ Identities = 56/66 (85%), Positives = 61/66 (92%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYI LFALGAALVTL FYLILNPR +TTEGETFDLRFVLFMLLLI+L+A TV+LMLL+G
+Sbjct  1   MVYIVLFALGAALVTLLFYLILNPRTVTTEGETFDLRFVLFMLLLIILSAATVSLMLLLG  60
+
+Query  61  KAHHLL  66
+           K HHLL
+Sbjct  61  KMHHLL  66
+
+
+> UniRef90_A0A0N0IRQ0 Uncharacterized protein n=14 Tax=Thermus 
+TaxID=270 RepID=A0A0N0IRQ0_THESC
+Length=66
+
+ Score = 107 bits (266),  Expect = 2e-28, Method: Compositional matrix adjust.
+ Identities = 54/66 (82%), Positives = 63/66 (95%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYIALFALGAALVTL FYLILNPRVLTTEGETFDLRF+LFML+LI+LAA TVALML++G
+Sbjct  1   MVYIALFALGAALVTLLFYLILNPRVLTTEGETFDLRFILFMLMLIVLAASTVALMLILG  60
+
+Query  61  KAHHLL  66
+           + +H++
+Sbjct  61  RMYHVI  66
+
+
+> UniRef90_K7R0Z4 Uncharacterized protein n=2 Tax=Thermus oshimai 
+TaxID=56957 RepID=K7R0Z4_THEOS
+Length=66
+
+ Score = 105 bits (263),  Expect = 6e-28, Method: Compositional matrix adjust.
+ Identities = 54/66 (82%), Positives = 60/66 (91%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M YIA FALGAALVTL FYLILNPR+LTTEGETFDLRF+ FMLLLI+L+A TVALML +G
+Sbjct  1   MAYIAFFALGAALVTLLFYLILNPRILTTEGETFDLRFIFFMLLLIVLSAATVALMLWLG  60
+
+Query  61  KAHHLL  66
+           KA+HLL
+Sbjct  61  KAYHLL  66
+
+
+> UniRef90_UPI00037D0588 hypothetical protein n=2 Tax=Meiothermus 
+TaxID=65551 RepID=UPI00037D0588
+Length=70
+
+ Score = 65.1 bits (157),  Expect = 4e-12, Method: Compositional matrix adjust.
+ Identities = 31/63 (49%), Positives = 45/63 (71%), Gaps = 0/63 (0%)
+
+Query  2   VYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGK  61
+           V+  +F +G+ LVT   YL LNP+ +  EGE  DLR++ F L+LI+L+A T+  MLL+GK
+Sbjct  5   VFTLIFVIGSILVTSLIYLALNPKSVNVEGEGADLRYIGFALVLIILSAATIGAMLLLGK  64
+
+Query  62  AHH  64
+           AH+
+Sbjct  65  AHN  67
+
+
+> UniRef90_D7BBW9 Uncharacterized protein n=1 Tax=Meiothermus silvanus 
+(strain ATCC 700542 / DSM 9946 / VI-R2) TaxID=526227 
+RepID=D7BBW9_MEISD
+Length=78
+
+ Score = 63.9 bits (154),  Expect = 1e-11, Method: Compositional matrix adjust.
+ Identities = 31/57 (54%), Positives = 43/57 (75%), Gaps = 0/57 (0%)
+
+Query  5   ALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGK  61
+           ALF +GA LVT   YL +NPR + T+ E+ DLR++ F LLLI+L+AGT+A +L +GK
+Sbjct  14  ALFTIGAVLVTTLIYLAINPRSVATKSESADLRYIGFALLLIILSAGTIASLLYLGK  70
+
+
+> UniRef90_D3PST5 Uncharacterized protein n=4 Tax=Meiothermus TaxID=65551 
+RepID=D3PST5_MEIRD
+Length=69
+
+ Score = 58.2 bits (139),  Expect = 2e-09, Method: Compositional matrix adjust.
+ Identities = 32/61 (52%), Positives = 40/61 (66%), Gaps = 0/61 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  LF +G+ LVT   YL L PR L  E E  DLR+V   LLLI+L A TVA ML++G
+Sbjct  1   MLFAILFTIGSILVTWLLYLALRPRTLEVESEGADLRYVAMALLLIILTAATVASMLILG  60
+
+Query  61  K  61
+           K
+Sbjct  61  K  61
+
+
+> UniRef90_F2NNB9 Uncharacterized protein n=2 Tax=Marinithermus 
+TaxID=186191 RepID=F2NNB9_MARHT
+Length=72
+
+ Score = 57.0 bits (136),  Expect = 6e-09, Method: Compositional matrix adjust.
+ Identities = 28/63 (44%), Positives = 43/63 (68%), Gaps = 0/63 (0%)
+
+Query  3   YIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGKA  62
+           Y+ LF +G+ +V    Y+ L+PR +  EGE  DLRF+ F+L LI+LAA T++ ML++GK 
+Sbjct  6   YVTLFFIGSLVVGYVLYVALSPRSVAVEGENVDLRFIGFVLALIILAAFTISAMLILGKI  65
+
+Query  63  HHL  65
+             +
+Sbjct  66  DEI  68
+
+
+> UniRef90_UPI0003F80048 hypothetical protein n=1 Tax=Meiothermus 
+rufus TaxID=604332 RepID=UPI0003F80048
+Length=69
+
+ Score = 55.8 bits (133),  Expect = 1e-08, Method: Compositional matrix adjust.
+ Identities = 30/61 (49%), Positives = 40/61 (66%), Gaps = 0/61 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  LF +G+ LVT   YL L PR L  E E  DLR++   L+LI+L A TVA ML++G
+Sbjct  1   MLFAILFTIGSILVTWLLYLALRPRTLEVESEGADLRYIGMALILIILTAATVASMLILG  60
+
+Query  61  K  61
+           K
+Sbjct  61  K  61
+
+
+> UniRef90_UPI0004825335 hypothetical protein n=1 Tax=Meiothermus 
+cerbereus TaxID=65552 RepID=UPI0004825335
+Length=69
+
+ Score = 52.8 bits (125),  Expect = 2e-07, Method: Compositional matrix adjust.
+ Identities = 28/61 (46%), Positives = 39/61 (64%), Gaps = 0/61 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  +F + A +VT   YL L PR L  E ET DLR++   L+LI+L A  VA ML++G
+Sbjct  1   MLFAIIFTVLAVMVTWLLYLALRPRALEVESETADLRYIAMALILIILTAAAVASMLILG  60
+
+Query  61  K  61
+           K
+Sbjct  61  K  61
+
+
+> UniRef90_E4U6L8 Uncharacterized protein n=2 Tax=Oceanithermus 
+TaxID=208447 RepID=E4U6L8_OCEP5
+Length=76
+
+ Score = 50.1 bits (118),  Expect = 2e-06, Method: Compositional matrix adjust.
+ Identities = 27/63 (43%), Positives = 42/63 (67%), Gaps = 0/63 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           ++Y+A+F +GA +VT  FYL  NPR+L TE    DL  +   LL+I+L +  VA ML++G
+Sbjct  4   LIYVAVFVVGALVVTGVFYLTFNPRMLATESGEVDLVLIGRTLLMIVLTSVAVAAMLMLG  63
+
+Query  61  KAH  63
+           + +
+Sbjct  64  RYY  66
+
+
+
+Lambda      K        H        a         alpha
+   0.341    0.153    0.435    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 444254410460
+Results from round 2
+
+
+Query= Q5SH67|2yevC
+
+Length=66
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+Sequences used in model and found again:
+
+  UniRef90_A0A0A2WR22 Uncharacterized protein n=1 Tax=Thermus fil...  54.8    3e-08
+  UniRef90_UPI0005711A44 hypothetical protein n=1 Tax=Thermus amy...  54.5    4e-08
+  UniRef90_K7R0Z4 Uncharacterized protein n=2 Tax=Thermus oshimai...  54.5    4e-08
+  UniRef90_A0A0N0IRQ0 Uncharacterized protein n=14 Tax=Thermus Ta...  54.5    4e-08
+  UniRef90_F2NNB9 Uncharacterized protein n=2 Tax=Marinithermus T...  51.0    8e-07
+  UniRef90_UPI00037D0588 hypothetical protein n=2 Tax=Meiothermus...  51.0    1e-06
+  UniRef90_D7BBW9 Uncharacterized protein n=1 Tax=Meiothermus sil...  49.1    5e-06
+  UniRef90_E4U6L8 Uncharacterized protein n=2 Tax=Oceanithermus T...  49.1    5e-06
+  UniRef90_UPI0003F80048 hypothetical protein n=1 Tax=Meiothermus...  48.7    7e-06
+  UniRef90_D3PST5 Uncharacterized protein n=4 Tax=Meiothermus Tax...  48.3    1e-05
+  UniRef90_Q72HH5 Uncharacterized protein n=7 Tax=Thermus TaxID=2...  47.5    1e-05
+  UniRef90_UPI0004825335 hypothetical protein n=1 Tax=Meiothermus...  46.4    5e-05
+
+Sequences not found previously or not previously below threshold:
+
+
+
+> UniRef90_A0A0A2WR22 Uncharacterized protein n=1 Tax=Thermus filiformis 
+TaxID=276 RepID=A0A0A2WR22_THEFI
+Length=67
+
+ Score = 54.8 bits (131),  Expect = 3e-08, Method: Composition-based stats.
+ Identities = 56/66 (85%), Positives = 61/66 (92%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYI LFALGAALVTL FYLILNPR +TTEGETFDLRFVLFMLLLI+L+A TV+LMLL+G
+Sbjct  1   MVYIVLFALGAALVTLLFYLILNPRTVTTEGETFDLRFVLFMLLLIILSAATVSLMLLLG  60
+
+Query  61  KAHHLL  66
+           K HHLL
+Sbjct  61  KMHHLL  66
+
+
+> UniRef90_UPI0005711A44 hypothetical protein n=1 Tax=Thermus amyloliquefaciens 
+TaxID=1449080 RepID=UPI0005711A44
+Length=66
+
+ Score = 54.5 bits (130),  Expect = 4e-08, Method: Composition-based stats.
+ Identities = 57/66 (86%), Positives = 61/66 (92%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M YIALFALGAALVTL FYLILNPRVLTTEGETFDLRF+LFML+LI+LAA TVALML +G
+Sbjct  1   MAYIALFALGAALVTLLFYLILNPRVLTTEGETFDLRFILFMLMLIILAASTVALMLTLG  60
+
+Query  61  KAHHLL  66
+           K HHLL
+Sbjct  61  KMHHLL  66
+
+
+> UniRef90_K7R0Z4 Uncharacterized protein n=2 Tax=Thermus oshimai 
+TaxID=56957 RepID=K7R0Z4_THEOS
+Length=66
+
+ Score = 54.5 bits (130),  Expect = 4e-08, Method: Composition-based stats.
+ Identities = 54/66 (82%), Positives = 60/66 (91%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M YIA FALGAALVTL FYLILNPR+LTTEGETFDLRF+ FMLLLI+L+A TVALML +G
+Sbjct  1   MAYIAFFALGAALVTLLFYLILNPRILTTEGETFDLRFIFFMLLLIVLSAATVALMLWLG  60
+
+Query  61  KAHHLL  66
+           KA+HLL
+Sbjct  61  KAYHLL  66
+
+
+> UniRef90_A0A0N0IRQ0 Uncharacterized protein n=14 Tax=Thermus 
+TaxID=270 RepID=A0A0N0IRQ0_THESC
+Length=66
+
+ Score = 54.5 bits (130),  Expect = 4e-08, Method: Composition-based stats.
+ Identities = 54/66 (82%), Positives = 63/66 (95%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYIALFALGAALVTL FYLILNPRVLTTEGETFDLRF+LFML+LI+LAA TVALML++G
+Sbjct  1   MVYIALFALGAALVTLLFYLILNPRVLTTEGETFDLRFILFMLMLIVLAASTVALMLILG  60
+
+Query  61  KAHHLL  66
+           + +H++
+Sbjct  61  RMYHVI  66
+
+
+> UniRef90_F2NNB9 Uncharacterized protein n=2 Tax=Marinithermus 
+TaxID=186191 RepID=F2NNB9_MARHT
+Length=72
+
+ Score = 51.0 bits (121),  Expect = 8e-07, Method: Composition-based stats.
+ Identities = 28/63 (44%), Positives = 43/63 (68%), Gaps = 0/63 (0%)
+
+Query  3   YIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGKA  62
+           Y+ LF +G+ +V    Y+ L+PR +  EGE  DLRF+ F+L LI+LAA T++ ML++GK 
+Sbjct  6   YVTLFFIGSLVVGYVLYVALSPRSVAVEGENVDLRFIGFVLALIILAAFTISAMLILGKI  65
+
+Query  63  HHL  65
+             +
+Sbjct  66  DEI  68
+
+
+> UniRef90_UPI00037D0588 hypothetical protein n=2 Tax=Meiothermus 
+TaxID=65551 RepID=UPI00037D0588
+Length=70
+
+ Score = 51.0 bits (121),  Expect = 1e-06, Method: Composition-based stats.
+ Identities = 31/65 (48%), Positives = 46/65 (71%), Gaps = 0/65 (0%)
+
+Query  2   VYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGK  61
+           V+  +F +G+ LVT   YL LNP+ +  EGE  DLR++ F L+LI+L+A T+  MLL+GK
+Sbjct  5   VFTLIFVIGSILVTSLIYLALNPKSVNVEGEGADLRYIGFALVLIILSAATIGAMLLLGK  64
+
+Query  62  AHHLL  66
+           AH+ +
+Sbjct  65  AHNAI  69
+
+
+> UniRef90_D7BBW9 Uncharacterized protein n=1 Tax=Meiothermus silvanus 
+(strain ATCC 700542 / DSM 9946 / VI-R2) TaxID=526227 
+RepID=D7BBW9_MEISD
+Length=78
+
+ Score = 49.1 bits (116),  Expect = 5e-06, Method: Composition-based stats.
+ Identities = 31/61 (51%), Positives = 44/61 (72%), Gaps = 0/61 (0%)
+
+Query  2   VYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIGK  61
+           +  ALF +GA LVT   YL +NPR + T+ E+ DLR++ F LLLI+L+AGT+A +L +GK
+Sbjct  11  LLAALFTIGAVLVTTLIYLAINPRSVATKSESADLRYIGFALLLIILSAGTIASLLYLGK  70
+
+Query  62  A  62
+            
+Sbjct  71  L  71
+
+
+> UniRef90_E4U6L8 Uncharacterized protein n=2 Tax=Oceanithermus 
+TaxID=208447 RepID=E4U6L8_OCEP5
+Length=76
+
+ Score = 49.1 bits (116),  Expect = 5e-06, Method: Composition-based stats.
+ Identities = 27/63 (43%), Positives = 42/63 (67%), Gaps = 0/63 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           ++Y+A+F +GA +VT  FYL  NPR+L TE    DL  +   LL+I+L +  VA ML++G
+Sbjct  4   LIYVAVFVVGALVVTGVFYLTFNPRMLATESGEVDLVLIGRTLLMIVLTSVAVAAMLMLG  63
+
+Query  61  KAH  63
+           + +
+Sbjct  64  RYY  66
+
+
+> UniRef90_UPI0003F80048 hypothetical protein n=1 Tax=Meiothermus 
+rufus TaxID=604332 RepID=UPI0003F80048
+Length=69
+
+ Score = 48.7 bits (115),  Expect = 7e-06, Method: Composition-based stats.
+ Identities = 30/62 (48%), Positives = 40/62 (65%), Gaps = 0/62 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  LF +G+ LVT   YL L PR L  E E  DLR++   L+LI+L A TVA ML++G
+Sbjct  1   MLFAILFTIGSILVTWLLYLALRPRTLEVESEGADLRYIGMALILIILTAATVASMLILG  60
+
+Query  61  KA  62
+           K 
+Sbjct  61  KL  62
+
+
+> UniRef90_D3PST5 Uncharacterized protein n=4 Tax=Meiothermus TaxID=65551 
+RepID=D3PST5_MEIRD
+Length=69
+
+ Score = 48.3 bits (114),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 32/62 (52%), Positives = 40/62 (65%), Gaps = 0/62 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  LF +G+ LVT   YL L PR L  E E  DLR+V   LLLI+L A TVA ML++G
+Sbjct  1   MLFAILFTIGSILVTWLLYLALRPRTLEVESEGADLRYVAMALLLIILTAATVASMLILG  60
+
+Query  61  KA  62
+           K 
+Sbjct  61  KL  62
+
+
+> UniRef90_Q72HH5 Uncharacterized protein n=7 Tax=Thermus TaxID=270 
+RepID=Q72HH5_THET2
+Length=66
+
+ Score = 47.5 bits (112),  Expect = 1e-05, Method: Composition-based stats.
+ Identities = 66/66 (100%), Positives = 66/66 (100%), Gaps = 0/66 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG
+Sbjct  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+
+Query  61  KAHHLL  66
+           KAHHLL
+Sbjct  61  KAHHLL  66
+
+
+> UniRef90_UPI0004825335 hypothetical protein n=1 Tax=Meiothermus 
+cerbereus TaxID=65552 RepID=UPI0004825335
+Length=69
+
+ Score = 46.4 bits (109),  Expect = 5e-05, Method: Composition-based stats.
+ Identities = 28/65 (43%), Positives = 40/65 (62%), Gaps = 0/65 (0%)
+
+Query  1   MVYIALFALGAALVTLFFYLILNPRVLTTEGETFDLRFVLFMLLLILLAAGTVALMLLIG  60
+           M++  +F + A +VT   YL L PR L  E ET DLR++   L+LI+L A  VA ML++G
+Sbjct  1   MLFAIIFTVLAVMVTWLLYLALRPRALEVESETADLRYIAMALILIILTAAAVASMLILG  60
+
+Query  61  KAHHL  65
+           K   +
+Sbjct  61  KLGQV  65
+
+
+
+Lambda      K        H        a         alpha
+   0.336    0.156    0.422    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0467    0.140     1.90     42.6     43.6 
+
+Effective search space used: 444254410460
+
+Search has CONVERGED!
+
+
+  Database: uniref90
+    Posted date:  Feb 27, 2017  10:12 AM
+  Number of letters in database: 17,866,164,385
+  Number of sequences in database:  52,629,880
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40
