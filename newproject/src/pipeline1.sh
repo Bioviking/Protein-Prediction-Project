@@ -9,7 +9,7 @@
    
 python parse.py    #Runs parse.py with hard coded dataset file
 
-python cross_valid.py #| bash training_file_list.sh  #Runs protein_cross function in the cross_valid.py makes 4 training and 1 test dataset file plus extra combo files   #Runs training_file_list.sh to create a .txt list of file names for training and test function inputs
+python protein_cross.py #| bash training_file_list.sh  #Runs protein_cross function in the cross_valid.py makes 4 training and 1 test dataset file plus extra combo files   #Runs training_file_list.sh to create a .txt list of file names for training and test function inputs
 
 #bash cross_valid.sh     #Convert dataset to a fasta file for psiblast
 

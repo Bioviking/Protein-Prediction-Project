@@ -7,10 +7,10 @@ Created on Mon Mar 13 13:10:01 2017
 """
 
 import sys
-import encoding.py as X, y
+import encoding_file
 #from sklearn import preprocessing
 #import os 
-#import numpy as np
+import numpy as np
 #import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
@@ -24,10 +24,19 @@ from sklearn.svm import SVC
 
 top_dict_inv = {'0':'I', '1':'M', '2':'O'}
 
+wind_list= []
+top_list = []
 
-
-def svm_learning(X, y):
-       
+def svm_linear_learn(wind_list, top_list):
+   
+    wind_list= []
+    top_list = []
+    
+    X = np.array(wind_list)
+    y = np.array(top_list)
+    print(X.shape)
+    print(y.shape)
+    
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
 ###################################Creating my Model##############################3
@@ -64,7 +73,7 @@ def svm_learning(X, y):
     score = cross_val_score(svc, X_train, y_train, cv=5)
     print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
     
-    
+    return    
     
 
 
@@ -72,7 +81,6 @@ def svm_learning(X, y):
 #loading_input(X, Y)
 
 #encoding_list(file1)
-svm_learning(X, y)
 #training_svm(X, Y)
 #padding(link_list)
 ##################################Closing the files which were opened################################33

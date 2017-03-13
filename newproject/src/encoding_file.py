@@ -10,8 +10,12 @@
 import sys
 #from sklearn import preprocessing
 #import os 
+
 import numpy as np
-from src import protein_cross
+
+import svm_linear_learn 
+#import svm_RBF_learn
+#, listB #, listC, listD
 #import scipy as sp
 #from sklearn.preprocessing import OneHotEncoder
 #from sklearn.feature_extraction import DictVectorizer
@@ -29,29 +33,29 @@ from src import protein_cross
 
 
 ##################Extra###################################3
+#file1 = open('../data/textfile/parsed/both_list.txt', 'r+')
+#out_sparse1 = open('../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
+#out_sparse2 = open('../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
+#out_sparse3 = open('../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
+#out_sparse4 = open('../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+#out_test = open('../data/textfile/cross_validated/test_list.txt', 'r+')
 
-#fname = open('both_list.txt', 'r+')
-#
-#out_sparse2 = open('trainlist_no2.txt', 'r+')
-#out_sparse3 = open('trainlist_no3.txt', 'r+')
-#out_sparse4 = open('trainlist_no4.txt', 'r+')
-#out_test = open('test_list.txt', 'r+')
+
+
+
+
 #out_encoded1 = open('encoded_file.txt', 'w')
 
-encode_1, encode_2, encode_3, encode_4 = protein_cross()
-# = cross_valid.protein_cross(listB)
-#encode_3 = cross_valid.protein_cross(listC)
-#encode_4 = cross_valid.protein_cross(listD)
+#encode_1, encode_2, encode_3, encode_4 = ()
+#encode_1 = print(listA)
+#encode_2 = listB.protein_cross
+#encode_3 = listC.protein_cross
+#encode_4 = listD.protein_cross
 #out_test = open('test_list.txt', 'r+')
 #out_encoded1 = open('encoded_file.txt', 'w')
 
 #####Output_files######
-#out_X_array = open('../data/textfile/encoded/Xarray.txt', 'w')
-#out_Y_array = open('../data/textfile//Yarray.txt', 'w')
-#
-##Amino acid numbers assignment
-#aadict = [{'A': 1,'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'K': 9, 'L': 10, 'M': 11,
-#           'N': 12, 'P': 13, 'Q': 14, 'R': 15, 'S': 16, 'T': 17, 'V': 18, 'W': 19,'Y': 20}]
+
 
 
 ##################################### Load the data from file############################
@@ -68,7 +72,6 @@ encode_1, encode_2, encode_3, encode_4 = protein_cross()
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
-file_lists = [encode_1, encode_2, encode_3, encode_4] 
 
 aadict = {'A' : [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
           'C' : [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -96,12 +99,12 @@ top_dict = {'I': 0, 'M': 1, 'O': 2}
 top_dict_inv = {'0':'I', '1':'M', '2':'O'}
 #################0#######################Making seq and feat lists function########################  
 
-def encoding_list(file1):
+def encode_list(file1):
     seq_list = []
     feat_list = []
-    nfile = open(file1, 'r+')
+    ofile = file1
     
-    for counter, line in enumerate(nfile):
+    for counter, line in enumerate(ofile):
 #        print(line)
         line = line.strip('\n').split()
 #        print(line)
@@ -115,30 +118,28 @@ def encoding_list(file1):
         else:
             #print('This is an topology:', line)
             feat_list.append(line)
-    nfile.close()
+    ofile.close()
 #    print(seq_list)
 #    print(feat_list)
     return seq_list, feat_list
 
 ################################################Encoding function###################################################################
 
-def encoding(tnfile): #### possible output file - , file2
+def encoding_file(nfile):
+    file1 = open(nfile, 'r+')
+    print(file1)
 
-    #out_X_array = open('../data/textfile/encoded/X_array.dat', 'w')
-    #out_Y_array = open('../data/textfile/encoded/Y_array.dat', 'w')
-    #nfile = open(file1, 'r+')
     wind_list = []
     seq_list = []
     feat_list = []
     top_list = []
 #    aa_list = []
     link_list = []
-#    ofile = open(file2, 'w')
     #Amino acid numbers assignment
 
 
-    #sw = [1, 3, 5, 7, 9, 11, 13]
-    seq_list, feat_list = encoding_list(file1)
+    
+    seq_list, feat_list = encode_list(file1)
 #    print(seq_list)
 #    print(feat_list) 
     
@@ -154,23 +155,18 @@ def encoding(tnfile): #### possible output file - , file2
     top_list = [top_dict[aa] for pos in feat_list for aa in pos]   #Assigning the frames the features
 #    print('this is toplist', top_list)
 #    print('the is length list', len(top_list))
-
-
 ##########################Converting lists into an array#########################
     
-    #out_X_array.write(wind_list)
-    #out_Y_array.write(top_list)
+    
     X = np.array(wind_list)
-    #np.save('../data/textfile/encoded/X_array.npy', X, allow_pickle=True, fix_imports=True)  # X is an array
     y = np.array(top_list)
-    #np.save('../data/textfile/encoded/Y_array.npy', y, allow_pickle=True, fix_imports=True)    # Y is an array
+   
     
     print(X.shape)
     print(y.shape)
     
-   
-    
-
+    X, y = svm_linear_learn.svm_linear_learn(wind_list, top_list) 
+    #svm_RBF_learn(X, y) 
 #    svm_learning(X, y) 
     
     return X, y
@@ -186,6 +182,7 @@ def padding(link_list):
     
     pad =   [0] * 20 #[[0]*20] * sw
     wind_list= []
+    #sw = [1, 3, 5, 7, 9, 11, 13]
     wsize = int(input('Please confirm your window if not default of 3:'))
     odd = False
     while odd == False:
@@ -217,10 +214,10 @@ def padding(link_list):
             return wind_list
         else:
             wsize = int(input('Please enter an odd number or choose default 3:'))
-    
+    return
 #    sys.exit(1)        
 
-
+#encoding_file(file1)
 
 #################################################################################
 ################################################################################
@@ -270,28 +267,12 @@ def padding(link_list):
 #    print(line)
 #    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ################################################Calling functions###############################
 #encoding_list(file1)
 
-for tnfile in file_lists:
-    print(tnfile)
-    encoding(tnfile)
+#for file1 in file_lists:
+#    print(file1)
+
     
 
 #Possible out file - , out_formatted

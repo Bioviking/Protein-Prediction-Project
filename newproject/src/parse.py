@@ -2,10 +2,7 @@
 #Creating a parsed file for the extraction of features for the original dataset.
 
 #library imports
-#import os 
-#import numpy as np
-#import scipy as sp
-
+import protein_cross
 
 # Load the data from file.
 first_dataset = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
@@ -17,7 +14,7 @@ out_feat = open('../data/textfile/parsed/feat_list.txt', 'w')
 
 out_both = open('../data/textfile/parsed/both_list.txt', 'w')
 
-
+next_both = open('../data/textfile/parsed/both_list.txt', 'r+')
 #creating Lists for Ids sequences and features
 main_dict = {}
 temp_list = []
@@ -26,7 +23,8 @@ seqlist = []
 feat_list = []
 
 #iterating through the file and separating the id label, sequences and topology
-def parsing(fname):
+def parsing(first_dataset):
+    fname = first_dataset
     for counter, line in enumerate(fname):
       line = line.strip()
       
@@ -69,7 +67,8 @@ def parsing(fname):
     #Printing the 3 lists to a text file 
     
     #Closing the files which were opened
-    
+    next_both = open('../data/textfile/parsed/both_list.txt', 'r+')
+    protein_cross.protein_cross(next_both)
     
     fname.close()
     out_ids.close()
@@ -78,7 +77,10 @@ def parsing(fname):
     out_both.close()
     out_ids_feat.close()
     out_ids_seq.close()
-
-
+    
+    return next_both
+    
+    
+    
 #first_dataset = input('Please enter the raw dataset for processing:'))
 parsing(first_dataset)

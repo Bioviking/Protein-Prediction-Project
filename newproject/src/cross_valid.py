@@ -31,6 +31,10 @@ def protein_cross(file1):
     trainlist = [1, 2, 3, 4, 5, 6, 7, 8]
     list1 = []
     list2 = []
+    listA = [] 
+    listB = []
+    listC = []
+    listD = []
     count = 1
     #def cross_valid(file1, file2):
     #print() 
@@ -45,15 +49,19 @@ def protein_cross(file1):
 #            print("this is count 1", count)
             count += 1
             out_sparse1.write(line)
+            listA.append(line)
         elif count in trainlist[2:4]:
             out_sparse2.write(line)
             count += 1
+            listB.append(line)
         elif count in trainlist[4:6]:
             out_sparse3.write(line)
             count += 1
+            listC.append(line)
         elif count in trainlist[6:8]: 
             out_sparse4.write(line)
             count += 1
+            listD.append(line)
          
       elif count == 9:
         out_test.write(line)
@@ -73,7 +81,7 @@ def protein_cross(file1):
     out_sparse3.close()
     out_sparse4.close()
     out_test.close()
-    return list1, list2
+    return (listA, listB, listC, listD, list1, list2)
     
 
 #######################################################Window Cross Validation###################################33

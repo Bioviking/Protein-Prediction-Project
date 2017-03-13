@@ -53,7 +53,7 @@ top_dict_inv = {'0':'I', '1':'M', '2':'O'}
 #    return seq_list, feat_list
 #"""
 ######################################Training and Test Data##############
-def svm_learning(X, y):
+def svm_RBF_learn(X, y):
        
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
@@ -116,7 +116,7 @@ def svm_learning(X, y):
 #loading_input(X, Y)
 
 #encoding_list(file1)
-svm_learning(X, y)
+svm_RBF_learn(X, y)
 #training_svm(X, Y)
 #padding(link_list)
 ##################################Closing the files which were opened################################33

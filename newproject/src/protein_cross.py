@@ -7,10 +7,10 @@
 import numpy as np
 #import scipy as sp
 import sys 
-
+import encoding_file
 
 # Load the data from file
-fname = open('../data/textfile/parsed/both_list.txt', 'r+')
+#fname = open('../data/textfile/parsed/both_list.txt', 'r+')
 out_sparse1 = open('../data/textfile/cross_validated/trainlist_no1.txt', 'w')
 out_sparse2 = open('../data/textfile/cross_validated/trainlist_no2.txt', 'w')
 out_sparse3 = open('../data/textfile/cross_validated/trainlist_no3.txt', 'w')
@@ -23,10 +23,16 @@ out_test = open('../data/textfile/cross_validated/test_list.txt', 'w')
 #out_sparse4 = open('../data/textfile/cross_validated/trainlist_no4.txt', 'w')
 #out_test = open('../data/textfile/cross_validated/test_list.txt', 'w')
 
-def protein_cross(file1):
-    
-    
+out_encode1 = open('../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
+out_encode2 = open('../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
+out_encode3 = open('../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
+out_encode4 = open('../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+out_test_encode = open('../data/textfile/cross_validated/test_list.txt', 'r+')
 
+def protein_cross(next_both):
+    fname = next_both
+    file_lists = [] 
+    
     #List declaration
     trainlist = [1, 2, 3, 4, 5, 6, 7, 8]
     list1 = []
@@ -50,22 +56,25 @@ def protein_cross(file1):
             count += 1
             out_sparse1.write(line)
             listA = [line]
+            file_lists.append(out_encode1)
 
         elif count in trainlist[2:4]:
             out_sparse2.write(line)
             listB = [line]
-
+            file_lists.append(out_encode2)
             count += 1
         elif count in trainlist[4:6]:
             out_sparse3.write(line)
             listC = [line]
-
+            file_lists.append(out_encode3)
             count += 1
         elif count in trainlist[6:8]: 
             out_sparse4.write(line)
             listD = [line]
             count += 1
-         
+            file_lists.append(out_encode4)
+      
+      
       elif count == 9:
         out_test.write(line)
         count += 1
@@ -76,13 +85,22 @@ def protein_cross(file1):
         list2.append(line)
         out_test.write(line)
         count = 1
-        
-#    print("this list 1", len(list1))
-#    print("this is list 2", len(list2))
-    return listA, listB, listC, listD
+    
+    print(len(file_lists))
+    print('Proteins have been separated into multiple training files')   
+    print("this list 1", len(list1))
+    print("this is list 2", len(list2))
+    
+    for nfile in file_lists:
+        encoding_file.encoding_file(nfile)
+    print('Encoding features finish')
+   
+    fname.close()
+    return listA, listB, listC, listD, list2
 
 
 #out_sparse1, out_sparse2, out_sparse3, out_sparse4
+
     out_sparse1.close()
     out_sparse2.close()
     out_sparse3.close()
@@ -102,13 +120,11 @@ def protein_cross(file1):
 #Calling the function
 #print("this is the function", 
 
-protein_cross(fname)
-#window_cross()
 
 
 
 #closing the files
-fname.close()
+
 #f2name.close()
 
 #out_both.close()
