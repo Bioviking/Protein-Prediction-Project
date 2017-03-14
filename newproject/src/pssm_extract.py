@@ -13,6 +13,10 @@ pssm_tab = re.compile(" +\d+ [A-Z]")
 def parse_fasta(filename):
 #    f = open(filename,'r')
     pssm_list = []
+    sw = int((wsize - 1)  / 2)
+    pad =   [0] * 20 #[[0]*20] * sw
+    wind_list = []
+    new_feat = []
     #g_dict = dict()
     for ids in filename:
         n_ids = ids.strip()
@@ -34,9 +38,30 @@ def parse_fasta(filename):
                     print(line)
                     pssm_list.append(line)
             for num in pssm_list:
-                
-                print(num)
-                
+                for index in range(len(num)):
+                    num[index]= num[index]/100
+            
+            
+            
+            for pos in pssm_list:
+                plen = len(pos)       
+                for aa in range(plen):                   
+                    if aa < sw:
+                        tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
+                        wind_list.append(tempWin) 
+                        
+                    elif aa >= (plen - sw): #
+                        tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
+                        wind_list.append(tempWin)
+                         
+                    else:
+                        tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
+                        wind_list.append(tempWin)
+                      
+             X.np.array(wind_list)   
+             
+             index= filename.index(ids)
+             new_feat.append(   
                        
         else: 
             print('this is not wortking')
