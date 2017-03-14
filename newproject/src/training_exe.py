@@ -176,7 +176,7 @@ def svm_linear_learn(wind_list, top_list):
 
     y_pred = svc.predict(X_test) #p.random.random(())
     y_pred_prob = svc.predict_proba(X_test)
-    
+    feat_feature(y_pred, y_pred_prob)
           
 ##################################Evaluate my Model's Preformance########################
 
@@ -197,20 +197,27 @@ def svm_linear_learn(wind_list, top_list):
     score = cross_val_score(svc, X_train, y_train, cv=5)
     print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
  
+
 #############Predicted features##################################   
-    pred_list = []
-    for i in y_pred:
-        if y_pred[i] == top_dict_inv.keys[i]:
-            i = top_dict_inv[i]
-            pred_list.append(i)
-    final_pred= ''.join(pred_list)            
-    print(final_pred)
-    #        print(top_dict_inv.keys[i]) 
-    #        pred_list.append(top_dict_inv[i])
-    #    print(pred_list)
+def feat_feature(y_pred, y_pred_prob):    
+    
+    print(y_pred, y_pred_prob)
+    
+    y_pred = list(y_pred)
+    pre_list = []
+    pre_list = [top_dict_inv[feat] for pos in y_pred for feat in pos]   #Assigning the frames the features
+#    for feat in y_pred:
+#       if y_pred[feat] == top_dict_inv.keys[feat]:
+#        feat = top_dict_inv.keys[feat]
+#        pre_list.append(feat)
+    final_pred= ''.join(pre_list)            
+    print(len(final_pred))
+    print(final_pred)    
+    
+#    print(pred_list)
         
     #return pred_list  
-    return    
+    return final_pred
 
 encoding_file(nfile)
 
