@@ -40,6 +40,8 @@ Some training and predictiing results from my svm linear with accuracies and con
 
 
 Ignore
+
+
 #| bash training_file_list.sh 
 #Runs training_file_list.sh to create a .txt list of file names for training and test function inputs
 
