@@ -29,13 +29,11 @@ Some of the psiblast scripts I wrote for parsing the fasta files, and running ps
 
 Data folder:
 
-Sorted either by file format(fasta,txt,etc... or stage of processing(cross validating,encoding, etc...)
+Cros
 
 
 Result folder:
 ~/Documents/Protein_Project/newproject/results/
-
-Some training and predictiing results from my svm linear with accuracies and confusion matrix. Some varying window sizes with the kfold files.
 
 
 

@@ -230,7 +230,6 @@ def feat_feature(y_pred, y_pred_prob, X_test):
  
 #################################################Confusion Matrix###################################################
 
-#NotWorking - Parameter need to be adjusted
 
 def confusion_matrix(X, y)    
     

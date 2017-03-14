@@ -7,8 +7,8 @@
 import numpy as np
 
 first_dataset = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-#nfile = open('../data/textfile/parsed/both_list.txt', 'r+')
-nfile = open('../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
+nfile = open('../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
 
 
 ##################################Creating Lists for Ids sequences and features##############
@@ -142,7 +142,7 @@ def encoding_file(nfile):
     print(X.shape)
     print(y.shape)
     
-    confusion_matrix(wind_list, top_list)
+ #   confusion_matrix(wind_list, top_list)
     svm_linear_learn(wind_list, top_list) 
     
     #svm_RBF_learn(X, y) 
@@ -214,14 +214,14 @@ def feat_feature(y_pred, y_pred_prob, X_test):
     pre_list = []
     for feat in range(len(X_test)):
         temp_feat = y_pred[feat]
-        temp_prob = y_pred_prob[feat]
+        temp_prob = y_pred_prob[feat]					#Probablities
         #print(temp_feat)
         if temp_feat in top_dict_opp.keys():
             temp_feat = top_dict_opp[temp_feat]
             pre_list.append(temp_feat)
             final_list.append(temp_prob)
     print(''.join(pre_list))
-    print(final_list) 
+#    print(final_list)                        #Probabilities can be printed out but require further processing
             
     return pre_list, final_list #X_test #final_pred
 
