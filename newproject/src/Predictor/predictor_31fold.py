@@ -1,6 +1,6 @@
-#This script looks to conduct sparse encoding on the amino acid sequence
+   #This script looks to conduct sparse encoding on the amino acid sequence
 
-
+#####Hard coded for 3 fold and to a specific file to predict#############################
 
 ####################################Library imports################################
 
@@ -9,11 +9,10 @@ import numpy as np
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
 nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
 #nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
-out_file = open('../../results/RFaccuracy_score_23fold8est.txt', 'w')
-out_file1 = open('../../results/RFclassification_report_23fold8est.txt', 'w')
-out_file2 = open('../../results/RFconfusion_matrix_23fold8est.txt', 'w')
-out_file3 = open('../../results/RFcross_val_score_23fold8est.txt', 'w')
-
+out_file = open('../../results/accuracy_score_31fold.txt', 'w')
+out_file1 = open('../../results/classification_report_31fold.txt', 'w')
+out_file2 = open('../../results/confusion_matrix_31fold.txt', 'w')
+out_file3 = open('../../results/cross_val_score_31fold.txt', 'w')
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
@@ -75,7 +74,7 @@ def padding(link_list):
     wind_list= []
     #sw = [3, 5, 7, 9, 11, 13]
     #wsize = int(input('Please confirm your window if not default of 3:'))
-    wsize = 23
+    wsize = 31
     if wsize == 0:    
         odd = False
         while odd == False:
@@ -181,9 +180,8 @@ def encoding_file(nfile, pfile):
 
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
-
+from sklearn.svm import SVC
 import pickle
-from sklearn.ensemble import RandomForestClassifier
 
 def svm_linear_learn(wind_list, top_list, pfile):
     X = np.array(wind_list)
@@ -196,25 +194,27 @@ def svm_linear_learn(wind_list, top_list, pfile):
 ###################################Creating my Model##############################3
 ##Supervised Learning Estimators
 
-    clf = RandomForestClassifier(n_estimators=8, max_depth=None, min_samples_split=5, random_state=0, max_features='auto')   
+    svc= SVC(kernel='linear', probability=True)
     
 ##Supervised learning
-    clf.fit(X_train, y_train)
+    svc.fit(X_train, y_train)
     
          
-    s = pickle.dumps(clf)
+    s = pickle.dumps(svc)
 #######################################################Calling the Predictors function #######################################3    
     
-
-##Supervised Estimators
-
-    y_pred = clf.predict(X_test) #p.random.random(())
-    y_pred_prob = clf.predict_proba(X_test)
-    feat_feature(y_pred, y_pred_prob, X_test)
-
     protein_to_predict = pfile
     print('Loading the prediction model for your sequence........')
     predictor_svc(protein_to_predict, s)   
+     
+    
+##Supervised Estimators
+
+    y_pred = svc.predict(X_test) #p.random.random(())
+    y_pred_prob = svc.predict_proba(X_test)
+    feat_feature(y_pred, y_pred_prob, X_test)
+
+ 
               
 ##################################Evaluate my Models Preformance########################
 
@@ -236,7 +236,7 @@ def svm_linear_learn(wind_list, top_list, pfile):
     out_file2.write(str(confusion_matrix(y_test, y_pred)))
 #Cross Validation
     print('loading the cross validation scores')
-    score = cross_val_score(clf, X_train, y_train, cv=5)
+    score = cross_val_score(svc, X_train, y_train, cv=5)
     #print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
     out_file3.write(str("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2)))
  
@@ -244,7 +244,6 @@ def svm_linear_learn(wind_list, top_list, pfile):
     out_file1.close()
     out_file2.close()
     out_file3.close()
-
     return 
    
 ############################################################################################
@@ -290,8 +289,8 @@ def predictor_svc(protein_to_predict, s):
     X_pred = np.array(pseq_encode)
     print(X_pred.shape)
    
-    clf2 = pickle.loads(s)
-    y_pred = clf2.predict(X_pred)
+    svc2 = pickle.loads(s)
+    y_pred = svc2.predict(X_pred)
     print(y_pred)
     
     top_dict_opp = {0 : 'I', 1 : 'M', 2 : 'O'}
@@ -382,6 +381,7 @@ def confusion_matrix(wind_list, top_list):
         plt.title('Prediction: %i' % prediction)
     
     plt.show()
-pfile = open('>Q8DIQ1|3kziB.fasta', 'r+')       
+pfile = open('>Q8DIQ1|3kziB.fasta', 'r+')   
 #pfile = input('please enter the filename and extention:')
 encoding_file(nfile, pfile)
+

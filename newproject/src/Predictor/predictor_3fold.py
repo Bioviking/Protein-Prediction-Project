@@ -1,4 +1,4 @@
-#This script looks to conduct sparse encoding on the amino acid sequence
+    #This script looks to conduct sparse encoding on the amino acid sequence
 
 #####Hard coded for 3 fold and to a specific file to predict#############################
 
@@ -222,23 +222,23 @@ def svm_linear_learn(wind_list, top_list, pfile):
 #knn.score(X_test, y_test)
     from sklearn.metrics import accuracy_score
     print('loading the accuracy_score.....')
-    print(accuracy_score(y_test, y_pred))
-    out_file.write(accuracy_score(y_test, y_pred))
+    #print(accuracy_score(y_test, y_pred))
+    out_file.write(str(accuracy_score(y_test, y_pred)))
 #Classification Report
     from sklearn.metrics import classification_report
     print('loading the classification_report.....')
-    print(classification_report(y_test,y_pred))
-    out_file1.write(classification_report(y_test,y_pred))
+    #print(classification_report(y_test,y_pred))
+    out_file1.write(str(classification_report(y_test,y_pred)))
 #ConfusionMatrix
     from sklearn.metrics import confusion_matrix
     print('loading the confusion_matrix.....')
-    print(confusion_matrix(y_test, y_pred))
-    out_file2.write(confusion_matrix(y_test, y_pred))
+    #print(confusion_matrix(y_test, y_pred))
+    out_file2.write(str(confusion_matrix(y_test, y_pred)))
 #Cross Validation
     print('loading the cross validation scores')
     score = cross_val_score(svc, X_train, y_train, cv=5)
-    print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
-    out_file3.write("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
+    #print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
+    out_file3.write(str("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2)))
  
     out_file.close()
     out_file1.close()
