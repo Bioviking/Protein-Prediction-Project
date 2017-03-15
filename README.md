@@ -5,10 +5,11 @@ by Ryno Lawson
 
 
 Place protein seq to be predicted into the folder:~/Documents/Protein_Project/newproject/src/Predictor/
+
 Read below
 
 Predictor script:
-1. predictor.py  - Is a working training file and predictor file. This is hard coded to receive my mainset, train a linear svm model and call in a file to be predicted 
+1. predictor.py  - Is a working training file and predictor file(NB!FULL DATASET- see predictor_small_dataset.py for a smaller training dataset and functional 3fold hard coded predictor combo). This is hard coded to receive my mainset, train a linear svm model and call in a file to be predicted 
 Run the predictor.py script this will take some time as the training of the model and the predictor is combined.
 
 
