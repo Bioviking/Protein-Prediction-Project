@@ -157,7 +157,6 @@ def encoding_file(nfile):
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
-import pickle
 
 def svm_linear_learn(wind_list, top_list):
    
@@ -176,7 +175,6 @@ def svm_linear_learn(wind_list, top_list):
 ##Supervised learning
     svc.fit(X_train, y_train)
 
-    s= pickle.dumps(svc)
 ##Supervised Estimators
 
     y_pred = svc.predict(X_test) #p.random.random(())
@@ -202,7 +200,7 @@ def svm_linear_learn(wind_list, top_list):
     score = cross_val_score(svc, X_train, y_train, cv=5)
     print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
  
-    return s
+    return 
     
     
 #############Predicted features##################################   

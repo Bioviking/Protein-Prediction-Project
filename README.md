@@ -1,15 +1,34 @@
 # Protein_Project - runs with Ubuntu, python 3 and modules of the versions from January 2017 
 by Ryno Lawson
 
+
+
+
+Place protein seq to be predicted into the folder:~/Documents/Protein_Project/newproject/src/Predictor/
+Read below
+
+Predictor script:
+1. predictor.py  - Is a working training file and predictor file. This is hard coded to receive my mainset, train a linear svm model and call in a file to be predicted 
+Run the predictor.py script this will take some time as the training of the model and the predictor is combined.
+
+
+
 Main dataset:
 ~/Documents/Protein_Project/newproject/data/null_dataset/membrane-alpha.3line.txt
 
 
 
-Script folder:
-~/Documents/Protein_Project/newproject/src/
+Script folder:~/Documents/Protein_Project/newproject/src/
 
-Scripts:
+
+
+Predictor script:
+1. predictor.py  - Is a working training file and predictor file. This is hard coded to receive my mainset, train a linear svm model and call in a file to be predicted
+
+
+
+Training FolderScripts:
+
 
 1. parse.py    #Runs parse.py with hard coded dataset file - separates IDs, sequences and features.
 

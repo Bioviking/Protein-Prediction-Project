@@ -6,9 +6,9 @@
 
 import numpy as np
 
-first_dataset = open('../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-nfile = open('../data/textfile/parsed/both_list.txt', 'r+')
-#nfile = open('../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
+#first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
+nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
 
 
 ##################################Creating Lists for Ids sequences and features##############
@@ -72,49 +72,71 @@ def padding(link_list):
     wind_list= []
     #sw = [3, 5, 7, 9, 11, 13]
     wsize = int(input('Please confirm your window if not default of 3:'))
-    odd = False
-    while odd == False:
+    if wsize == 0:    
+        odd = False
+        while odd == False:
+            if wsize % 2 == 1:
+                odd = True
+                sw = int((wsize - 1)  / 2)
+                print(link_list)
+                for pos in link_list:
+                    plen = len(pos)       
+                    for aa in range(plen):
+                       
+                        if aa < sw:
+                            tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
+                            wind_list.append(tempWin) 
+                            
+                        elif aa >= (plen - sw): #
+                            tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
+                            wind_list.append(tempWin)
+                             
+                        else:
+                            tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
+                            wind_list.append(tempWin)
+                            
+                     
+    #       print(wind_list)
+    #       print(len(wind_list))
+    #       sys.exit(1)
+    #            print(wind_list)
+    #            print(len(wind_list))
+                #return wind_list
+    else:
         if wsize % 2 == 1:
-            odd = True
-            sw = int((wsize - 1)  / 2)
-            print(link_list)
-            for pos in link_list:
-                plen = len(pos)       
-                for aa in range(plen):
-                   
-                    if aa < sw:
-                        tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
-                        wind_list.append(tempWin) 
-                        
-                    elif aa >= (plen - sw): #
-                        tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
-                        wind_list.append(tempWin)
-                         
-                    else:
-                        tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
-                        wind_list.append(tempWin)
-                        
-                 
-#       print(wind_list)
-#       print(len(wind_list))
-#       sys.exit(1)
-#            print(wind_list)
-#            print(len(wind_list))
-            return wind_list
-        else:
-            wsize = int(input('Please enter an odd number or choose default 3:'))
+                odd = True
+                sw = int((wsize - 1)  / 2)
+                print(link_list)
+                for pos in link_list:
+                    plen = len(pos)       
+                    for aa in range(plen):
+                       
+                        if aa < sw:
+                            tempWin = pad*(sw-aa) + [i for am in pos[:(wsize-(sw-aa))] for i in am] 
+                            wind_list.append(tempWin) 
+                            
+                        elif aa >= (plen - sw): #
+                            tempWin = [i for am in pos[(aa-sw):plen] for i in am] + pad*(sw-((plen-1)-aa))
+                            wind_list.append(tempWin)
+                             
+                        else:
+                            tempWin = [i for am in pos[(aa-sw):(aa+1+sw)] for i in am]
+                            wind_list.append(tempWin)
+        
+        
+        
     return wind_list
 
 ################################################Encoding function###################################################################
 
-def encoding_file(nfile):
+def encoding_file(nfile, pfile):
     file1 = nfile
     wind_list = []
     seq_list = []
     feat_list = []
     top_list = []
     link_list = []
-
+    window = 0
     #Amino acid numbers assignment    
     seq_list, feat_list = encode_list(file1)
 #    print(seq_list)
@@ -124,7 +146,6 @@ def encoding_file(nfile):
         aa_list = []
         for aa in line:
             i = aadict[aa]
-
             aa_list.append(i)
         link_list.append(aa_list) 
     
@@ -144,12 +165,12 @@ def encoding_file(nfile):
     print(y.shape)
     
  #   confusion_matrix(wind_list, top_list)
-    svm_linear_learn(wind_list, top_list) 
+    svm_linear_learn(wind_list, top_list, pfile) 
     
     #svm_RBF_learn(X, y) 
 #    svm_learning(X, y) 
     
-    return wind_list, top_list, seq_list, feat_list, link_list
+    return wind_list, top_list, seq_list, feat_list
 #    print(X)
 
 ###############################################Input my data for SVM###########################################
@@ -159,51 +180,130 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 import pickle
 
-def svm_linear_learn(wind_list, top_list):
-   
+def svm_linear_learn(wind_list, top_list, pfile):
     X = np.array(wind_list)
     y = np.array(top_list)
     print(X.shape)
     print(y.shape)
     
-    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 ###################################Creating my Model##############################3
 ##Supervised Learning Estimators
 
     svc= SVC(kernel='linear', probability=True)
-
+    
 ##Supervised learning
     svc.fit(X_train, y_train)
-
-    s= pickle.dumps(svc)
+    
+         
+    s = pickle.dumps(svc)
+#######################################################Calling the Predictors function #######################################3    
+    
+    protein_to_predict = open(pfile, 'r+')
+    print('Loading the prediction model for your sequence........')
+    predictor_svc(protein_to_predict, s)   
+     
+    
 ##Supervised Estimators
 
     y_pred = svc.predict(X_test) #p.random.random(())
     y_pred_prob = svc.predict_proba(X_test)
     feat_feature(y_pred, y_pred_prob, X_test)
-          
-##################################Evaluate my Model's Preformance########################
+
+ 
+              
+##################################Evaluate my Models Preformance########################
 
 #Accuracy Score
 #knn.score(X_test, y_test)
     from sklearn.metrics import accuracy_score
+    print('loading the accuracy_score.....')
     print(accuracy_score(y_test, y_pred))
 
 #Classification Report
     from sklearn.metrics import classification_report
+    print('loading the classification_report.....')
     print(classification_report(y_test,y_pred))
 
 #ConfusionMatrix
     from sklearn.metrics import confusion_matrix
+    print('loading the confusion_matrix.....')
     print(confusion_matrix(y_test, y_pred))
 
 #Cross Validation
+    print('loading the cross validation scores')
     score = cross_val_score(svc, X_train, y_train, cv=5)
     print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
  
-    return s
+ 
+
+    return 
+   
+############################################################################################
+   
+import pickle  
+import numpy as np
+# Use of the created predictor model to predict in the whole original dataset
+def predictor_svc(protein_to_predict, s):    
+    f4pred = protein_to_predict
+    #pfile = list(f4pred)
+    seq_encode= []
+    ids_list = []
+    link_list = []
+    for line in f4pred:
+        #print('this is file line;', line)
+        if line[0] == '>':
+            line = line.split('\n')
+            line = line[0]
+            #print(line)
+            ids_list.append(line)
+        else:
+            line = line.split()
+            #print(line)
+            seq_encode.append(line)   
+
+    #print('This is sequence list', seq_encode)        
+
+    for counter, line in enumerate(seq_encode):
+        aa_list = []
+        line = line[0]
+        #print('This is line ', line)
+        for aa in line:
+            #print('This is aa', aa)
+            i = aadict[aa]
+            print(i)
+           
+            aa_list.append(i)
+        link_list.append(aa_list) 
+    print(link_list)
     
+    pseq_encode = padding(link_list)
+    
+    X_pred = np.array(pseq_encode)
+    print(X_pred.shape)
+   
+    svc2 = pickle.loads(s)
+    y_pred = svc2.predict(X_pred)
+    print(y_pred)
+    
+    top_dict_opp = {0 : 'I', 1 : 'M', 2 : 'O'}
+    y_pred = list(y_pred)
+    #y_pred_prob = list(y_pred_prob)
+    final_list = []
+    pre_list = []
+    for feat in range(len(X_pred)):
+        temp_feat = y_pred[feat]
+     #   temp_prob = y_pred_prob[feat]					#Probablities
+        #print(temp_feat)
+        if temp_feat in top_dict_opp.keys():
+            temp_feat = top_dict_opp[temp_feat]
+            pre_list.append(temp_feat)
+            #final_list.append(temp_prob)
+    print('This is the final predicted structure for the protein:')
+    print(''.join(pre_list))
+    #print(final_list) 
+  
     
 #############Predicted features##################################   
 
@@ -223,10 +323,18 @@ def feat_feature(y_pred, y_pred_prob, X_test):
             temp_feat = top_dict_opp[temp_feat]
             pre_list.append(temp_feat)
             final_list.append(temp_prob)
+    print('This is the test structure prediction:')
     print(''.join(pre_list))
 #    print(final_list)                        #Probabilities can be printed out but require further processing
             
     return pre_list, final_list #X_test #final_pred
+
+
+
+#######################################################################################################
+
+
+
 
 #################################################Confusion Matrix###################################################
 from sklearn.metrics import confusion_matrix
@@ -268,6 +376,6 @@ def confusion_matrix(wind_list, top_list):
     
     plt.show()
     
-
-encoding_file(nfile)
+pfile = input('please enter the filename and extention:')
+encoding_file(nfile, pfile)
 
