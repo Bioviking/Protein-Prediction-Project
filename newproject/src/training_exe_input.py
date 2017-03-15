@@ -77,6 +77,7 @@ def padding(link_list):
         if wsize % 2 == 1:
             odd = True
             sw = int((wsize - 1)  / 2)
+            print(link_list)
             for pos in link_list:
                 plen = len(pos)       
                 for aa in range(plen):
