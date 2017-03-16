@@ -7,12 +7,12 @@
 import numpy as np
 
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
-#nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
-out_file = open('../../results/accuracy_score_3fold.txt', 'w')
-out_file1 = open('../../results/classification_report_3fold.txt', 'w')
-out_file2 = open('../../results/confusion_matrix_3fold.txt', 'w')
-out_file3 = open('../../results/cross_val_score_3fold.txt', 'w')
+#nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
+nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
+out_file = open('../../results/2017-03-16/LinearSVC/LSVC_accuracy_score_3fold.txt', 'w')
+out_file1 = open('../../results/2017-03-16/LinearSVC/LSVC_classification_report_3fold.txt', 'w')
+out_file2 = open('../../results/2017-03-16/LinearSVC/LSVC_confusion_matrix_3fold.txt', 'w')
+out_file3 = open('../../results/2017-03-16/LinearSVC/LSVC_cross_val_score_3fold.txt', 'w')
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
@@ -181,6 +181,8 @@ def encoding_file(nfile, pfile):
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
+from sklearn import metrics
+
 import pickle
 
 def svm_linear_learn(wind_list, top_list, pfile):
@@ -194,7 +196,7 @@ def svm_linear_learn(wind_list, top_list, pfile):
 ###################################Creating my Model##############################3
 ##Supervised Learning Estimators
 
-    svc= SVC(kernel='linear', probability=True)
+    svc= SVC(kernel='linear', probability=True, decision_function_shape='ovr')
     
 ##Supervised learning
     svc.fit(X_train, y_train)
@@ -228,12 +230,18 @@ def svm_linear_learn(wind_list, top_list, pfile):
     from sklearn.metrics import classification_report
     print('loading the classification_report.....')
     #print(classification_report(y_test,y_pred))
-    out_file1.write(str(classification_report(y_test,y_pred)))
+    out_file1.write(str("Classification report for classifier %s:\n%s\n"
+          % (svc, metrics.classification_report(y_test,y_pred))))
+    #out_file1.write(str(classification_report(y_test,y_pred)))
+
+
 #ConfusionMatrix
     from sklearn.metrics import confusion_matrix
     print('loading the confusion_matrix.....')
     #print(confusion_matrix(y_test, y_pred))
-    out_file2.write(str(confusion_matrix(y_test, y_pred)))
+    out_file1.write(str("Confusion matrix:\n%s" % metrics.confusion_matrix(y_test,y_pred)))
+
+
 #Cross Validation
     print('loading the cross validation scores')
     score = cross_val_score(svc, X_train, y_train, cv=5)

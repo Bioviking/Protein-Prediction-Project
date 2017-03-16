@@ -1,4 +1,4 @@
-# Protein_Project - runs with Ubuntu, python 3 and modules of the versions from January 2017 
+# Protein_Project - runs with Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64), python 3 and modules of the versions from January 2017 
 by Ryno Lawson
 
 
