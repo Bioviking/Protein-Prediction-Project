@@ -191,7 +191,7 @@ cmap=plt.cm.Blues
 cm = confusion_matrix(y_test, y_pred)
 cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 plt.imshow(cm, interpolation='nearest', cmap=cmap)
-plt.title("Transmembrane - (3 features - window size=3)")
+plt.title("Transmembrane Linear SVC - (3 features - window size=31)")
 plt.colorbar()
 tick_marks = np.arange(len(classes))
 plt.xticks(tick_marks, classes, rotation=45)

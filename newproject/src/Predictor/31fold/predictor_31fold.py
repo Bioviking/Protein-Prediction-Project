@@ -7,12 +7,12 @@
 import numpy as np
 
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
-#nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
-out_file = open('../../results/accuracy_score_31fold.txt', 'w')
-out_file1 = open('../../results/classification_report_31fold.txt', 'w')
-out_file2 = open('../../results/confusion_matrix_31fold.txt', 'w')
-out_file3 = open('../../results/cross_val_score_31fold.txt', 'w')
+nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
+out_file = open('../../../results/LSVC_WDS_accuracy_score_31fold.txt', 'w')
+out_file1 = open('../../../results/LSVC_WDS_classification_report_31fold.txt', 'w')
+out_file2 = open('../../../results/LSVC_WDS_confusion_matrix_31fold.txt', 'w')
+out_file3 = open('../../../results/LSVC_WDS_cross_val_score_31fold.txt', 'w')
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
@@ -194,7 +194,7 @@ def svm_linear_learn(wind_list, top_list, pfile):
 ###################################Creating my Model##############################3
 ##Supervised Learning Estimators
 
-    svc= SVC(kernel='linear', probability=True)
+    svc= SVC(kernel='linear', probability=True, decision_function_shape='ovr')
     
 ##Supervised learning
     svc.fit(X_train, y_train)
@@ -381,7 +381,7 @@ def confusion_matrix(wind_list, top_list):
         plt.title('Prediction: %i' % prediction)
     
     plt.show()
-pfile = open('>Q8DIQ1|3kziB.fasta', 'r+')   
+pfile = open('../>Q8DIQ1|3kziB.fasta', 'r+')   
 #pfile = input('please enter the filename and extention:')
 encoding_file(nfile, pfile)
 

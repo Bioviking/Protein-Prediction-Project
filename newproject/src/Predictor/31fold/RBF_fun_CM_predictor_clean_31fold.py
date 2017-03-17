@@ -36,12 +36,12 @@ nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
 
 # Use of the created predictor model to predict in the whole original dataset
 #pfile = input('please enter the filename and extention:')
-pfile = '>Q8DIQ1|3kziB.fasta'
+#pfile = '>Q8DIQ1|3kziB.fasta'
 #def predictor_svc(protein_to_predict, s):    
-protein_to_predict = open(pfile, 'r+')
+#protein_to_predict = open(pfile, 'r+')
 #print('Loading the prediction model for your sequence........')
 
-f4pred = protein_to_predict
+#f4pred = protein_to_predict
 #pfile = list(f4pred)
 seq_encode= []
 ids_list = []
@@ -151,8 +151,8 @@ print(y.shape)
     
 
 # Create a classifier: a support vector classifier
-svc = svm.LinearSVC(class_weight='balanced', C=1) 
-#svc = svm.SVC(kernel='rbf', class_weight='balanced', C=1) 
+#svc = svm.LinearSVC(class_weight='balanced', C=1) 
+svc = svm.SVC(kernel='rbf', class_weight='balanced', C=1) 
 ##Supervised learning
     #X.reshape(-1, 1)
     
@@ -191,7 +191,7 @@ cmap=plt.cm.Blues
 cm = confusion_matrix(y_test, y_pred)
 cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 plt.imshow(cm, interpolation='nearest', cmap=cmap)
-plt.title("Transmembrane - (3 features - window size=3)")
+plt.title("Transmembrane -RBF - (3 features - window size=31)")
 plt.colorbar()
 tick_marks = np.arange(len(classes))
 plt.xticks(tick_marks, classes, rotation=45)
@@ -206,9 +206,10 @@ for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
 plt.tight_layout()
 plt.ylabel('True label')
 plt.xlabel('Predicted label')
+pylab.savefig('../../../results/CM_31fold.png', bbox_inches='tight')  
+pylab.savefig('../../../results/CM_31fold.pdf', bbox_inches='tight')
 plt.show()   
-savefig('../../../results/CM_31fold.png', bbox_inches='tight')  
-savefig('../../../results/CM_31fold.pdf', bbox_inches='tight')
+
 svc2 = pickle.loads(s)
 y_pred = svc2.predict(X_pred)
 print(y_pred)

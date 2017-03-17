@@ -7,8 +7,8 @@
 import numpy as np
 
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-#nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
-nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
+nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
 out_file = open('../../results/2017-03-16/LinearSVC/LSVC_accuracy_score_3fold.txt', 'w')
 out_file1 = open('../../results/2017-03-16/LinearSVC/LSVC_classification_report_3fold.txt', 'w')
 out_file2 = open('../../results/2017-03-16/LinearSVC/LSVC_confusion_matrix_3fold.txt', 'w')

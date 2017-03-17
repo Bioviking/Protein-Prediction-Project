@@ -18,10 +18,10 @@ nfile = open('../../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
 
 
 
-out_file = open('../../results/2017-03-16/RBF/RBFaccuracy_score_7fold_DS_1.txt', 'w')
-out_file1 = open('../../results/2017-03-16/RBF/RBFclassification_report_7fold_DS_1.txt', 'w')
-out_file2 = open('../../results/2017-03-16/RBF/RBFconfusion_matrix_7fold_DS_1.txt', 'w')
-out_file3 = open('../../results/2017-03-16/RBF/RBFcross_val_score_7fold_DS_1.txt', 'w')
+out_file = open('../../results/2017-03-16/RBF/RBFaccuracy_score_3fold_DS_1.txt', 'w')
+out_file1 = open('../../results/2017-03-16/RBF/RBFclassification_report_3fold_DS_1.txt', 'w')
+out_file2 = open('../../results/2017-03-16/RBF/RBFconfusion_matrix_3fold_DS_1.txt', 'w')
+out_file3 = open('../../results/2017-03-16/RBF/RBFcross_val_score_3fold_DS_1.txt', 'w')
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
@@ -207,7 +207,7 @@ def svm_linear_learn(wind_list, top_list, pfile):
 ###################################Creating my Model##############################3
 ##Supervised Learning Estimators
 
-    svc= SVC(kernel='rbf', gamma =0.001, C=3, probability=True)
+    svc= SVC(kernel='rbf', gamma =0.5, C=2, probability=True)
     
 ##Supervised learning
     svc.fit(X_train, y_train)

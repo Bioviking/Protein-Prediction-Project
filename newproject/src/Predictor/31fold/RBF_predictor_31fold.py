@@ -7,21 +7,21 @@
 import numpy as np
 
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-#nfile = open('../../data/textfile/parsed/both_list.txt', 'r+')
-nfile = open('../../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
-#nfile = open('../../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
-#nfile = open('../../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
-#nfile = open('../../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../../../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
+#nfile = open('../../../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
+#nfile = open('../../../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
+#nfile = open('../../../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
 
 #nfile = open('../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
 
 
 
 
-out_file = open('../../results/2017-03-16/RBF/RBFaccuracy_score_7fold_DS_1.txt', 'w')
-out_file1 = open('../../results/2017-03-16/RBF/RBFclassification_report_7fold_DS_1.txt', 'w')
-out_file2 = open('../../results/2017-03-16/RBF/RBFconfusion_matrix_7fold_DS_1.txt', 'w')
-out_file3 = open('../../results/2017-03-16/RBF/RBFcross_val_score_7fold_DS_1.txt', 'w')
+out_file = open('../../../results/2017-03-16/RBF/31fold_training_set/RBFaccuracy_score_31fold_WS.txt', 'w')
+out_file1 = open('../../../results/2017-03-16/RBF/31fold_training_set/RBFclassification_report_31fold_WS.txt', 'w')
+out_file2 = open('../../../results/2017-03-16/RBF/31fold_training_set/RBFconfusion_matrix_31fold_WS.txt', 'w')
+out_file3 = open('../../../results/2017-03-16/RBF/31fold_training_set/RBFcross_val_score_31fold_WS.txt', 'w')
 ##################################Creating Lists for Ids sequences and features##############
 
 ####Global Variables
@@ -83,7 +83,7 @@ def padding(link_list):
     wind_list= []
     #sw = [3, 5, 7, 9, 11, 13]
     #wsize = int(input('Please confirm your window if not default of 3:'))
-    wsize = 7
+    wsize = 31
     if wsize == 0:    
         odd = False
         while odd == False:
@@ -407,7 +407,7 @@ def confusion_matrix(wind_list, top_list):
         plt.title('Prediction: %i' % prediction)
     
     plt.show()
-pfile = open('>Q8DIQ1|3kziB.fasta', 'r+')   
+pfile = open('../>Q8DIQ1|3kziB.fasta', 'r+')   
 #pfile = input('please enter the filename and extention:')
 encoding_file(nfile, pfile)
 
