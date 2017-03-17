@@ -16,18 +16,24 @@ from sklearn.svm import SVC
 import itertools
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
+from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import matplotlib as pylab
 import numpy as np
 
 
 #first_dataset = open('../../data/null_dataset/membrane-alpha.3line.txt', 'r+')
-nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
+#nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/temp_files/test_list70.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no1.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
-#nfile = open('../../../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+nfile = open('../../../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+
+out_file = open('../../../results/LSVCaccuracy_score_7fold1_PDS_4.txt', 'w')
+out_file1 = open('../../../results/LSVCclassification_report_7fold_PDS_4.txt', 'w')
+out_file2 = open('../../../results/LSVCconfusion_matrix_7fold_PDS_4.txt', 'w')
+out_file3 = open('../../../results/LSVCcross_val_score_7fold_PDS_4.txt', 'w')
 
 ##################################Creating Lists for Ids sequences and features##############
 
@@ -118,7 +124,7 @@ pad =   [0] * 20 #[[0]*20] * sw
 wind_list= []
 top_list= []
 
-wsize = 31
+wsize = 7
 if wsize % 2 == 1:
     odd = True
     sw = int((wsize - 1)  / 2)
@@ -153,6 +159,7 @@ print(y.shape)
 # Create a classifier: a support vector classifier
 svc = svm.LinearSVC(class_weight='balanced', C=1) 
 #svc = svm.SVC(kernel='rbf', class_weight='balanced', C=1) 
+#svc = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=5, random_state=0, max_features='auto') 
 ##Supervised learning
     #X.reshape(-1, 1)
     
@@ -170,15 +177,30 @@ print(y_pred)
 
 #n_samples = len(X) 
     
-# We learn the digits on the first half of the digits
-#svc.fit(X[:n_samples / 2], y[:n_samples / 2])
-print("Classification report for classifier %s:\n%s\n"
-      % (svc, classification_report(y_test, y_pred)))
-print("Confusion matrix:\n%s" % confusion_matrix(y_test, y_pred))
+#Accuracy Score
+#knn.score(X_test, y_test)
+from sklearn.metrics import accuracy_score
+print('loading the accuracy_score.....')
+#print(accuracy_score(y_test, y_pred))
+out_file.write(str(accuracy_score(y_test, y_pred)))
+#Classification Report
+from sklearn.metrics import classification_report
+print('loading the classification_report.....')
+#print(classification_report(y_test,y_pred))
+out_file1.write(str(classification_report(y_test,y_pred)))
+#ConfusionMatrix
+from sklearn.metrics import confusion_matrix
+print('loading the confusion_matrix.....')
+#print(confusion_matrix(y_test, y_pred))
+out_file2.write(str(confusion_matrix(y_test, y_pred)))
 
-
-
-
+#Cross Validation
+print('loading the cross validation scores')
+score = cross_val_score(svc, X_train, y_train, cv=5)
+#print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
+out_file3.write(str("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2)))
+ 
+   
 
 
 # Plot confusion matrix
@@ -191,7 +213,7 @@ cmap=plt.cm.Blues
 cm = confusion_matrix(y_test, y_pred)
 cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 plt.imshow(cm, interpolation='nearest', cmap=cmap)
-plt.title("Transmembrane Linear SVC - (3 features - window size=31)")
+plt.title("Transmembrane LSVC - (3 features - window size=7)")
 plt.colorbar()
 tick_marks = np.arange(len(classes))
 plt.xticks(tick_marks, classes, rotation=45)
@@ -207,8 +229,8 @@ plt.tight_layout()
 plt.ylabel('True label')
 plt.xlabel('Predicted label')
 plt.show()   
-savefig('../../../results/CM_31fold.png', bbox_inches='tight')  
-savefig('../../../results/CM_31fold.pdf', bbox_inches='tight')
+#savefig('../../../results/RandF_CM_7fold.png', bbox_inches='tight')  
+#savefig('../../../results/RandF_CM_7fold.pdf', bbox_inches='tight')
 svc2 = pickle.loads(s)
 y_pred = svc2.predict(X_pred)
 print(y_pred)
@@ -231,4 +253,7 @@ for feat in range(len(X_pred)):
 print('This is the final predicted structure for the protein:')
 print(''.join(pre_list))
 #print(final_list) 
-
+out_file.close()
+out_file1.close()
+out_file2.close()
+out_file3.close()
