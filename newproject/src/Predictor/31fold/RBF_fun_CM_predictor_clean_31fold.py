@@ -4,7 +4,7 @@
 
 ####################################Library imports################################
 
-import numpy as np
+import numpy as npRB
 import pickle  
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
@@ -17,7 +17,7 @@ import itertools
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
-import matplotlib as pylab
+
 import numpy as np
 
 
@@ -28,6 +28,11 @@ nfile = open('../../../data/textfile/parsed/both_list.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no2.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no3.txt', 'r+')
 #nfile = open('../../../data/textfile/cross_validated/trainlist_no4.txt', 'r+')
+
+out_file = open('../../../results/RBF_accuracy_score_3fold_WDS.txt', 'w')
+out_file1 = open('../../../results/RBF_classification_report_3fold_WDS.txt', 'w')
+out_file2 = open('../../../results/RBF_confusion_matrix_3fold_WDS.txt', 'w')
+out_file3 = open('../../../results/RBF_cross_val_score_3fold_WDS.txt', 'w')
 
 ##################################Creating Lists for Ids sequences and features##############
 
@@ -118,7 +123,7 @@ pad =   [0] * 20 #[[0]*20] * sw
 wind_list= []
 top_list= []
 
-wsize = 31
+wsize = 3
 if wsize % 2 == 1:
     odd = True
     sw = int((wsize - 1)  / 2)
@@ -170,14 +175,26 @@ print(y_pred)
 
 #n_samples = len(X) 
     
-# We learn the digits on the first half of the digits
-#svc.fit(X[:n_samples / 2], y[:n_samples / 2])
-print("Classification report for classifier %s:\n%s\n"
-      % (svc, classification_report(y_test, y_pred)))
-print("Confusion matrix:\n%s" % confusion_matrix(y_test, y_pred))
+from sklearn.metrics import accuracy_score
+print('loading the accuracy_score.....')
+#print(accuracy_score(y_test, y_pred))
+out_file.write(str(accuracy_score(y_test, y_pred)))
+#Classification Report
+from sklearn.metrics import classification_report
+print('loading the classification_report.....')
+#print(classification_report(y_test,y_pred))
+out_file1.write(str(classification_report(y_test,y_pred)))
+#ConfusionMatrix
+from sklearn.metrics import confusion_matrix
+print('loading the confusion_matrix.....')
+#print(confusion_matrix(y_test, y_pred))
+out_file2.write(str(confusion_matrix(y_test, y_pred)))
 
-
-
+#Cross Validation
+print('loading the cross validation scores')
+score = cross_val_score(svc, X_train, y_train, cv=5)
+#print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2))
+out_file3.write(str("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), score.std()*2)))
 
 
 
@@ -191,7 +208,7 @@ cmap=plt.cm.Blues
 cm = confusion_matrix(y_test, y_pred)
 cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 plt.imshow(cm, interpolation='nearest', cmap=cmap)
-plt.title("Transmembrane -RBF - (3 features - window size=31)")
+plt.title(" Transmembrane -RBF - Whole dataset (3 features - window size=3)")
 plt.colorbar()
 tick_marks = np.arange(len(classes))
 plt.xticks(tick_marks, classes, rotation=45)
@@ -206,8 +223,8 @@ for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
 plt.tight_layout()
 plt.ylabel('True label')
 plt.xlabel('Predicted label')
-pylab.savefig('../../../results/CM_31fold.png', bbox_inches='tight')  
-pylab.savefig('../../../results/CM_31fold.pdf', bbox_inches='tight')
+plt.savefig('../../../results/RBF_CM_31fold.png', bbox_inches='tight')  
+plt.savefig('../../../results/RBF_CM_31fold.pdf', bbox_inches='tight')
 plt.show()   
 
 svc2 = pickle.loads(s)
